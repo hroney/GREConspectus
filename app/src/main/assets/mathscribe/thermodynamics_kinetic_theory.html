@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+	<title>Gas Laws</title>
+</head>
+<body>
+<center><h2>Kinetic theory</h2></center>
+<center><h3><font color="LightSkyBlue"><b>$●$ Monatomic gas</b></font></h3>
+	<table border="MediumAquaMarine" style="border:1px solid Gold;" bgcolor="LightSkyBlue">
+		<tr><td>Pressure</td><td>$p=1/3nm{\ov c^2}$</td></tr>
+		<tr><td>Equation of state of an ideal gas</td><td>$pV=NkT$</td></tr>
+		<tr><td>Internal energy</td><td>$U=3/2NkT=N/2m{\ov c^2}$</td></tr>
+		<tr><td>Heat capacities</td><td>$C_V=3/2Nk$ <br>$C_p=C_V+Nk=5/2Nk$
+		<br>$γ={C_p}/{C_V}=5/3$</td></tr>
+		<tr><td>Entropy (Sackur- Tetrode equation)$^a$</td><td>$S=Nk\ln{[({mkT}/{2πħ^2})^{3\text"/"
+			2}e^{5\text"/"2}V/N]}$</td></tr>
+	</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_monatomic');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_monatomic" style="background-color: white; padding: 5px 10px; display:none">
+<p>$^a$ For the uncondensed gas. The factor $({mkT}/{2πħ^2})^{3\text"/"2}$ is the quantum concentration of
+the particles $n_Q$. Their thermal de Broglie wavelength $λ_T$, approximately equals $n_Q^{-1\text"/"3}$</p>
+</div>
+<p>
+	<a href="javascript:toggleDiv('where_monatomic');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_monatomic" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$p$</td><td>pressure</td><td>$n$</td><td>number density $(=N\text"/"V)$</td></tr>
+	<tr><td>$m$</td><td>particle mass</td><td>${\ov c^2}$</td><td>mean squared particle velocity</td></tr>
+	<tr><td>$V$</td><td>volume</td><td>$k$</td><td>Boltzmann constant</td></tr>
+	<tr><td>$T$</td><td>temperature</td><td>$U$</td><td>internal energy</td></tr>
+	<tr><td>$γ$</td><td>ratio of heat capacities $(C_p\text"/"C_V)$</td>
+		<td>$N$</td><td>number of particles</td>
+	<tr><td>$C_p$</td><td>heat capacity, constant $p$</td>
+		<td>$C_V$</td><td>heat capacity, constant $V$</td>
+	<tr><td>$S$</td><td>entropy</td><td>$ħ$</td><td>$=\text"(Planck constant)/"(2π)$</td></tr>
+	<tr><td>$e$</td><td>$=2.71828...$</td></tr>
+</table>
+	</div>
+
+<center><h3><font color="LightSkyBlue"><b>$●$ Maxwell-Boltzmann distribution$^1$</b></font></h3>
+	<table border="MediumAquaMarine" style="border:1px solid Gold;" bgcolor="LightSkyBlue">
+		<tr><td>Particle speed distribution</td><td>$\text"pr"(c)dc=({m}/{2πkT})^{3\text"/"2}
+			\exp{({-mc^2}/{2kT})}4πc^2dc$</td></tr>
+		<tr><td>Particle energy distribution</td><td>$\text"pr"(E)dE={2E^{1\text"/"2}}/
+			{π^{1\text"/"2}(kT)^{3\text"/"2}}\exp{({-E}/{kT})}dE$</td></tr>
+		<tr><td>Mean speed</td><td>$\ov c=({8kT}/{πm})^{1\text"/"2}$</td></tr>
+		<tr><td>rms speed</td><td>$c_{rms}=({3kT}/{m})^{1\text"/"2}=({3π}/{8})^{1\text"/"2}\text"  "\ov c$</td></tr>
+		<tr><td>Most probable speed</td><td>$c↖{∧}=({2kT}/{m})^{1\text"/"2}=({π}/{4})^{1\text"/"2}\text"  "\ov c$</td></tr>
+	</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_maxwell_boltzmann');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_maxwell_boltzmann" style="background-color: white; padding: 5px 10px; display:none">
+<p>$^1$ Probability density functions normalised so that $∫_{0}^{∞}\text"pr"(x)dx=1$.</p>
+	</div>
+<p>
+	<a href="javascript:toggleDiv('where_maxwell_boltzmann');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_maxwell_boltzmann" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$\text"pr"$</td><td>probability density</td><td>$m$</td><td>particle mass</td></tr>
+	<tr><td>$c$</td><td>particle speed</td><td>$E$</td><td>particle kinetic energy $(=mc^2\text"/"2)$</td></tr>
+	<tr><td>$\ov c$</td><td>mean speed</td><td>$c_{rms}$</td><td>root mean squared speed</td></tr>
+	<tr><td>$c↖{∧}$</td><td>most probable speed</td></tr>
+</table>
+</div>
+<center><h3><font color="LightSkyBlue"><b>$●$ Gas equipartition</b></font></h3>
+	<table border="MediumAquaMarine" style="border:1px solid Gold;" bgcolor="LightSkyBlue">
+		<tr><td>Classical equipartition$^a$</td><td>$E_q=1/2kT$</td></tr>
+		<tr><td>Ideal gas heat capacities</td><td>$C_V=1/2fNk=1/2fnR$<br>$C_p=Nk(1+f/2)$<br>
+			$γ={C_p}/{C_V}=1+2/f$</td></tr>
+	</table></center>
+	<p>
+		<a href="javascript:toggleDiv('super_gas_equipartition');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+	</p>
+	<div id="super_gas_equipartition" style="background-color: white; padding: 5px 10px; display:none">
+<p>$^a$ System in thermal equilibrium at temperature $T$.</p>
+		</div>
+	<p>
+		<a href="javascript:toggleDiv('where_gas_equipartition');" style="background-color: white; padding: 5px 10px;">where</a>
+	</p>
+	<div id="where_gas_equipartition" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$E_q$</td><td>energy per quadratic degree of freedom</td><td>$f$</td><td>number of
+		degrees of freedom</td></tr>
+	<tr><td>$R$</td><td>molar gas constant</td><td>$n$</td><td>number of moles</td></tr>
+</table>
+</div>
+
+<center><p>...</p></center>
+
+</body>
+</html>

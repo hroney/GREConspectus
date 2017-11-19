@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+  <link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+  <script src="../mathscribe/jquery-1.4.3.min.js"></script>
+  <script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+  <!-- <script>M.MathPlayer = false; M.trustHtml = true;</script> -->
+
+  <!--
+  To use jqMath in an html file, use a text editor to copy the above lines to the beginning of
+  your file, remove any corresponding old tags, and save the file in UTF-8 format.
+
+  If you aren't writing in English, change "en" above to the correct language code, especially if
+  your language allows a comma as a decimal mark (instead of a period).
+
+  If you don't use Fraktur characters, you can remove the link on line 7, as this may speed up
+  download times slightly.
+
+  You may need to change each "../mathscribe" path above, depending on the directory structure
+  that you choose.
+
+  You can use a different version of jquery (1.0+) if you prefer.  We've just provided this one
+  for your convenience.
+
+  If you need to use the \html macro, then uncomment the M.MathPlayer and M.trustHtml line above.
+  But if you are going to parse untrusted user input using jqMath, even in a blog comment, you
+  must ensure that M.trustHtml is set back to false first.
+
+  The files jscurry-0.4.0.js, jscurry-0.4.0.min.js, and jqmath-0.4.3.js are provided just for your
+  information.  They are all included, and compressed, in jqmath-etc-0.4.3.min.js.
+
+  α β γ δ ε ζ η θ ι κ λ μ
+ν ξ π ρ ς σ τ υ φ χ ψ ω
+ϐ ϑ ϒ ϕ ϖ Ϛ Ϟ Ϡ ϰ ϱ ϲ
+
+ℎ ℏ
+  -->
+
+  <title>Classical Mechanics</title>
+</head>
+<body>
+<h2>Generalised dynamics</h2>
+<center><h3>$●$ Hamiltonian dynamics</h3></center>
+<center>
+  <table border="1" style="border:1px solid Gold;" bgcolor="OldLace">
+  <tr><td>Hamiltonian</td><td>$H=∑↙{i}p_i q↖{.}_i - L$</td></tr>
+  <tr><td>Hamilton's equations</td><td>$q↖{.}_i={∂H}/{∂p_i}$<br>$p↖{.}_i=-{∂H}/{∂q_i}$</td></tr>
+  <tr><td>Hamiltonian of particle in external field</td><td>$H={1}/{2}mv^2+V(\bo r,t)$
+    <br>$=T+V$</td></tr>
+  <tr><td>Relativistic Hamiltonian of a charged particle</td>
+    <td>$H=√{m_0^2c^4+|\bo p-e\bo A|^2c^2}$ <br>$+eϕ$</td></tr>
+  <tr><td>Poisson brackets</td><td>$[f,g]=∑↙{i}\({∂f}/{∂q_i}{∂g}/{∂p_i}-{∂f}/{∂p_i}{∂g}/{∂q_i}\)$
+    <br>$[q_i,g]={∂g}/{∂p_i}$; $[p_i,g]=-{∂g}/{∂q_i}$
+    <br>$[H,g]=0$ if ${∂g}/{∂t}=0$; ${dg}/{dt}=0$</td></tr>
+  <tr><td>Hamilton- Jacobi equation</td><td>${∂S}/{∂t}+H\(q_i,{∂S}/{∂q_i},t\)=0$</td></tr>
+</table></center>
+<p>
+<a href="javascript:toggleDiv('myContent');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="myContent" style="background-color: white; padding: 5px 10px; display:none">
+<table border-collapse="collapse;" border="1px solid black;">
+  <tr><td>$$L$$</td><td>Lagrangian</td><td>$$H$$</td><td>Hamiltonian</td></tr>
+  <tr><td>$$p_i$$</td><td>generalised momenta</td><td>$$q_i$$</td><td>generalised coordinates</td></tr>
+  <tr><td>$$q↖{.}_i$$</td><td>generalised velocities</td><td>$$t$$</td><td>time</td></tr>
+  <tr><td>$$v$$</td><td>particle speed</td><td>$$U$$</td><td>potential energy</td></tr>
+  <tr><td>$$r$$</td><td>position vector</td><td>$$T$$</td><td>kinetic energy</td></tr>
+  <tr><td>$$m_0$$</td><td>(rest) mass</td><td>$$+e$$</td><td>positive charge</td></tr>
+  <tr><td>$$c$$</td><td>speed of light</td><td>$$ϕ$$</td><td>electronic potential</td></tr>
+  <tr><td>$$A$$</td><td>vector potential</td><td>$$\bo p$$</td><td>generalised momentum</td></tr>
+  <tr><td>$$[;]$$</td><td>Poisson brackets</td><td>$$f,g$$</td><td>arbitrary functions</td></tr>
+  <tr><td>$$S$$</td><td>action</td><td></td><td></td></tr>
+</table>
+  </div>
+<center>
+  <p><a href="javascript:toggleDiv('myContent2');" style="background-color: SkyBlue; padding: 10px 15px;">Theory</a></p>
+  <div id="myContent2" style="background-color: white; padding: 5px 10px; display:none">
+    <p><a href="javascript:toggleDiv('myContent_intro');" style="background-color: PowderBlue; padding: 10px 15px;">Intro</a></p>
+    <div id="myContent_intro" style="background-color: white; padding: 5px 10px; display:none">
+      <p style="color:FireBrick"><b><u>INTRODUCTION</u></b></p>
+      <p>It was shown, how to describe a system by means of Lagrange's equations. For a system with $n$
+      degrees of freedom, we need $n$ generalized coordinates. The Lagrangian $L$ was described in terms of generalized coordinates $q_k$
+      and generalized velocities $q↖{·}_k$. Furthermore, if a Lagrangian were an explicit function of time, we wrote
+      <br>$L(q,q↖{.},t)=L(q_1,q_2,...,q_n;q↖{.}_1,q↖{.}_2,...,q↖{.}_n;t)$</p>
+      <p>Lagrange's formalism leads to $n$ second-order differential equations.
+      <br> An alternative to Lagrange's formalism is Hamilton's formalism. Hamilton's formalism is
+        carried out in terms of <i>generalized coordinates</i> and <i>generalized momenta</i>. This
+        is, if the <b>Hamiltonian</b> $H$ is an explicit function of time, then:
+      <br>$H=H(q,p,t)=H(q_1,q_2,...,q_n;p_1,p_2,...,p_n;t)$</p>
+      <p>Such formalism for a system of $n$ degrees of freedom leads to $2n$ first-order differential equations.
+      These $2n$ first-order equations are much easier to solve than $n$ second-order differential equations,
+      as in the case of Lagrange's formalism.</p>
+      </div>
+    <p>$∗$</p>
+      <p><a href="javascript:toggleDiv('myContent_momenta');" style="background-color: PowderBlue; padding: 10px 15px;">Generalized momenta</a></p>
+      <div id="myContent_momenta" style="background-color: white; padding: 5px 10px; display:none">
+        <p style="color:FireBrick"><b><u>GENERALIZED MOMENTA AND CYCLIC (OR IGNORABLE) COORDINATES</u></b></p>
+      <p>Firstly, we have to define the generalized momentum. As a simple example, let us consider
+        the motion of a single particle moving with velocity $x↖{.}$ along $X-\text"axis"$. The kinetic energy of
+      such a particle is
+      <br> $T=1/2mx↖{.}^2$
+      <br>Usually one defines momentum $p$ as $p=mx↖{.}$. But in the present formalism, we define the momentum $p$
+      to be
+      <br> $p={∂T}/{∂x↖{.}}\text" or " p={∂L}/{∂x↖{.}}$</p>
+      <p>Thus, the <b><u><i>generalized momentum</i></u> $p_k$ </b>corresponding to generalized coordinate $q_k$ as:</p>
+      <p style="border:3px; border-style:solid; border-color:Black;">$p_k={∂L}/{∂x↖{.}_k}$</p>
+      <p>The generalized momentum $p_k$ is also called the <b><u><i>conjugate momentum</i></u></b> $p_k$
+        (conjugate to coordinate $q_k$). It may be pointed out that the generalized momenta do not
+        always convey the same physical concept as we are used to in introductory physics using
+        rectangular coordinates.<br>...</p>
+      <p>For a conservative system, Lagrange's equations are
+      <br>${d}/{dt}\({∂L}/{∂q↖{.}_k}\)-{∂L}/{∂q_k}=0$
+      <br>and takes the form $p↖{.}_k={∂L}/{∂q_k}$<br>
+        That is the connection between the generalized momenta and the constants of motion.</p>
+      <p style="border:3px; border-style:solid; border-color:Black;">
+      <i>Quantities that are functions of the coordinates and velocities that remain constant in time
+      are called <b>constants of motion.</b></i> </p>
+      <p>Suppose in the expression for the Lagrangian $L$ of a system a
+      certain coordinate $q_λ$ does not occur explicitly. In such cases,
+      <br> ${∂L}/{∂q_λ}=0$
+      <br>Therefore, $p↖{.}_λ={d}/{dt}\({∂L}/{∂q_λ}\)=0$
+      <br> which on integration yields
+      <br> $p_λ={∂L}/{∂q↖{.}_λ}=\text"constant"=C_λ$
+      <br> That is, whenever the Lagrangian function does not contain a coordinate $q_λ$ explicitly,
+        the corresponding generalized momentum $p_λ$ is a constant of motion. The coordinate $q_λ$
+        is said to be <u><i>cyclic</i></u> or <u><i>ignorable</i></u>. Thus, we may
+        conclude that <b><i>the generalized momentum associated with an ignorable coordinate is a constant
+        of motion of a system</i></b>.</p>
+      <p>As an <u>example</u>, let us consider the motion of a particle in a central force field. In polar
+        coordinates, the Lagrangian $L$ is
+      <br> $L=T-V=1/2m\(r↖{.}^2+r^2θ↖{.}^2\)-V(r)$
+      <br>Since $L$ does not contain the coordinate $θ$, $θ$ <i>is cyclic (or ignorable)</i>, and
+      the generalized momentum corresponding to $θ$ is
+      <br>$p_θ={∂L}/{∂θ↖{.}}=mr^2θ↖{.}=\text"constant"$</p>
+      <p>where $p_θ$ is the angular momentum and is a constant of motion. A note of caution: $p_θ$ is
+      a constant of motion; it does not mean that $θ↖{.}$ is constant. For example, in an elliptic
+        orbit resulting from an inverse-square attractive force, $θ↖{.}$ varies, but $r$ also varies
+        in such a way as to make $p_θ$ remain constant.</p>
+    </div>
+    <p>$∗$</p>
+    <a href="javascript:toggleDiv('myContent_hamiltonian');" style="background-color: PowderBlue; padding: 10px 15px;">Symmetry principles</a>
+    <div id="myContent_hamiltonian" style="background-color: white; padding: 5px 10px; display:none">
+      <p style="color:FireBrick"><b><u>HAMILTONIAN FUNCTION: CONSERVATION LAWS AND SYMMETRY PRINCIPLES</u></b></p>
+      <p>The system that does not interact with anything outside the system is called <i>closed system</i></p>
+      <p>There may be or may not be any interactions between the particles of the closed system. In either
+      case, for such a closed system there are always <i>seven constants or integrals of motion:</i>
+      (1) the linear momentum, which has three components, (2) the angular momentum, which also has
+        three components, and (3) the total energy. Let us investigate the process by which these
+        constants are arrived at from the considerations of Lagrangian of a closed system.</p>
+      <a href="javascript:toggleDiv('myContent_conservation_momentum');" style="background-color: LightCyan; padding: 10px 15px;">
+        -Conservation of Linear Momentum</a>
+      <div id="myContent_conservation_momentum" style="background-color: white; padding: 5px 10px; display:none">
+        <p style="color:Black"><b><u>CONSERVATION OF LINEAR MOMENTUM</u></b></p>
+      <p><b></b></p>
+      <p>Consideration a Lagrangian of a closed system in an inertial reference frame, implies that
+        <i><u>the Lagrangian of a closed system in an inertial frame unaffected or is invariant</u></i>. </p>
+        <p>Because of an outstanding property of an inertial system, that <i>space is homogeneous in an inertial
+        system or frame;</i> that is, a closed system is unaffected by a translation of the entire system in space.</p>
+      <p>The variation in $L$ due to the variation in the generalized coordinates must be zero.
+        That is, $L$ is invariant:</p>
+        <p>$δL=∑↙{k}{∂L}/{∂q_k}δq_k+∑↙{k}{∂L}/{∂q↖{.}_k}δq↖{.}_k=0$
+        <br> Since we are causing only the displacement of the system, $δq_i$ are not
+        functions of time; hence
+        <br>$δq↖{.}_k=δ\({dq}/{dt}\)={d}/{dt}\(δq\)=0$
+        <br>$⇒\text"  "δL=∑↙{k}{∂L}/{∂q_k}δq_k=0\text" ⇒ "{∂L}/{∂q_k}=0$</p>
+        <p style="border:3px; border-style:solid; border-color:Black;">${d}/{dt}\({∂L}/{∂q↖{.}_k}\)=0
+          \text" ⇒ "{∂L}/{∂q↖{.}_k}=\text"constant"$ </p>
+        <p>This equation states that if space is homogeneous then the linear momentum $p_k$ of a closed
+        system is constant. Since the motion of a single particle can be described by three Cartesian coordinates
+          (or any other generalized coordinates), there will be three constants of motion, $p_x, p_y, p_z$,
+        which are the three components of a linear momentum vector ${\bo p}_k$. In more general terms,
+        we may make the following statement:</p>
+        <p style="border:3px; border-style:solid; border-color:FireBrick;">
+          <i>If the Lagrangian of a system, closed or otherwise, is invariant with respect to a
+            <b>translation</b> in a certain direction, then the <b>linear momentum</b> of the system in that direction
+          is constant in time.</i>
+        </p>
+</div>
+      <p>-</p>
+        <a href="javascript:toggleDiv('myContent_conservation_angular_momentum');" style="background-color: LightCyan; padding: 10px 15px;">
+          -Conservation of Angular Momentum</a>
+        <div id="myContent_conservation_angular_momentum" style="background-color: white; padding: 5px 10px; display:none">
+          <p style="color:Black"><b><u>CONSERVATION OF ANGULAR MOMENTUM</u></b></p>
+          <p>Another property of an inertial system is that <i>space is isotropic in an inertial frame</i>;
+            that is, a closed system is unaffected by the orientation or rotation of the entire system.</p>
+          <p>This implies that <i><u>the Lagrangian of a closed system remains invariant if the
+            system is rotated through an infinitesimal angle</u></i>. </p>
+          <p>The same equation
+            <br>$δL=∑↙{k}{∂L}/{∂q_k}δq_k+∑↙{k}{∂L}/{∂q↖{.}_k}δq↖{.}_k=0$
+            <br> By definition,
+            <br>$p_k={∂L}/{∂q↖{.}_k}\text" ⇒ "p↖{.}_k={∂L}/{∂q_k}$
+            <br>$⇒\text"  "δL=∑↙{k}p↖{.}_kδq_k+∑↙{k}p_kδq↖{.}_k=0$</p>
+          <p>$δ{\bo r}=[δ{\bo θ},{\bo r}]\text" ⇒ " δ{\bo r}↖{.}=[δ{\bo θ},{\bo r}↖{.}]$</p>
+          <p>$δL={\bo p}↖{.}δ{\bo r}+{\bo p}δ{\bo r}↖{.}=0$</p>
+           <p>${\bo p}↖{.}[δ{\bo θ},{\bo r}]+{\bo p}[δ{\bo θ},{\bo r}↖{.}]=0$</p>
+          <p>$δ{\bo θ}[\({\bo r},{\bo p}↖{.}\)+\({\bo r}↖{.},{\bo p}\)]=0$</p>
+          <p>$δ{\bo θ}\({d}/{dt}[{\bo r},{\bo p}]\)=0$</p>
+          <p> $[{\bo p},{\bo r}]={\bo J}$
+          <br>where ${\bo J}$ is the angular momentum about the given axis. Therefore,
+          <br>$δ{\bo θ}{d{\bo J}}/{dt}=0$</p>
+          <p style="border:3px; border-style:solid; border-color:Black;">${d{\bo J}}/{dt}=0
+            \text" ⇒ "{\bo J}=[{\bo p},{\bo r}]=\text"constant"$ </p>
+          <p>where ${\bo J}$ has three components. In general:</p>
+          <p style="border:3px; border-style:solid; border-color:FireBrick;">
+            <i>If the Lagrangian remains invariant under <b>rotation</b> about an axis, then the <b>angular
+             momentum</b> of the system about this axis will remain constant in time.</i>
+          </p>
+        </div>
+      <p>-</p>
+      <a href="javascript:toggleDiv('myContent_conservation_energy');" style="background-color: LightCyan; padding: 10px 15px;">
+        -Conservation of Energy</a>
+      <div id="myContent_conservation_energy" style="background-color: white; padding: 5px 10px; display:none">
+        <p style="color:Black"><b><u>CONSERVATION OF ENERGY AND THE HAMILTONIAN FUNCTION</u></b></p>
+        <p>Another property of an inertial frame says, that <i>the time is homogeneous within an
+          inertial reference frame</i>. </p>
+        <p> This implies that <u><i>the Lagrangian of a closed system cannot
+        be an explicit function of time</i></u>. That is, in the total differential of $L$
+        <br>$dL=∑↙{k}{∂L}/{∂q_k}dq_k+∑↙{k}{∂L}/{∂q↖{.}_k}dq↖{.}_k+{∂L}/{∂y}dt$</p>
+        <p>We must have $\text"  " {∂L}/{∂t}=0$</p>
+        <p>${dL}/{dt}=∑↙{k}{∂L}/{∂q_k}{∂q_k}/{∂t}+∑↙{k}{∂L}/{∂q↖{.}_k}{∂q↖{.}_k}/{∂t}=0$</p>
+        <p>or
+          <br>${dL}/{dt}=∑↙{k}{∂L}/{∂q_k}q↖{.}_k+∑↙{k}{∂L}/{∂q↖{.}_k}∂q↖{..}_k=0$</p>
+        <p>From Lagrange's equations,
+        <br>${d}/{dt}\({∂L}/{∂q↖{.}_k}\)={∂L}/{∂q_k}$</p>
+        <p>${dL}/{dt}=∑↙{k}q↖{.}_k{d}/{dt}\({∂L}/{∂q↖{.}_k}\)+∑↙{k}{∂L}/{∂q↖{.}_k}∂q↖{..}_k$
+          $=∑↙{k}{d}/{dt}\(q↖{.}_k{∂L}/{∂q↖{.}_k}\)=0$</p>
+        <p>That is,
+        <br> ${d}/{dt}\(∑↙{k}q↖{.}_k{∂L}/{∂q↖{.}_k}-L\)=0$</p>
+        <p>Thus the quantity in parentheses must be constant in time. This constant is denoted by $H$,
+        called the <u><i>Hamiltonian $H$</i></u>, and is given by (uning the definition of generalized momentum)
+        <br> $H=∑↙{k}q↖{.}_k{∂L}/{∂q↖{.}_k}-L=∑↙{k}q↖{.}_kp↖{.}_k-L=\text"constant"$</p>
+        <p>Hence $H$ is a <i>constant of motion if $L$ is not an explicit function of time $t$;</i>
+        that is ${∂L}\text"/"{t}=0$. $H$ takes a special form if we make the following two assumptions:</p>
+        <p>(I) The potential energy $V$ is independent of the velocity coordinate $V=V(q_k)$so that
+        <br>${∂L}/{∂q↖{.}_k}={∂(T-V)}/{∂q↖{.}_k}={∂T}/{∂q↖{.}_k}$</p>
+        <p>(II) If the equations representing the transformation of coordinates do not contain time
+          explicitly, then the kinetic energy $T$ will not only be the quadratic function of the
+          generalized velocity, but will also be homogeneous in all its terms. [Caution: The
+          transformation equations between the coordinates, say from a rectangular to generalized,
+          will contain time explicitly if $q$'s are rotating with respect to the inertial coordinate
+          (say rectangular) or if the constraints are functions of time.]<br>...</p>
+        <p>Now, according to Euler's theorem for a homogeneous function $f(q_1,q_2,...,q_n)$ of order
+          $N$ in variables $(q_1,q_2,...,q_n)$,
+        <br>$∑↙{k=1}↖N q_k{∂f}/{∂q_k}=Nf$</p>
+        <p>Thus, if the kinetic energy $T$ is a homogeneous quadratic function, that is, of the order
+        $N=2$, we get
+        <br>$∑↙{k=1}↖N q↖{.}_k{∂f}/{∂q↖{.}_k}=2f$</p>
+        <p>Combining all together, we obtain</p>
+        <p>$H=2T-(T-V)=T+V=E$</p>
+        <p style="border:3px; border-style:solid; border-color:Black;">$H=E\text" ⇒ "E=\text"constant"$</p>
+        <p> where $E$ is the total energy and is constant. That is, under the assumption given
+        above, (I) $V=V(q_k)$ and (II) $T$ is a homogeneous quadratic function; the constant of
+          motion, the Hamiltonian $H$, is equal to the total energy $E$ of the system. It is very
+          important to keep in mind that $H$ is not always equal to $E$. The different possibilities are as follows</p>
+        <p>$H$ is <i>constant</i> and is <i>equal</i> to the total energy $E$.</p>
+        <p>$H$ is <i>constant</i> but is not <i>equal</i> to the total energy $E$.</p>
+        <p>$H$ is not <i>constant</i> but is <i>equal</i> to the total energy $E$.</p>
+        <p>$H$ is not <i>constant</i> and is not <i>equal</i> to the total energy $E$.</p>
+      </div>
+      <p>-</p>
+      <p>Summarizing, all three conservative laws may be shown in the table</p>
+      <table border-collapse="collapse;" border="1px solid black;">
+      <tr><th COLSPAN=2>SYMMETRY PROPERTIES AND CONSERVATION LAWS</th></tr>
+      <tr><td>Property in inertial frame</td><td>Conserved quantity</td></tr>
+      <tr><td>Homogeneous space</td><td>Linear momentum</td></tr>
+      <tr><th COLSPAN=2>$L$ is invariant to translation; $δL=0$</th></tr>
+      <tr><td>Isotropic space</td><td>Angular momentum</td></tr>
+      <tr><th COLSPAN=2>$L$ is invariant to rotation; $δL=0$</th></tr>
+      <tr><td>Homogeneous time</td><td>Total energy</td></tr>
+      <tr><th COLSPAN=2>$L$ is not an explicit function of time; ${∂L}\text"/"{∂t}=0$</th></tr>
+      </table>
+    </div>
+    <p>$∗$</p>
+    <a href="javascript:toggleDiv('myContent_hamiltonian_dynamics');" style="background-color: PowderBlue; padding: 10px 15px;">Hamiltonian Dynamics</a>
+    <div id="myContent_hamiltonian_dynamics" style="background-color: white; padding: 5px 10px; display:none">
+      <p style="color:FireBrick"><b><u>HAMILTONIAN DYNAMICS: HAMILTON'S EQUATIONS OF MOTION</u></b></p>
+    <p>Hamilton's equations of motion, also called the <u><i>canonical equations</i></u> of motion, will be
+    derived here.Beginning with the Lagrangian $L$ as a function of generalized coordinates and generalized velocities and may be an explicit function of time; that is
+    <br>$L=L(q_1,q_2,...,q_n;q↖{.}_1,q↖{.}_2,...,q↖{.}_n;t)$</p>
+      <p>The differential of $L$ is
+      <br>$dL=∑↙{k=1}↖n\({∂L}/{∂q_k}dq_k+{∂L}/{∂q↖{.}_k}dq↖{.}_k\)+{∂L}/{∂t}dt$</p>
+      <p>$dL=∑↙{k=1}↖n\(p↖{.}_kdq_k+p_kdq↖{.}_k\)+{∂L}/{∂t}dt$</p>
+      <p>Add $q↖{.}_kp_k$ to the both sides of the equation and, after rearranging, we get
+      <br>$d\(∑↙{k=1}↖np_kq↖{.}_k-L\)=∑↙{k=1}↖n\(q↖{.}_kdp_k-p↖{.}_kdq_k\)-{∂L}/{∂t}dt$</p>
+      <p>As before, we define the Hamiltonian function $H$ to be
+      <br>$H=∑↙{k=1}↖np_kq↖{.}_k-L(q_1,q_2,...,q_n;q↖{.}_1,q↖{.}_2,...,q↖{.}_n;t)$</p>
+      <p>and previous equation takes form
+        <br>$dH=∑↙{k=1}↖n\(q↖{.}_kdp_k-p↖{.}_kdq_k\)-{∂L}/{∂t}dt$</p>
+      <p>$L$ is an explicit function of $(q_1,q_2,...,q_n;q↖{.}_1,q↖{.}_2,...,q↖{.}_n;t)$. So, it
+        is possible to express $H$ as an explicit function $(q_1,q_2,...,q_n;p_1,p_2,...,p_n;t)$.
+        This can be done by using the relation defining generalized momenta, that is,
+      ${∂L}\text"/"{∂q↖{.}_k}=p_k$; hence we can express $q↖{.}_k$ in terms of $p_k$. WHen this is
+        possible, we can write
+      <br>$H=H(q_1,q_2,...,q_n;p_1,p_2,...,p_n;t)$</p>
+      <p>We may write the differential of $H$ as
+      <br>$dH=∑↙{k=1}↖n\({∂H}/{∂q_k}q_k+{∂H}/{∂p_k}p_k\)+{∂H}/{∂t}dt$</p>
+      <p>Comparison of the obtained equations, gives us</p>
+      <p style="border:3px; border-style:solid; border-color:Black;">$q↖{.}_k={∂H}/{∂p_k}$
+      <br>$p↖{.}_k=-{∂H}/{∂q_k}$</p>
+      <p style="border:3px; border-style:solid; border-color:FireBrick;">These equations are called <i>Hamilton's equations of motion</i>; and because of their
+        symmetrical nature, they are also called <i>canonical equations</i> of motion.
+        This procedure of describing motion by these equations is called <i>Hanilton's dynamics</i></p>
+    </div>
+  </div>
+</center>
+<center><p><br>...</p></center>
+</body>
+</html>

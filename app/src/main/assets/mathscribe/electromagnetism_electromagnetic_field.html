@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+	<title>Static Fields</title>
+</head>
+<body>
+<center><h2>Electric fields$^a$</h2></center>
+<center><table border="Brown" style="border:1px solid DarkSlateBlue;" bgcolor="Lavender">
+	<tr><td>Uniformly charged sphere, radius $a$, charge $q$</td>
+		<td>$\bo E(\bo r)=\{\table {q}/{4πε_0a^3}\bo r ,\text"," (r < a); {q}/{4πε_0r^3}\bo r ,\text"," (r ≥ a)$</td></tr>
+	<tr><td>Uniformly charged disk, radius $a$, charge $q$ (on axis, $z$)</td>
+		<td>$\bo E(\bo z)={q}/{2πε_0a^2}z\({1}/{|z|}-{1}/{√{z^2+a^2}}\)$</td></tr>
+	<tr><td>Line charge, charge density $λ$ per unit length</td>
+		<td>$\bo E(\bo r)={λ}/{2πε_0r^2}\bo r$</td></tr>
+	<tr><td>Electric dipole, moment $\bo p$ (spherical polar coordinates, $θ$ angle between $\bo p$
+		and $\bo r$)</td>
+		<td>$\table E_r={p\cos θ}/{2πε_0r^3} ; E_θ={p\sin θ}/{4πε_0r^3}$</td></tr>
+	<tr><td>Charge sheet, surface density $σ$</td>
+		<td>$E={σ}/{2ε_0}$</td></tr>
+</table></center>
+<p>$^a$For $ε_r=1$ in the surrounding medium.</p>
+
+<center><h2>Magnetic fields$^b$</h2></center>
+<center>
+	<table border="Brown" style="border:1px solid DarkSlateBlue;" bgcolor="Lavender">
+	<tr><td>Uniform infinite solenoid, current $I,n$ turns per unit length</td>
+		<td>$B=\{\table μ_0nI ,\text", inside (axial)"; 0,\text", outside"$</td></tr>
+	<tr><td>Uniform cylinder of current $I$, radius $a$</td>
+		<td>$B(r)=\{\table {μ_0Ir}/{2πa^2} ,\text"," (r < a); {μ_0I}/{2πr} ,\text","(r ≥ a)$</td></tr>
+	<tr><td>Magnetic dipole, moment $\bo m$ ($θ$ angle between $\bo m$ and $\bo r$)</td>
+		<td>$\table B_r=μ_0{m\cos θ}/{2πr^3} ; B_θ=μ_0{m\sin θ}/{4πr^3}$</td></tr>
+	<tr><td>Circular current loop of $N$ turns, radius $a$, along axis $z$</td>
+		<td>$B(z)={μ_0NI}/{2}{a^2}/{\(a^2+z^2\)^{3\text"/"2}}$</td></tr>
+	<tr><td>The axis $z$, of a straight solenoid, $n$ turns per unit length, current $I$</td>
+		<td>$B_{\text"axis"}={μ_0nI}/{2}\(\cos α_1-\cos α_2\)$</td></tr>
+</table></center>
+<p>$^b$For $μ_r=1$ in the surrounding medium.</p>
+
+<center><h2>Electromagnetic fields (general)</h2></center>
+<center><h3><font color="DarkSlateBlue">$●$ Field relationships</font></h3>
+	<table border="Brown" style="border:1px solid DarkSlateBlue;" bgcolor="Lavender">
+		<tr><td>Conservation of charge</td><td>$(\bo ∇,\bo J)=-{∂ρ}/{∂t}$ <br>or <br>${∂ρ}/{∂t}+\text"div"\bo J=0$</td></tr>
+		<tr><td>Magnetic vector potential</td><td>$\bo B=[\bo ∇,\bo A]$</td></tr>
+		<tr><td>Electric field from potentials</td><td>$\bo E=-{∂\bo A}/{∂t}-\bo ∇φ$</td></tr>
+		<tr><td>Coulomb gauge condition</td><td>$(\bo ∇,\bo A)=0$</td></tr>
+		<tr><td>Lorentz gauge condition</td><td>$(\bo ∇,\bo A)+{1}/{c^2}{∂φ}/{∂t}=0$</td></tr>
+		<tr><td>Potential field equations$^c$</td><td>$\table {1}/{c^2}{∂^2φ}/{∂t^2}-∇^2φ={ρ}/{ε_0};
+			{1}/{c^2}{∂^2\bo A}/{∂t^2}-∇^2\bo A=μ_0\bo J$</td></tr>
+		<tr><td>Expression for $φ$ in terms of $ρ^c$</td>
+			<td>$φ(\bo r,t)={1}/{4πε_0}∫↙\text"volume"{ρ(\bo r',t-{|\bo r-\bo r'|}/{c})}/
+				{|\bo r-\bo r'|}dτ'$</td></tr>
+		<tr><td>Expression for $\bo A$ in terms of $\bo J^c$</td>
+			<td>$\bo A(\bo r,t)={μ_0}/{4π}∫↙\text"volume"{\bo J(\bo r',t-{|\bo r-\bo r'|}/{c})}/
+				{|\bo r-\bo r'|}dτ'$</td></tr>
+	</table></center>
+<p>$^c$assumes the Lorentz gauge</p>
+<p>where</p>
+<table border="1">
+	<tr><td>$$\bo J$$</td><td>current density</td><td>$$ρ$$</td><td>charge density</td></tr>
+	<tr><td>$$t$$</td><td>time</td><td>$$c$$</td><td>speed of light</td></tr>
+	<tr><td>$$\bo A$$</td><td>vector potential</td><td>$$φ$$</td><td>electrical potential</td></tr>
+	<tr><td>$$dτ'$$</td><td>volume element</td><td>$$\bo r'$$</td><td>position vector of $dτ'$</td>
+	</tr>
+	<tr><td>$$μ_0$$</td><td>permeability of free space</td></tr>
+</table>
+
+<center><h3><font color="DarkSlateBlue">$●$ Maxwell's equations</font></h3></center>
+<center><table border="Brown" style="border:1px solid DarkSlateBlue;" bgcolor="Lavender">
+	<tr><th>Differential form:</th><th>Integral form:</th></tr>
+	<tr><td>$(\bo ∇,\bo E)={ρ}/{ε_0}$</td>
+		<td>$∮↙\text"closed surface"\bo Ed\bo s=1/ε_0∫↙\text"volume"ρdτ$</td></tr>
+	<tr><td>$(\bo ∇,\bo B)=0$</td><td>$∮↙\text"closed surface"\bo Bd\bo s=0$</td></tr>
+	<tr><td>$[\bo ∇,\bo E]=-{∂\bo B}/{∂t}$</td>
+		<td>$∮↙\text"loop"\bo Ed\bo l=-{dΦ}/{dt}$</td></tr>
+	<tr><td>$[\bo ∇,\bo B]=μ_0\bo J+μ_0ε_0{∂\bo E}/{∂t}$</td>
+		<td>$∮↙\text"loop"\bo B d\bo l=μ_0I+μ_0ε_0∮↙\text"surface"{∂\bo E}/{∂t}d\bo s$</td>
+	</tr>
+</table>
+</center>
+<center><h3><font color="DarkSlateBlue">$●$ Maxwell's equations (using $\bo D$ and $\bo H$)</font>
+</h3></center>
+<center><table border="Brown" style="border:1px solid DarkSlateBlue;" bgcolor="Lavender">
+	<tr><th>Differential form:</th><th>Integral form:</th></tr>
+	<tr><td>$(\bo ∇,\bo D)=ρ_{free}$</td>
+		<td>$∮↙\text"closed surface"\bo D d\bo s=∫↙\text"volume"ρ_{free}dτ$</td></tr>
+	<tr><td>$(\bo ∇,\bo B)=0$</td><td>$∮↙\text"closed surface"\bo B d\bo s=0$</td></tr>
+	<tr><td>$[\bo ∇,\bo E]=-{∂\bo B}/{∂t}$</td>
+		<td>$∮↙\text"loop"\bo E d\bo l=-{dΦ}/{dt}$</td></tr>
+	<tr><td>$[\bo ∇,\bo H]=\bo J_{free}+{∂\bo D}/{∂t}$</td>
+		<td>$∮↙\text"loop"\bo H d\bo l=I_{free}+∮↙\text"surface"{∂\bo D}/{∂t} d\bo s$</td></tr>
+</table></center>
+<p>Simply, we formally changed $\bo D=ε_0 \bo E$ and $\bo H={\bo B}/{μ_0}$</p>
+<p>where</p>
+<table border="1">
+	<tr><td>$\bo E$</td><td>electric field</td><td>$\bo B$</td><td>magnetic flux density</td></tr>
+	<tr><td>$\bo J$</td><td>current density</td><td>$ρ$</td><td>charged density</td></tr>
+	<tr><td>$\bo J_{free}$</td><td>free current density (in the sense of $\bo J=\bo J_{induced}+
+		\bo J_{free}$)</td><td>$ρ_{free}$</td><td>free charge density (in the sense of $\bo ρ=
+		\bo ρ_{induced}+\bo ρ_{free}$</td></tr>
+	<tr><td>$dl$</td><td>line element</td><td>$ds$</td><td>surface element</td></tr>
+	<tr><td>$dτ$</td><td>volume element</td><td>$Φ$</td><td>linked magnetic flux
+		$(=∫\bo B⋅d\bo s)$</td></tr>
+	<tr><td>$I$</td><td>linked current $(=∫\bo J⋅d\bo s)$</td><td>$I_{free}$</td>
+		<td>linked free current $(=∫\bo J_{free}⋅d\bo s)$</td></tr>
+	<tr><td>$t$</td><td>time</td></tr>
+</table>
+<center><p>...</p></center>
+
+</body>
+</html>

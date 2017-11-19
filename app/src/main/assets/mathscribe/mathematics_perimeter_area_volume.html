@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+	<title>Perimeter, Area and Volume</title>
+</head>
+<body>
+<center><h3>$●$ Perimeter, Area and Volume</h3></center>
+<center><img src="mathematics_perimeter_circle.jpg" alt="coordinate systems" style="width:/2;height:158px;">
+	<img src="mathematics_perimeter_sphere
+	.jpg" alt="coordinate systems" style="width:/2;height:168px;">
+
+<table border="1" style="border:1px solid Gold;" bgcolor="OldLace">
+	<tr><td>Perimeter of circle</td><td>$P=2πr$</td></tr>
+	<tr><td>Area of circle</td><td>$A=πr^2$</td></tr>
+	<tr><td>Surface area of sphere$^a$</td><td>$A=4πR^2$</td></tr>
+	<tr><td>Volume of sphere</td><td>$V={4}/{3}πR^3$</td></tr>
+	<tr><td>Perimeter of ellipse$^b$</td><td>$P=4aE({π}/{2},e)$ $≈2π√{{a^2+b^2}/{2}}$</td></tr>
+	<tr><td>Area of ellipse</td><td>$A=πab$</td></tr>
+	<tr><td>Volume of ellipsoid$^c$</td><td>$V=4π{abc}/{3}$</td></tr>
+	<tr><td>Surface area of cylinder</td><td>$A=2πr(h+r)$</td></tr>
+	<tr><td>Volume of cylinder</td><td>$V=πr^2h$</td></tr>
+	<tr><td>Area of circular cone$^d$</td><td>$A=πrl$</td></tr>
+	<tr><td>Volume of cone or pyramid</td><td>$V=A_b{h}/{3}$</td></tr>
+	<tr><td>Surface are of torus</td><td>$A=π^2(r_1+r_2)(r_2-r_1)$</td></tr>
+	<tr><td>Volume of torus</td><td>$V={π^2}/{4}(r_2^2+r_1^2)(r_2-r_1)$</td></tr>
+	<tr><td>Area$^d$ of spherical cap, depth $d$</td><td>$V=πd^2\(R-{d}/{3}\)$</td></tr>
+	<tr><td>Solid angle of a circle from a point on its axis, $z$ from centre</td>
+		<td>$Ω=2π\[1-{z}/{√{z^2+r^2}}\]$ $=2π(1-\cos α)$</td></tr>
+</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_script_discrete_statistics');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_script_discrete_statistics" style="background-color: white; padding: 5px 10px; display:none">
+<p>$^a$ Sphere defined by $x^2+y^2+z^2=R^2$.</p>
+<p>$^b$ The approximation is exact when $e=0$ and $e≈0.91$,
+	giving a maximum error of $11%$ at $e=1$.</p>
+<p>$^c$ Ellipsoid defined by ${x^2}/{a^2}+{y^2}/{b^2}+{z^2}/{c^2}=1$.</p>
+<p>$^d$ Curved surface only.</p>
+	</div>
+<p>
+	<a href="javascript:toggleDiv('where_discrete_statistics');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_discrete_statistics" style="background-color: white; padding: 5px 10px; display:none">
+<table border-collapse="collapse;" border="1px solid black;">
+	<tr><td>$$P$$</td><td>perimeter</td><td>$$a$$</td><td>semi-major axis</td></tr>
+	<tr><td>$$r$$</td><td>radius</td><td>$$b$$</td><td>semi-major axis</td></tr>
+	<tr><td>$$A$$</td><td>area</td><td>$$E$$</td><td>elliptic integral of the second kind</td></tr>
+	<tr><td>$$R$$</td><td>sphere radius</td><td>$$e$$</td><td>eccentricity $(=1-{b^2}/{c^2})$</td></tr>
+	<tr><td>$$c$$</td><td>third semi-axis</td><td>$$h$$</td><td>height</td></tr>
+	<tr><td>$$l$$</td><td>slant height</td><td>$$A_b$$</td><td>base area</td></tr>
+	<tr><td>$$r_1$$</td><td>inner radius</td><td>$$r_2$$</td><td>outer radius</td></tr>
+</table>
+	</div>
+
+<center><p>...</p></center>
+</body>
+</html>

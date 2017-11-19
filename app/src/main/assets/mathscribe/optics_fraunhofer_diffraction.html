@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+	<title>Fraunhofer diffraction</title>
+</head>
+<body>
+<center><h2>Fraunhofer diffraction</h2></center>
+<center><h3><font color="GoldenRod"><b>$●$ Gratings$^a$</b></font></h3>
+	<img src="optics_fraunhofer_gratings.jpg" alt="Fraunhofer Diffraction" style="width:100%;height:auto;">
+</center>
+<center>
+<table border="Brown" style="border:1px solid Gold;" bgcolor="GoldenRod">
+	<tr><td>Young's double slits$^b$</td><td>$I(s)=I_0\cos^2 {kDs}/{2}$</td></tr>
+	<tr><td>$N$ equally spaced narrow slits</td><td>$I(s)=I_0\[{\sin(Nkds\text"/"2)}/{N\sin(kds\text"/"2)}\]^2$</td></tr>
+	<tr><td><p>Infinite grating <br><br>Normal incidence <br><br>
+		Oblique incidence<br><br>Reflection grating</p></td>
+		<td>$I(s)=I_0∑↙{n=-∞}↖∞ δ\(s-{nλ}/{d}\)$<br>$\sin θ_n={nλ}/{d}$
+			<br>$\sin θ_n+\sin θ_i={nλ}/{d}$<br>$\sin θ_n-\sin θ_i={nλ}/{d}$</td></tr>
+	<tr><td>Chromatic resolving power</td><td>${λ}/{δλ}=Nn$</td></tr>
+	<tr><td>Granting dispersion</td><td>${∂θ}/{∂λ}={n}/{d\cos θ}$</td></tr>
+	<tr><td>Bragg's law$^c$</td><td>$2a\sin θ_n=nλ$</td></tr>
+</table></center>
+<p>$^a$ Unless stated otherwise, the illumination is normal to the grating.
+	<br>$^b$ Two narrow slits separated by $D$.
+	<br>$^c$ The condition is for Bragg reflection, with $θ_n=θ_i$
+</p>
+<center><img src="optics_fraunhofer_D.jpg" alt="Fraunhofer Diffraction"
+			 style="width:40%;height:auto;">
+	<img src="optics_fraunhofer_N.jpg" alt="Fraunhofer Diffraction"
+		 style="width:40%;height:auto;">
+	<img src="optics_fraunhofer_theta.jpg" alt="Fraunhofer Diffraction"
+		 style="width:40%;height:auto;">
+	<img src="optics_fraunhofer_a.jpg" alt="Fraunhofer Diffraction"
+		 style="width:40%;height:auto;"></center>
+<p>where</p>
+<table border="1">
+	<tr><td>$I(s)$</td><td>diffracted intensity</td><td>$I_0$</td><td>peak intensity</td></tr>
+	<tr><td>$θ$</td><td>diffraction angle</td><td>$s$</td><td>$=\sin θ$</td></tr>
+	<tr><td>$D$</td><td>slit separation</td><td>$λ$</td><td>wavelength</td></tr>
+	<tr><td>$N$</td><td>number of slits</td><td>$k$</td><td>wavenumber<br>$(=2π\text"/"λ)$</td></tr>
+	<tr><td>$d$</td><td>slit spacing</td><td>$n$</td><td>diffraction order</td></tr>
+	<tr><td>$δ$</td><td>Dirac delta function</td><td>$θ_n$</td><td>angle of diffracted maximum</td></tr>
+	<tr><td>$θ_i$</td><td>angle of incident illumination</td><td>$δλ$</td><td>diffraction peak width</td></tr>
+	<tr><td>$a$</td><td>atomic plane spacing</td></tr>
+</table>
+
+<center><p>...</p></center>
+</body>
+</html>

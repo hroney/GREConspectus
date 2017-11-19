@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+	<!-- <script>M.MathPlayer = false; M.trustHtml = true;</script> -->
+	<title>Probability and Statistics</title>
+</head>
+<body>
+<center><h2>Probability and statistics</h2></center>
+<center><h3><font color="GoldenRod"><b>$●$ Discrete statistics</b></font></h3></center>
+<center>
+	<table border="SandyBrown" style="border:1px solid SandyBrown;" bgcolor="OldLace">
+	<tr><td>Mean</td><td>$\ov x={1}/{N}∑↙{i=1}↖N x_i$</td></tr>
+	<tr><td>Variance$^a$</td><td>$\text"var"\[x\]={1}/{N-1}∑↙{i=1}↖N \(x_i-\ov x\)^2$</td></tr>
+	<tr><td>Standard deviation</td><td>$σ\[x\]=√{\text"var"\[x\]}$</td></tr>
+	<tr><td>Skewness</td><td>$\text"skew"\[x\]={N}/{(N-1)(N-2)}$ $⋅∑↙{i=1}↖N \({x_i-\ov x}/{σ}\)^3$
+	</td></tr>
+	<tr><td>Kurtosis</td><td>$\text"kurt"\[x\]≈\[{1}/{N}∑↙{i=1}↖N \({x_i-\ov x}/{σ}\)^4\]-3$</td>
+	</tr>
+	<tr><td>Correlation coefficient$^b$</td><td>
+		$r={∑↙{i=1}↖N \(x_i-\ov x)(y_i-\ov y)}/{√{∑↙{i=1}↖N \(x_i-\ov x)^2}√{∑↙{i=1}↖N \(y_i-\ov
+		y)^2}}$</td>
+	</tr>
+</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_script_discrete_statistics');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_script_discrete_statistics" style="background-color: white; padding: 5px 10px; display:none">
+<p>$^a$ If $\ov x$ is derived from the data, {$x_i$}, the relation is
+	as shown. If $\ov x$ is known independently, then an
+	unbiased estimate is obtained by dividing the
+	right-hand side by $N$ rather 	then $N-1$.
+	<br>$^b$ Also known as "Pearson's $r$".</p>
+</div>
+<p>
+	<a href="javascript:toggleDiv('where_discrete_statistics');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_discrete_statistics" style="background-color: white; padding: 5px 10px; display:none">
+<table>
+	<tr><td>$x_i$</td><td>data series</td><td>$σ$</td><td>Standard deviation</td></tr>
+	<tr><td>$N$</td><td>series length</td><td>$x,y$</td><td>data series to correlate</td></tr>
+	<tr><td>$\ov x$</td><td>mean value</td><td>$r$</td><td>correlation coefficient</td></tr>
+	<tr><td>$var\[x\]$</td><td>unbiased variance</td></tr>
+</table>
+	</div>
+
+<center><h3><font color="GoldenRod"><b>$●$ Discrete probability distributions</b></font></h3></center>
+<center>
+	<table border="SandyBrown" style="border:1px solid SandyBrown;" bgcolor="OldLace">
+	<tr><th>distribution</th><th>pr(x)</th><th>mean</th><th>variance</th><th>domain</th></tr>
+	<tr><td>Binomial</td><td>$(\table n; x)p^x(1-p)^{n-x}$</td><td>$np$</td><td>$np(1-p)$</td>
+		<td>$(x=0,1,...,n)$</td></tr>
+	<tr><td>Geometric</td><td>$(1-p)^{x-1}p$</td><td>$1/p$</td><td>$(1-p)\text"/"p^2$</td>
+		<td>$(x=1,2,3,...)$</td></tr>
+	<tr><td>Poisson</td><td>${λ^x \exp{(-λ)}}\text"/"{x!}$</td><td>$λ$</td><td>$λ$</td>
+		<td>$(x=1,2,3,...)$</td></tr>
+</table></center>
+<p>
+	<a href="javascript:toggleDiv('where_discrete_probability_distribution');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_discrete_probability_distribution" style="background-color: white; padding: 5px 10px; display:none">
+	<p>$(\table n; x)p^x(1-p)^{n-x}$ binomial coefficient</p>
+</div>
+
+<center><h3><font color="GoldenRod"><b>$●$ Continuous probability distributions</b></font></h3></center>
+<center>
+	<table border="SandyBrown" style="border:1px solid SandyBrown;" bgcolor="OldLace">
+	<tr><th>distribution</th><th>pr(x)</th><th>mean</th><th>variance</th><th>domain</th></tr>
+	<tr><td>Uniform</td><td>${1}/{b-a}$</td><td>${a+b}/{2}$</td><td>${(b-a)^2}/{12}$</td>
+		<td>$a≤x≤b$</td></tr>
+	<tr><td>Exponential</td><td>$λ \exp{(-λx)}$</td><td>$1\text"/"λ$</td><td>$1\text"/"λ^2$</td>
+		<td>$x≥0$</td></tr>
+	<tr><td>Normal/ Gaussian</td><td>${1}/{σ√{2π}}\exp{\[{-(x-μ)^2}/{2σ^2}\]}$</td><td>$μ$</td>
+		<td>$σ^2$</td><td>$-∞ < x < ∞$</td></tr>
+	<tr><td>Chi-squared$^a$</td><td>${e^{x\text"/"2}x^{(r\text"/"2)-1}}/{2^{r\text"/"2}Γ(r\text"/"2)}$</td>
+		<td>$r$</td><td>$2r$</td><td>$x≥0$</td></tr>
+	<tr><td>Rayleigh</td><td>${x}/{σ^2}\exp{({-x^2}/{2σ^2})}$</td><td>$σ√{π\text"/"2}$</td>
+		<td>$2σ^2\(1-π/4\)$</td><td>$x≥0$</td></tr>
+	<tr><td>Cauchy/ Lorentzian</td><td>${a}/{π(a^2+x^2)}$</td><td>(none)</td><td>(none)</td>
+		<td>$-∞ < x < ∞$</td></tr>
+</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_script_continuous_probability_distribution');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_script_continuous_probability_distribution" style="background-color: white; padding: 5px 10px; display:none">
+	$^a$ With $r$ degrees of freedom $Γ$ is the gamma function</div>
+
+<center><p>...</p></center>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+	<title>Fresnel diffraction</title>
+</head>
+<body>
+<center><h2>Fresnel diffraction</h2></center>
+<center><h3><font color="GoldenRod"><b>$●$ Kirchhoff's diffraction formula$^a$</b></font></h3>
+	<img src="optics_fresnel1.jpg" alt="Fresnel Diffraction" style="width:100%;height:auto;">
+	<img src="optics_fresnel2.jpg" alt="Fresnel Diffraction" style="width:100%;height:auto;">
+</center>
+<center>
+<table border="Brown" style="border:1px solid Gold;" bgcolor="GoldenRod">
+	<tr><td><p>Source at infinity <br><br> where: <br><br> Obliquity factor (cardioid)</p></td>
+		<td>$ψ_p=-{\bo i}/{λ}ψ_0 \∫↙{\text"plane"}K(θ){e^{ikr}}/{r}dA$<br><br><br><br> $K(θ)={1}/{2}(1+\cos θ)$</td></tr>
+	<tr><td>Source at finite distance$^b$</td>
+		<td>$ψ_p=-{\bo iE_0}/{λ}∫↙{\text"closed surface"}{e^{ik(ρ+r)}}/{2ρr}×$
+			$[\cos(\bo s,\bo r)-\cos(\bo s,\bo ρ)]dS$</td></tr>
+</table></center>
+<p>$^a$ Also known as the <i>"Fresnel-Kirchhoff formula."</i> Diffraction by an obstacle coincident with the
+	integration surface can be approximated by omitting that part of the surface from the integral.
+	<br>$^b$ The source amplitude at $ρ$ is $ψ(ρ)=E_0e^{ikρ}\text"/"ρ$. The integral is taken over a
+	surface enclosing the point $P$.
+</p>
+<table border="1">
+	<tr><td>$ψ_p$</td><td>complex amplitude at $P$</td><td>$λ$</td><td>wavelength</td></tr>
+	<tr><td>$k$</td><td>wavenumber $(=2π\text"/"λ)$</td><td>$ψ_0$</td><td>incident amplitude</td></tr>
+	<tr><td>$θ$</td><td>obliquity angle</td><td>$r$</td><td>distance of $dA$ from $P (≫λ)$</td></tr>
+	<tr><td>$dA$</td><td>area element on incident wavefront</td><td>$K$</td><td>oblique factor</td></tr>
+	<tr><td>$dS$</td><td>element of closed surface</td><td>$\bo x$</td><td>unit vector</td></tr>
+	<tr><td>$\bo s$</td><td>vector normal to $dS$</td><td>$\bo r$</td><td>vector from $P$ to $dS$</td></tr>
+	<tr><td>$\bo ρ$</td><td>vector from source to $dS$</td><td>$E_0$</td><td>amplitude (see footnote $^b$)</td></tr>
+</table>
+<center><h3><font color="GoldenRod"><b>$●$ Fresnel zones</b></font></h3>
+	<img src="optics_fresnel_zone.jpg" alt="Fresnel zones" style="width:100%;height:auto;">
+</center>
+<center>
+<table border="Brown" style="border:1px solid Gold;" bgcolor="GoldenRod">
+	<tr><td><p>Effective aperture distance$^a$</p></td><td>${1}/{z}={1}/{z_1}+{1}/{z_2}$</td></tr>
+	<tr><td>Half-period zone radius</td><td>$y_n=(nλz)^{1\text"/"2}$</td></tr>
+	<tr><td>Axial zeros (circular aperture)</td><td>$z_m={R^2}/{2mλ}$</td></tr>
+</table></center>
+<p>$^a$ I.e., the aperture-observer distance to be employed when the source is not at infinity.</p>
+<table border="1">
+	<tr><td>$z$</td><td>effective distance</td><td>$z_1$</td><td>source-aperture distance</td></tr>
+	<tr><td>$z_2$</td><td>aperture-observer distance</td><td>$n$</td><td>half-period zone number</td></tr>
+	<tr><td>$λ$</td><td>wavelength</td><td>$y_n$</td><td>$n$th half-period zone radius</td></tr>
+	<tr><td>$z_m$</td><td>distance of $m$th zero from aperture</td><td>$R$</td><td>aperture radius</td></tr>
+</table>
+
+<center><p>...</p></center>
+</body>
+</html>

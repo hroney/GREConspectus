@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/formulas_menu_literature"
+        android:title="@string/formulas_literature"
+        android:orderInCategory="1"/>
+    <item
+        android:id="@+id/formulas_menu_tips"
+        android:title="@string/formulas_useful_tips"
+        android:orderInCategory="2"/>
+    <item
+        android:id="@+id/formulas_menu_studyplan"
+        android:title="@string/formulas_useful_studyplans"
+        android:orderInCategory="3"/>
+    <item
+        android:id="@+id/formulas_menu_additional"
+        android:title="@string/formulas_useful_additional"
+        android:orderInCategory="4"/>
+</menu>

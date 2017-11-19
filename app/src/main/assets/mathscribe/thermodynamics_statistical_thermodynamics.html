@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+	<title>Statistical Thermodynamics</title>
+</head>
+<body>
+<center><h2>Statistical Thermodynamics</h2></center>
+<center><h3><font color="LightSkyBlue"><b>$●$ Statistical entropy</b></font></h3>
+	<table border="MediumAquaMarine" style="border:1px solid Gold;" bgcolor="LightSkyBlue">
+		<tr><td>Boltzmann formula$^a$</td><td>$S=k\ln W$<br>$≈k\ln g(E)$</td></tr>
+		<tr><td>Gibbs entropy$^b$</td><td>$S=-k∑↙{i}p_i\ln p_i$</td></tr>
+		<tr><td>$N$ two-level system</td><td>$W={N!}/{(N-n)!n!}$</td></tr>
+		<tr><td>$N$ harmonic oscillators</td><td>$W={(Q+N-1)!}/{Q!(N-1)!}$</td></tr>
+	</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_statistical_entropy');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_statistical_entropy" style="background-color: white; padding: 5px 10px; display:none">
+<p>$^a$ Sometimes called "configuration entropy".</p>
+<p>$^b$ Sometimes called "canonical entropy"."</p>
+	</div>
+<p>
+	<a href="javascript:toggleDiv('where_statistical_entropy');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_statistical_entropy" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$S$</td><td>entropy</td><td>$k$</td><td>Boltzmann constant</td></tr>
+	<tr><td>$W$</td><td>number of accessible microstates</td><td>$g(E)$</td><td>density of
+		microstates with energy $E$</td></tr>
+	<tr><td>$∑_{i}$</td><td>sum over microstates</td><td>$p_i$</td><td>probability that the system
+		is in microstate $i$</td></tr>
+	<tr><td>$N$</td><td>number of systems</td><td>$n$</td><td>number in upper state</td></tr>
+	<tr><td>$Q$</td><td>total number of energy quanta available</td></tr>
+</table>
+</div>
+<center><h3><font color="LightSkyBlue"><b>$●$ Ensemble probabilities</b></font></h3>
+	<table border="MediumAquaMarine" style="border:1px solid Gold;" bgcolor="LightSkyBlue">
+		<tr><td>Microcanonical ensemble$^a$</td><td>$p_i=1/W$</td></tr>
+		<tr><td>Partition function$^b$</td><td>$Z=∑↙{i}e^{-βE_i}$</td></tr>
+		<tr><td>Canonical ensemble (Boltzmann distribution)$^c$</td><td>$p_i=1/Ze^{-βE_i}$</td></tr>
+		<tr><td>Grand partition function</td><td>$Ξ=∑↙{i}e^{-β(E_i-μN_i)}$</td></tr>
+		<tr><td>Grand canonical ensemble (Gibbs distribution)$^d$</td><td>$p_i=1/Ξe^{-β(E_i-μN_i)}$</td></tr>
+	</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_ensemble_probability');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_ensemble_probability" style="background-color: white; padding: 5px 10px; display:none">
+<p>$^a$ Energy fixed.</p>
+<p>$^b$ Also called "sum over states".</p>
+<p>$^c$ Temperature fixed.</p>
+<p>$^d$ Temperature fixed. Exchange of both heat and particles with a reservoir.</p>
+	</div>
+<p>
+	<a href="javascript:toggleDiv('where_ensemble_probability');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_ensemble_probability" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$p_i$</td><td>probability that the system is in microstate $i$</td><td>$∑_{i}$</td>
+		<td>sum over microstates</td></tr>
+	<tr><td>$W$</td><td>number of accessible microstates</td><td>$Z$</td><td>partition function</td></tr>
+	<tr><td>$β$</td><td>$=1\text"/"{(kT)}$</td><td>$E_i$</td><td>energy of microstate $i$</td></tr>
+	<tr><td>$k$</td><td>Boltzmann constant</td><td>$T$</td><td>temperature</td></tr>
+	<tr><td>$Ξ$</td><td>grand partition function</td><td>$μ$</td><td>chemical potential</td></tr>
+	<tr><td>$N_i$</td><td>number of particles in microstate $i$</td></tr>
+</table>
+</div>
+
+<center><h3><font color="LightSkyBlue"><b>$●$ Macroscopic thermodynamic variables</b></font></h3>
+	<table border="MediumAquaMarine" style="border:1px solid Gold;" bgcolor="LightSkyBlue">
+		<tr><td>Helmholtz free energy</td><td>$F=-kT\ln Z$</td></tr>
+		<tr><td>Grand potential</td><td>$Φ=-kT\ln Ξ$</td></tr>
+		<tr><td>Internal energy</td><td>$U=F+TS=-{∂\ln Z}/{∂β}|_{V,N}$</td></tr>
+		<tr><td>Entropy</td><td>$S=-{∂F}/{∂T}|_{V,N}={∂(kT\ln Z)}/{∂T}|_{V,N}$</td></tr>
+		<tr><td>Pressure</td><td>$p=-{∂F}/{∂V}|_{T,N}={∂(kT\ln Z)}/{∂V}|_{T,N}$</td></tr>
+		<tr><td>Chemical potential</td><td>$μ={∂F}/{∂N}|_{V,T}=-{∂(kT\ln Z)}/{∂N}|_{V,T}$</td></tr>
+	</table></center>
+<p>
+	<a href="javascript:toggleDiv('where_macroscopic_variables');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_macroscopic_variables" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$F$</td><td>Helmholtz free energy</td><td>$Φ$</td><td>grand potential</td></tr>
+	<tr><td>$Z$</td><td>partition function</td><td>$Ξ$</td><td>grand partition function</td></tr>
+</table>
+</div>
+
+<center><h3><font color="LightSkyBlue"><b>$●$ Identical particles</b></font></h3>
+	<center><img src="thermodynamics_Bose-Einstein_distribution.jpg" alt="Bose-Einstein distribution" style="width:40%;height:auto;">
+		<img src="thermodynamics_Fermi-Dirac_distribution.jpg" alt="Fermi-Dirac distribution" style="width:40%;height:auto;">
+	</center>
+	<table border="MediumAquaMarine" style="border:1px solid Gold;" bgcolor="LightSkyBlue">
+		<tr><td>Bose-Einstein distribution$^a$</td><td>$f_i=1/{e^{β(ε_i-μ)}-1}$</td></tr>
+		<tr><td>Fermi-Dirac distribution$^b$</td><td>$f_i=1/{e^{β(ε_i-μ)}+1}$</td></tr>
+		<tr><td>Fermi energy$^c$</td><td>$ε_F={ħ^2}/{2m}\({6π^2n}/{g}\)^{2\text"/"3}$</td></tr>
+		<tr><td>Bose condensation temperature</td><td>$T_c={6πħ^2}/{mk}\[{n}/{gζ(3\text"/"2)}\]^
+			{2\text"/"3}$</td></tr>
+	</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_identical_particles');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_identical_particles" style="background-color: white; padding: 5px 10px; display:none">
+<p>$^a$ For bosons $f_i≥0$.</p>
+<p>$^b$ For fermions $0≤f_i≤1$.</p>
+<p>$^c$ For noninteracting particles. At low temperatures, $μ≈ε_F$.</p>
+	</div>
+<p>
+	<a href="javascript:toggleDiv('where_identical_particles');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_identical_particles" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$f_i$</td><td>mean occupation number of $i$th state</td><td>$β$</td><td>$=1\text"/"{(kT)}$</td></tr>
+	<tr><td>$ε_i$</td><td>energy quantum for $i$th state</td><td>$μ$</td><td>chemical potential</td></tr>
+	<tr><td>$ε_F$</td><td>Fermi energy</td><td>$ħ$</td><td>$(\text"Planck constant)/"(2π)$</td></tr>
+	<tr><td>$n$</td><td>particle number density</td><td>$m$</td><td>particle mass</td></tr>
+	<tr><td>$g$</td><td>spin degeneracy $(=2s+1)$</td><td>$ζ$</td><td>Riemann zeta function
+		$ζ(3\text"/"2)≈2.612$</td></tr>
+	<tr><td>$T_c$</td><td>Bose condensation temperature</td></tr>
+</table>
+</div>
+
+<center><p>...</p></center>
+
+</body>
+</html>

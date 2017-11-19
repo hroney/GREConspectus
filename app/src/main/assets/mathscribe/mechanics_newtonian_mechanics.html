@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+  <link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+  <script src="../mathscribe/jquery-1.4.3.min.js"></script>
+  <script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+  <!-- <script>M.MathPlayer = false; M.trustHtml = true;</script> -->
+
+  <!--
+  To use jqMath in an html file, use a text editor to copy the above lines to the beginning of
+  your file, remove any corresponding old tags, and save the file in UTF-8 format.
+
+  If you aren't writing in English, change "en" above to the correct language code, especially if
+  your language allows a comma as a decimal mark (instead of a period).
+
+  If you don't use Fraktur characters, you can remove the link on line 7, as this may speed up
+  download times slightly.
+
+  You may need to change each "../mathscribe" path above, depending on the directory structure
+  that you choose.
+
+  You can use a different version of jquery (1.0+) if you prefer.  We've just provided this one
+  for your convenience.
+
+  If you need to use the \html macro, then uncomment the M.MathPlayer and M.trustHtml line above.
+  But if you are going to parse untrusted user input using jqMath, even in a blog comment, you
+  must ensure that M.trustHtml is set back to false first.
+
+  The files jscurry-0.4.0.js, jscurry-0.4.0.min.js, and jqmath-0.4.3.js are provided just for your
+  information.  They are all included, and compressed, in jqmath-etc-0.4.3.min.js.
+
+  α β γ δ ε ζ η θ ι κ λ μ
+ν ξ π ρ ς σ τ υ φ χ ψ ω
+ϐ ϑ ϒ ϕ ϖ Ϛ Ϟ Ϡ ϰ ϱ ϲ
+
+ℎ ℏ
+  -->
+
+</head>
+<body>
+<h2>Generalised dynamics</h2>
+<center><h3>$●$ Newtonian dynamics</h3></center>
+<center>
+  <table border="1" style="border:1px solid Tomato;" bgcolor="Plum">
+  <tr><td>Newton's laws:</td><td>$F=ma$</td><td>unit:N,(newton)</td></tr>
+  <tr><td></td><td>$F_{12}=-F_{21}$</td></tr>
+  <tr><td>Work:</td><td>$A=F⋅D⋅\cos θ$</td><td>unit:J,(joule)</td></tr>
+  <tr><td>Power= rate of work done</td><td>$\text"Power"={\text"work"}/{\text"time"}$</td><td>unit: watt</td></tr>
+  <tr><td>Newton's gravitational law:</td><td>$F↖{→}={GMm}/{r^3}r↖{→}$</td></tr>
+</table></center>
+<p>where $F$ is force, $A$ is work. $r$ is a distance between two objects of mass $M$ and $m$, respectively, and $G$ is a
+  gravitational constant. On Earth, $g={GM}/{r^2}=9.8m⋅s^{-1}$</p>
+
+<center><p><a href="javascript:toggleDiv('myContent');" style="background-color: SkyBlue; padding: 10px 15px;">Theory (click me)</a></p>
+  <div id="myContent" style="background-color: white; padding: 5px 10px; display:none">
+    <p><a href="javascript:toggleDiv('myContent_classical');" style="background-color: PowderBlue; padding: 10px 15px;">Classical Mechanics</a></p>
+    <div id="myContent_classical" style="background-color: white; padding: 5px 10px; display:none">
+    <p style="color:FireBrick"><b><u>CLASSICAL MECHANICS</u></b></p>
+    <p><b>Newton's Laws</b></p><p><b>First law:</b> an object either remains at rest or continues to move at a constant velocity, unless acted upon
+      by a net force.</p>
+    <p><b>Second law:</b> In an inertial reference frame, the vector sum of the forces $F$ on an object is equal to the
+      mass $m$ of that object multiplied by the acceleration vector a of the object: $F = ma$.</p>
+    <p><b>Third law:</b> When one body exerts a force on a second body, the second body simultaneously exerts a force
+      equal in magnitude and opposite in direction on the first body.
+      <br>...<br>
+      <b><i>Inertia</i></b> is a property of a body that determines its resistance to acceleration or
+      change in motion when the body interacts with another body.
+      <br><b><i>Mass</i></b> ($m$) is the quantitative measure of inertia
+      <br>...<br>
+      The interaction results in acceleration of the bodies. Thus, the effect of interaction is
+      that the product of mass and acceleration is constant and denotes the <i>change in motion</i>
+      <br><b><i>Force</i></b> (${\bo F}$) is any interaction that, when unopposed, will change the motion of an object.
+      <br>${\bo F}=m{\bo a}$
+      <br><b><i>Linear momentum</i></b> (${\bo p}$) is defined as a product of mass $m$ and velocity ${\bo v}$ of an object.
+      <br>${\bo p}=m{\bo v}$</p>
+    <p>The second Newton's law may be rewritten as: ${\bo F}={d{\bo p}}/{dt}$
+      <br>...<br><br></p>
+      </div>
+    <p>$∗$</p>
+    <a href="javascript:toggleDiv('myContent_conservation');" style="background-color: PowderBlue; padding: 10px 15px;">Conservation </a>
+    <div id="myContent_conservation" style="background-color: white; padding: 5px 10px; display:none">
+    <p style="color:FireBrick"><b><u>THE LAWS OF CONSERVATION</u></b></p>
+      <b> The law of conservation of motion</b>:
+      <br> <u>In a closed system</u> <i>(one that does not exchange any matter with its surroundings and is not
+      acted on by external forces)</i> <u>the total momentum</u> <i>(is the sum of each momentum of every
+      particle in a system)</i> <u>is constant</u>.
+      <br><br>
+      <b>The law of conservation of energy</b>:
+      <u>The total energy of an isolated system remains constant</u>
+      <br>-it is said to be conserved over time. <br>
+      Energy can neither be created nor destroyed; rather, it transforms from one form to another.
+      And the measure of such energy transformation we call <b>work</b>.
+      <br><br>
+      <b>The law of conservation of angular momentum</b>:
+      <br> <i>An angular momentum can be exchanged between objects in a closed system, but</i>
+      <u>the total angular
+      momentum before and after an exchange remains constant (is conserved)</u>
+      <br>...<br>
+      </div>
+    <p>$∗$</p>
+    <a href="javascript:toggleDiv('myContent_energy');" style="background-color: PowderBlue; padding: 10px 15px;">Energy, Work </a>
+    <div id="myContent_energy" style="background-color: white; padding: 5px 10px; display:none">
+      <p style="color:FireBrick"><b><u>Energy and Work</u></b></p>
+      <p><b>Kinetic energy</b> of an object is the energy that it possesses due to its motion
+        <br>$E_k≡K=1/2m{\bo v}^2$</p>
+      <p>Here we arrive at the <i>work-energy principle</i>:
+        given that a particle undergoes a displacement under the influence of a force $F$, the work
+        done by $\bo F$ equals to the change in kinetic energy of a particle.
+        <br>$W_{1-2}=K_2-K_1\text"   "$  <br>
+        The work done by a constant force of magnitude $F$ on a point that moves a displacement
+        (not distance)$\{dW=\bo F d\bo r\}$
+        <br>...</p></div>
+  <p>$∗$</p>
+    <a href="javascript:toggleDiv('myContent_plane');" style="background-color: PowderBlue; padding: 10px 15px;">Plane</a>
+    <div id="myContent_plane" style="background-color: white; padding: 5px 10px; display:none">
+    <p style="color:FireBrick"><b><u>MOTION IN A PLANE</u></b></p>
+    <p>In comparison to one dimension motion, to answer the question "Where am I?" in two and three dimensions
+    one needs to specify more coordinates, such as: ($x,y,z$). Thus, let us introduce the
+      <b>position vector $r$</b>, and then introduce <b>velocity ${\bo v}$</b> and
+    <b>acceleration ${\bo a}$</b>.</p>
+    <p>${\bo r}=x{\bo i}+y{\bo j} +z{\bo k}$<br>
+      ${\bo v}={dx}/{dt}{\bo i}+{dy}/{dt}{\bo j} +{dz}/{dt}{\bo k}\text" "→\text" "{\bo v}=v_x{\bo i}+v_y{\bo j} +v_z{\bo k}$<br>
+      ${\bo a}={dv_x}/{dt}{\bo i}+{dv_y}/{dt}{\bo j} +{dv_z}/{dt}{\bo k}\text" "→\text" "{\bo a}=a_x{\bo i}+a_y{\bo j} +a_z{\bo k}$</p>
+    <p>To define the coordinate(-es) of the body/point at any time moment, we have to use such equations
+    of motion:
+    <br>${\bo x}={\bo x_0}+{\bo v_x}t+{\bo a_x}{t^2}/{2}$<br>
+      ${\bo v}_x={d{\bo x}}/{dt}={\bo v}_{0x}+{\bo a}_xt$</p>
+    </div>
+  <p>$∗$</p>
+    <a href="javascript:toggleDiv('myContent_circular');" style="background-color: PowderBlue; padding: 10px 15px;">Circular</a>
+    <div id="myContent_circular" style="background-color: white; padding: 5px 10px; display:none">
+    <p style="color:FireBrick"><b><u>CIRCULAR MOTION</u></b></p>
+  <p>Suppose the motion of an object as function of time can be described by the following relations:
+  <br> ${\bo x}(t)={\bo r}_0\cos{({2π}/{T}t)}$<br>
+    ${\bo y}(t)={\bo r}_0\sin{({2π}/{T}t)}$</p>
+    <p>This equations describe a periodic motion: the position of the object at time $t$ and at time
+    $t+T$ are identical. The period of the periodic motion is obviously $T$. The pass of this object
+      will be circular.
+    <br> ${\bo r}(t)=√{{\bo x}^2(t)+{\bo y}^2(t)}$<br>$=√{{\bo r}^2_0\cos^2{({2π}/{T}t)}+{\bo r}^2_0\sin^2{({2π}/{T}t)}}={\bo r}_0$</p>
+  <p>The velocity and the acceleration of the object can be easily calculated:
+    <br>$\{\table {\bo v}_x(t)=-{2π}/{T}{\bo r}_0\sin{({2π}/{T}t)} ; {\bo v}_y(t)={2π}/{T}{\bo r}_0\cos{({2π}/{T}t)}$
+    <br>$⇒\text"  "∣{\bo v}(t)∣={2π}/{T}{\bo r}_0$
+    <br> and <br>
+    $\{\table {\bo a}_x(t)=-{4π^2}/{T^2}{\bo r}_0\cos{({2π}/{T}t)}=-{4π^2}/{T^2}{\bo x}(t) ; {\bo a}_y(t)={4π^2}/{T^2}{\bo r}_0\sin{({2π}/{T}t)}=-{4π^2}/{T^2}{\bo y}(t)$
+    <br>$⇒\text"  "{\bo a}(t)=-{4π^2}/{T^2}{\bo r}(t)\text" ; "∣{\bo a}(t)∣={4π^2}/{T^2}{\bo r}_0={∣{\bo v}∣^2}/{{\bo r}_0}$</p>
+    </div>
+  </div>
+</center>
+
+<center><p> </p>
+  <p><br>...</p></center>
+</body>
+</html>

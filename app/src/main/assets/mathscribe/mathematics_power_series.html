@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+	<title>Power series</title>
+</head>
+<body>
+<center><h2> Power series</h2></center>
+<center>
+	<table  border="SandyBrown" style="border:1px solid SandyBrown;" bgcolor="OldLace">
+	<tr><td>Binomial series$^a$</td>
+		<td>$\(1+x\)^n=1+nx+{n(n-1)}/{2!}x^2$ <br> $+{n(n-1)(n-2)}/{3!}x^3+...$</td></tr>
+	<tr><td>Binomial coefficient$^b$</td>
+		<td>$^n C_r≡(\table n; r)≡{n!}/{r!(n-r)!}$</td></tr>
+	<tr><td>Binomial theorem</td>
+		<td>$(a+b)^n = ∑↙{k=0}↖n (\table n; k)a^{n-k}b^{k}$</td></tr>
+	<tr><td>Taylor series (about a)$^c$</td>
+		<td>$f(a+x)=f(a)+xf^{(1)}(a)+{x^2}/{2!}f^{(2)}(a)$
+			$+...+{x^{n-1}}/{(n-1)!}f^{(n-1)}(a)+...$</td></tr>
+	<tr><td>Taylor series (3-D)</td>
+		<td>$f(\bo a+\bo x)=f(\bo a)+(\bo x,\bo ∇)f|_{\bo a}$
+			$+{(\bo x,\bo ∇)^2}/{2!}f|_{\bo a}+
+			{(\bo x,\bo ∇)^3}/{3!}f|_{\bo a}+...$</td></tr>
+	<tr><td>Maclaurin series</td>
+		<td>$f(x)=f(0)+xf^{(1)}(0)+{x^2}/{2!}f^{(2)}(0)$
+			$+...+{x^{n-1}}/{(n-1)!}f^{(n-1)}(0)+...$</td>
+	</tr>
+</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_script_discrete_statistics');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_script_discrete_statistics" style="background-color: white; padding: 5px 10px; display:none">
+<p>$^a$ If $n$ is a positive integer the series terminates and is valid for all $x$. Otherwise the
+	(infinite)series is convergent for $|x|<1$.
+	<br>$^b$ The coefficient of $x^r$ in the binomial series.
+	<br>$^c$ $xf^{(n)}(a)$ is $x$ times the $n$th derivative of the function $f(x)$ with respect to
+	$x$	evaluated at $a$, taken as well behaved around $a$. $(\bo x,\bo ∇)^n f|_{\bo a}$ is its
+	extension to three
+	dimensions.</p>
+	</div>
+
+<center><p>...</p></center>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+	<title>Gas Laws</title>
+</head>
+<body>
+<center><h2>Gas laws</h2></center>
+<center><h3><font color="LightSkyBlue"><b>$●$ Ideal gas</b></font></h3>
+	<table border="MediumAquaMarine" style="border:1px solid Gold;" bgcolor="LightSkyBlue">
+		<tr><td>Joule's law</td><td>$U=U(T)$</td></tr>
+		<tr><td>Boyle's law</td><td>$pV|_T=\text"constant"$</td></tr>
+		<tr><td>Equation of state (Ideal gas law)</td><td>$pV=nRT$</td></tr>
+		<tr><td>Adiabatic equations</td><td>$pV^γ=\text"constant"$<br>$TV^{(γ-1)}=\text"constant"$
+			<br>$T^γp^{(1-γ)}=\text"constant"$ <br> $∆W={1}/{γ-1}(p_2V_2-p_1V_1)$</td></tr>
+		<tr><td>Internal energy</td><td>$U={nRT}/{γ-1}$</td></tr>
+		<tr><td>Reversible isothermal expansion</td><td>$∆Q=nRT\ln(V_2\text"/"V_1)$</td></tr>
+		<tr><td>Joule expansion$^a$</td><td>$∆S=nR\ln(V_2\text"/"V_1)$</td></tr>
+	</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_ideal_gas');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_ideal_gas" style="background-color: white; padding: 5px 10px; display:none">$^a$ Since $∆Q=0$ for a Joule expansion, $∆S$ is due entirely to irreversibility. Because
+	entropy of state it has the same value as for the reversible isothermal expansion, where
+	$∆S=∆Q\text"/"T$</div>
+
+<p>
+	<a href="javascript:toggleDiv('where_ideal_gas');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_ideal_gas" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$U$</td><td>internal energy</td><td>$V$</td><td>volume</td></tr>
+	<tr><td>$T$</td><td>temperature</td><td>$p$</td><td>pressure</td></tr>
+	<tr><td>$n$</td><td>number of moles</td><td>$R$</td><td>molar gas constant</td></tr>
+	<tr><td>$γ$</td><td>ratio of heat capacities $(C_p\text"/"C_V)$</td>
+		<td>$∆W$</td><td>work done on system</td>
+	<tr><td>$∆S$</td><td>change in entropy of the system</td><td>$∆Q$</td><td>heat supplied to system</td></tr>
+	<tr><td>$1,2$</td><td>initial and final states</td></tr>
+</table>
+	</div>
+
+<center><h3><font color="LightSkyBlue"><b>$●$ Virial expansion</b></font></h3>
+	<table border="MediumAquaMarine" style="border:1px solid Gold;" bgcolor="LightSkyBlue">
+		<tr><td>Virial expansion</td><td>$pV=RT(1+{B_2(T)}/{V}$<br>$+{B_3(T)}/{V^2}+...)$</td></tr>
+		<tr><td>Boyle temperature</td><td>$B_2(T_B)=0$</td></tr>
+	</table></center>
+<p>
+	<a href="javascript:toggleDiv('where_virial');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_virial" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$B_i$</td><td>virial coefficients</td><td>$T_B$</td><td>Boyle temperature</td></tr>
+</table>
+	</div>
+
+<center><h3><font color="LightSkyBlue"><b>$●$ Van der Waals gas</b></font></h3>
+	<table border="MediumAquaMarine" style="border:1px solid Gold;" bgcolor="LightSkyBlue">
+		<tr><td>Equation of state</td><td>$(p+{a}/{V^2_m})(V_m-b)=RT$</td></tr>
+		<tr><td>Critical point</td><td>$T_c=8a\text"/"(27Rb)$<br>$p_c=a\text"/"(27b^2)$<br>$V_{mc}=3b$</td></tr>
+		<tr><td>Reduced equation of state</td><td>$(p_r+{3}/{V^2_r})(3V_r-1)=8T_r$</td></tr>
+	</table></center>
+<center><h3><font color="LightSkyBlue"><b>$●$ Dieterici gas</b></font></h3>
+	<table border="MediumAquaMarine" style="border:1px solid Gold;" bgcolor="LightSkyBlue">
+		<tr><td>Equation of state</td><td>$p={RT}/{V_m-b'}\exp{({-a'}/{RTV_m})}$</td></tr>
+		<tr><td>Critical point</td><td>$T_c=a'\text"/"(4Rb')$<br>$p_c=a'\text"/"(4b'^2e^2)$<br>$V_{mc}=2b'$</td></tr>
+		<tr><td>Reduced equation of state</td><td>$p_r={T_r}/{2V_r-1}\exp{(2-{2}/{V_rT_r})}$</td></tr>
+	</table></center>
+<p>
+	<a href="javascript:toggleDiv('where_van_der_waals_dieterici');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_van_der_waals_dieterici" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$a,b$</td><td>van der Waals' constants</td><td>$a',b'$</td><td>Dieterici's constants</td></tr>
+	<tr><td>$T_c$</td><td>critical temperature</td><td>$p_c$</td><td>critical pressure</td></tr>
+	<tr><td>$V_{mc}$</td><td>critical molar volume</td><td>$p_r$</td><td>$=p\text"/"p_c$</td></tr>
+	<tr><td>$V_r$</td><td>$=V_m\text"/"V_{mc}$</td><td>$T_r$</td><td>$=T\text"/"T_c$</td>
+	<tr><td>$e$</td><td>$=2.71828...$</td></tr>
+</table>
+	</div>
+<center><img src="thermodynamics_gas_laws_vdv.jpg" alt="Van der Waals' & Dieterici's gases" style="width:100%;height:auto;">
+</center>
+
+<center>
+	<p>
+		<br><a href="javascript:toggleDiv('theory');" style="background-color: SkyBlue; padding: 10px 15px;">Theory</a></p>
+	<div id="theory" style="background-color: white; padding: 5px 10px; display:none">
+		<p><a href="javascript:toggleDiv('myContent_intro');" style="background-color: PowderBlue; padding: 10px 15px;">Ideal gases</a></p>
+		<div id="myContent_intro" style="background-color: white; padding: 5px 10px; display:none">
+			<p style="color:FireBrick"><b><u>THE EQUATIONS OF STATE FOR AN IDEAL GAS</u></b></p>
+			<p>To illustrate the basic concepts of thermodynamics, we will consider an ideal gas in greater
+			detail. Such an ideal gas is characterized by the fact that the particles are considered
+			(as in classical mechanics) to be noninteracting , pointlike particles. It is obvious
+			that this is only a simple model of a real gas, the particles of which have atomic dimensions
+			and do interact. The approximation is the better the more dilute a gas is.</p>
+			<p>Already in 1664 R.Boyle, and shortly later (1676) but independently from him, E.
+				Mariotte found a general relationship between the pressure and the volume of a gas
+				at constant temperature:</p>
+			<p>$pV=p_0V_0\text" ,  "T=\text"constant"$</p>
+			<p>where we define the pressure as the force per unit area which acts perpendicularly on
+				the area $O$. Microscopically, the origin of pressure is the fact that particles hit the area,
+			where they are reflected and transfer a certain momentum. Not until 1802 did Gay-Lussac
+				consider the dependence of the volume of a gas on temperature. The corresponding
+				equation is identical with our definition of the absolute temperature,</p>
+			<p>$V={T}/{T_0}V_0\text" ,  "p=\text"constant"$</p>
+			<p>The quantities $p_0, V_0,$ and $T_0$ are the pressure, volume, and temperature of an arbitrary
+			but fixed state. Now we can ask what relationship holds between pressure, volume and
+			temperature if we move first change the pressure at constant temperature, until we reach
+				the desired pressure $p$, where a volume $V'_0$ is attained</p>
+			<p>$pV'_0=p_0V_0\text" ,  "T_0=\text"constant"$</p>
+			<p>Now we change the temperature at constant pressure to obtain</p>
+			<p>$V={T}/{T_0}V'_0\text" ,  "p=\text"constant"$</p>
+			<p>If we eliminate the intermediate volume $V'_0$ from both equations we have</p>
+			<p>${pV}/{T}={p_0V_0}/{T_0}=\text"const"$</p>
+			<p>Since the expression $pV\text"/"T$ is an extensive quantity it must, under the same
+			conditions, increase proportionally to the particle number, i.e. it must equal $kN$, where
+			we introduce <i>Boltzmann's constant of proportionality</i> $k=1.380658⋅10^{-23}\J\K^{-1}$.
+			We obtain</p>
+			<p style="border:3px; border-style:solid; border-color:FireBrick;">
+				${pV}/{T}={p_0V_0}/{T_0}=Nk\text" ,  "pV=NkT\text" or "p=ρkT$</p>
+			<p>This is the <u><i>ideal gas law</i></u>, as we will often use it; it is also an example
+			of an equation of state:<br>
+			the pressure is the product of particle density $ρ$ and the temperature.</p>
+
+		</div>
+		<p>$∗$</p>
+		<p><a href="javascript:toggleDiv('real_gas_EoS');" style="background-color: PowderBlue; padding: 10px 15px;">Real gases</a></p>
+		<div id="real_gas_EoS" style="background-color: white; padding: 5px 10px; display:none">
+			<p style="color:FireBrick"><b><u>THE EQUATIONS OF STATE FOR A REAL GAS</u></b></p>
+			<p>
+				<a href="javascript:toggleDiv('real_gas_EoS_virial');" style="background-color: PowderBlue; padding: 10px 15px;">-Virial expansion</a></p>
+			<div id="real_gas_EoS_virial" style="background-color: white; padding: 5px 10px; display:none">
+				<p><b><u>VIRIAL EXPANSION</u></b></p>
+			<p>It is in general sufficient to fix a few variables for a system. Then all other
+				quantities assume values that depend on these state variables. We have encountered some examples:
+			<br>$pV=p_0V_0\text" ,  "T=\text"constant"$</p>
+			<p>or<br> $V={T}/{T_0}V_0\text" ,  "p=\text"constant"$</p>
+			<p> As a standard example for a general equation of state which connects all relevant
+			variables, we have the ideal gas law</p>
+			<p>$pV=NkT$</p>
+			<p>which is, however, valid only for dilute gases (low pressure). Measuring the pressure
+				of an ideal gas at constant temperature, particle number and volume, we can determine the value
+			of Boltzmann's constant with the help of ideal gas law. In most cases $N=N_A$ particles, i.e. just
+			one mole, and obtains
+			<br>$N_Ak=R=8.3145 \J\K^{-1}\text"mol"^{-1}$
+			<br> The constant $N_Ak=R$ is named the <i>gas constant</i>.
+			<br>...</p>
+			<p>In thermodynamics one often assumes EoS to be polynomials of a variable. For larger
+				pressures the more sophisticated EoS is</p>
+			<p style="border:3px; border-style:solid; border-color:Black;">$pV=NkT+B(T)p+C(T)p^2+...$</p>
+			<p>As a first approximation terminates the <i>virial expansion</i>,after the linear term;
+			the coefficient $B(T)$ can be determined experimentally. The quantity $B(T)$ is called the first
+			<i>virial coefficient</i>.</p>
+			<p>If one does not expand the EoS of a real gas in terms of low pressure, but rather in terms
+			of low density, one obtains an analogous equation,</p>
+			<p style="border:3px; border-style:solid; border-color:Black;">$pV=NkT+B'(T)N/V+C'(T)(N/V)^2+...$</p>
+			<p>which is often also called the virial expansion. </p>
+				</div>
+			<p>-</p>
+
+			<p>
+				<a href="javascript:toggleDiv('real_gas_EoS_van_der_waals');" style="background-color: PowderBlue; padding: 10px 15px;">-Van der Waals</a></p>
+			<div id="real_gas_EoS_van_der_waals" style="background-color: white; padding: 5px 10px; display:none">
+				<p><b><u>VAN DER WAALS EQUATION</u></b></p>
+				<p>Another well-known equation of state (EoS) for real gases is the equation of van der
+				Waals (1873), which is made plausible by the following consideration: Equation $pV=NkT$
+				neglects the proper volume of the particles, which causes $V→0$ for $T→0$. We can
+					mend this if we substitute for $V$ the quantity $V-Nb$, where $b$ is a measure
+					for the proper volume of a particle. Furthermore, in an ideal gas one neglects
+					the interaction between the particles, which is mainly attractive. Let us, for
+					instance, consider a globe containing a gas with a particle density $N\text"/"V$.
+				Inside the globe, the forces acting between the particles will be zero on the average.</p>
+				<p>On the other hand, the particles on the surface feel an effective force in the
+					direction of the interior of the globe. This means that the pressure of a real
+					gas has to be smaller than that of an ideal. We can account for this in $pV=NkT$
+					if we substitute the ideal gas pressure $p_{id}$ by $p_{real}+p_0$, where  $p_0$
+					is the so-called inner pressure.</p>
+				<p>With $p_{id}=p_{real}+p_0$, it is obvious that the pressure of a real gas is smaller
+				by $p_0$ than that of the ideal gas. The inner pressure $p_0$ is, however, not simply
+				a constant, but depends on the mean distance between the particles and on how many
+					particles are on the surface.</p>
+				<p>Both dependences are in crude approximation proportional to the particle density
+					$N\text"/"V$, so that $p_0=a(N\text"/"V)^2$, where $a$ is a constant.</p>
+				<p>Van der Waals' equation therefore reads</p>
+				<p style="border:3px; border-style:solid; border-color:Black;">$\(p+\(N/V\)^2a\)(V-Nb)=NkT$</p>
+				<p>Here $a$ and $b$ are material constants, which are mostly cited per mole and not
+					per particle. Note that EoS don't require any justification in thermodynamics!
+					Solely decisive is the fact whether and in which region of the state quantities an
+				EoS yields an appropriate description of the behaviour of a system.</p>
+				<p>For high temperatures and low densities, van der Waals' equation becomes the equation
+				for the ideal gas.</p>
+				<p>An often used approximation for van der Waals' equation is obtained by setting $N\text"/"V$
+				in the inner pressure equal to that of an ideal gas, $N\text"/"V≈p\text"/"kT$. Then
+				it holds that</p>
+				<p style="border:3px; border-style:solid; border-color:Black;">$\(p+{p^2}/{(kT)^2}a\)(V-Nb)=NkT$</p>
+				<p>or</p>
+				<p style="border:3px; border-style:solid; border-color:Black;">$pV={NkT}/{1+{pa}/{(kT)^2}}+pNb$</p>
+				<p>For low pressures and high temperatures we have $pa\text"/"(kT)^2≪1$ and we can
+				expand the denominator, with the result
+					<br>$pV=NkT+N\(b-{a}/{kT}\)p+...$</p>
+				<p>As we observe, van der Waal's equation can also be expressed by the virial expansion,
+				with $B(T)=N[b-a\text"/"(kT)]$. This first virial coefficient goes into satisfying agreement
+					with the measurements. For high temperatures the virial coefficient determined
+					from van der Waal's equation approach the constant value $b$, which determines the
+				proper volume of the particles. For $kT=a\text"/"b$, $B(T)=0$, and for small temperatures
+				$(kT→0)$, $B(T)$ becomes strongly negative. Van der Waals' equation yields also higher order
+				virial coefficients ($C(T)≠0$, etc.) in the virial expansion for low pressures.</p>
+				</div>
+
+		</div>
+
+	</div>
+</center>
+
+<center><p>...</p></center>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+	<!-- <script>M.MathPlayer = false; M.trustHtml = true;</script> -->
+
+	<!--
+    To use jqMath in an html file, use a text editor to copy the above lines to the beginning of
+    your file, remove any corresponding old tags, and save the file in UTF-8 format.
+
+    If you aren't writing in English, change "en" above to the correct language code, especially if
+    your language allows a comma as a decimal mark (instead of a period).
+
+    If you don't use Fraktur characters, you can remove the link on line 7, as this may speed up
+    download times slightly.
+
+    You may need to change each "../mathscribe" path above, depending on the directory structure
+    that you choose.
+
+    You can use a different version of jquery (1.0+) if you prefer.  We've just provided this one
+    for your convenience.
+
+    If you need to use the \html macro, then uncomment the M.MathPlayer and M.trustHtml line above.
+    But if you are going to parse untrusted user input using jqMath, even in a blog comment, you
+    must ensure that M.trustHtml is set back to false first.
+
+    The files jscurry-0.4.0.js, jscurry-0.4.0.min.js, and jqmath-0.4.3.js are provided just for your
+    information.  They are all included, and compressed, in jqmath-etc-0.4.3.min.js.
+    -->
+
+	<title>LCR circuits</title>
+</head>
+<body>
+<center><h2>LCR circuits</h2></center>
+<center><h3><font color="DarkSlateBlue"><b>$●$ LCR definitions</b></font></h3>
+	<table border="Brown" style="border:1px solid DarkSlateBlue;" bgcolor="Lavender">
+		<tr><td>Current</td><td>$I={dQ}/{dt}$</td></tr>
+		<tr><td>Ohm's law</td><td>$V=IR$</td></tr>
+		<tr><td>Ohm's law (field form)</td><td>$\bo J=σ\bo E$</td></tr>
+		<tr><td>Resistivity</td><td>$ρ={1}/{σ}={RA}/{l}$</td></tr>
+		<tr><td>Capacitance</td><td>$C={Q}/{V}$</td></tr>
+		<tr><td>Current through capacitor</td><td>$I=C{dV}/{dt}$</td></tr>
+		<tr><td>Self-inductance</td><td>$L={Φ}/{I}$</td></tr>
+		<tr><td>Voltage across inductor</td><td>$V=-L{dI}/{dt}$</td></tr>
+		<tr><td>Mutual inductance</td><td>$L_{12}={Φ_1}/{I_2}=L_{21}$</td></tr>
+		<tr><td>Coefficient of coupling</td><td>$|L_{12}|=k√{L_1L_2}$</td></tr>
+		<tr><td>Linked magnetic flux through a coil</td><td>$Φ=Nφ$</td></tr>
+	</table></center>
+<center><img src="electromagnetism_LCR_circuits.jpg" alt="LCR circuits" style="width:/2;height:158px;">
+</center>
+<p>where</p>
+<table border="1">
+	<tr><td>$I$</td><td>current</td><td>$Q$</td><td>charge</td></tr>
+	<tr><td>$R$</td><td>resistance</td><td>$V$</td><td>potential difference over $R$</td></tr>
+	<tr><td>$I$</td><td>current through $R$</td><td>$\bo J$</td><td>currents density</td></tr>
+	<tr><td>$\bo E$</td><td>electric field</td><td>$σ$</td><td>conductivity</td></tr>
+	<tr><td>$ρ$</td><td>resistivity</td><td>$A$</td><td>area of face ($I$ is normal to face)</td></tr>
+	<tr><td>$l$</td><td>length</td><td>$C$</td><td>capacitance</td></tr>
+	<tr><td>$V$</td><td>potential difference across $C$</td><td>$I$</td><td>current through $C$</td></tr>
+	<tr><td>$t$</td><td>time</td><td>$Φ$</td><td>total linked flux</td></tr>
+	<tr><td>$V$</td><td>potential difference over $L$</td><td>$Φ_1$</td><td>total flux from loop 2
+		linked by loop 1</td></tr>
+	<tr><td>$L_{12}$</td><td>mutual inductance</td><td>$I_{2}$</td><td>current through loop 2</td></tr>
+	<tr><td>$k$</td><td>coupling coefficient between $L_1$ and $L_2$ $(≤1)$</td><td>$Φ$</td><td>linked flux</td></tr>
+	<tr><td>$N$</td><td>number of turns around $φ$</td><td>$φ$</td><td>flux through area of turns</td></tr>
+</table>
+
+<center><h3><font color="DarkSlateBlue"><b>$●$ Resonant LCR circuits</b></font></h3>
+	<table border="Brown" style="border:1px solid DarkSlateBlue;" bgcolor="Lavender">
+		<tr><td>Phase resonant frequency$^a$</td><td>$ω^2_0=\{\table 1\text"/"LC \text",  (series)";
+			1\text"/"LC-R^2\text"/"L^2 \text", (parallel)"$</td></tr>
+		<tr><td>Tuning$^b$</td><td>${δω}/{ω_0}={1}/{Q}={R}/{ω_0L}$</td></tr>
+		<tr><td>Quality factor</td><td>$Q=2π{\text"stored energy"}/{\text"energy lost per cycle"}$</td></tr>
+	</table></center>
+<p>$^a$ At which the impedance is purely real.</p>
+<p>$^b$ Assuming the capacitor is purely reactive. If $L$ and $R$ are parallel, then $1\text"/"Q=ω_0L\text"/"R$.</p>
+<center><img src="electromagnetism_LCR_resonant_circuit1.jpg" alt="Resonant LCR circuit" style="width:/2;height:158px;">
+	<img src="electromagnetism_LCR_resonant_circuit2.jpg" alt="Resonant LCR circuit" style="width:/2;height:158px;">
+</center>
+<p>where</p>
+<table border="1">
+	<tr><td>$I$</td><td>current</td><td>$Q$</td><td>charge</td></tr>
+	<tr><td>$R$</td><td>resistance</td><td>$V$</td><td>potential difference over $R$</td></tr>
+	<tr><td>$I$</td><td>current through $R$</td><td>$\bo J$</td><td>currents density</td></tr>
+	<tr><td>$\bo E$</td><td>electric field</td><td>$σ$</td><td>conductivity</td></tr>
+	<tr><td>$ρ$</td><td>resistivity</td><td>$A$</td><td>area of face ($I$ is normal to face)</td></tr>
+	<tr><td>$l$</td><td>length</td><td>$C$</td><td>capacitance</td></tr>
+	<tr><td>$V$</td><td>potential difference across $C$</td><td>$I$</td><td>current through $C$</td></tr>
+	<tr><td>$t$</td><td>time</td><td>$Φ$</td><td>total linked flux</td></tr>
+	<tr><td>$V$</td><td>potential difference over $L$</td><td>$Φ_1$</td><td>total flux from loop 2
+		linked by loop 1</td></tr>
+	<tr><td>$L_{12}$</td><td>mutual inductance</td><td>$I_{2}$</td><td>current through loop 2</td></tr>
+	<tr><td>$k$</td><td>coupling coefficient between $L_1$ and $L_2$ $(≤1)$</td><td>$Φ$</td><td>linked flux</td></tr>
+	<tr><td>$N$</td><td>number of turns around $φ$</td><td>$φ$</td><td>flux through area of turns</td></tr>
+</table>
+
+<center><p>...</p></center>
+</body>
+</html>

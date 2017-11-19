@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+	<title>Random walk</title>
+</head>
+<body>
+<center><h2> Random walk</h2></center>
+<center>
+	<table border="SandyBrown" style="border:1px solid SandyBrown;" bgcolor="OldLace">
+	<tr><td>One- dimensional</td><td>$\pr (x)={1}/{√{2πNl^2}}\exp{\({-x^2}/{2Nl^2}\)}$</td></tr>
+	<tr><td>rms displacement</td><td>$x_{rms}=N^{i\text"/"2}l$</td></tr>
+	<tr><td>Three- dimensional</td><td>$\pr (r)=\({a}/{√{π}}\)^3\exp {(-a^2 r^2)}$
+		<br> where $a=√{{3}/{2Nl^2}}$</td></tr>
+	<tr><td>Mean distance</td><td>$\ov r=√{{8}/{3π}}√{N}l$</td></tr>
+	<tr><td>rms distance</td><td>$r_{rms}=N^{1\text"/"2}l$</td></tr>
+</table></center>
+<p>
+	<a href="javascript:toggleDiv('where_discrete_probability_distribution');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_discrete_probability_distribution" style="background-color: white; padding: 5px 10px; display:none">
+<table border-collapse="collapse;" border="1px solid black;">
+	<tr><td>$x$</td><td>displacement after $N$ steps (can be positive or negative)</td></tr>
+	<tr><td>$\pr (x)$</td><td>probability density of $x$ ($∫↙{-∞}↖{∞}\pr (x)dx=1$)</td></tr>
+	<tr><td>$N$</td><td>number of steps</td></tr>
+	<tr><td>$l$</td><td>step length (all equal)</td></tr>
+	<tr><td>$x_{rms}$</td><td>root-mean-squared displacement from start point</td></tr>
+	<tr><td>$r$</td><td>radial distance from start point</td></tr>
+	<tr><td>$\pr (r)$</td><td>probability density of $r$ $(∫↙{0}↖{∞} 4πr^2\pr (r)dr=1)$</td></tr>
+	<tr><td>$a$</td><td>(most probable distance)$^{-1}$</td></tr>
+	<tr><td>$\ov r$</td><td>mean distance from start point</td></tr>
+	<tr><td>$r_{rms}$</td><td>root-mean-squared distance from start point</td></tr>
+</table>
+	</div>
+<center><p>...</p></center>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+	<!-- <script>M.MathPlayer = false; M.trustHtml = true;</script> -->
+
+	<!--
+    To use jqMath in an html file, use a text editor to copy the above lines to the beginning of
+    your file, remove any corresponding old tags, and save the file in UTF-8 format.
+
+    If you aren't writing in English, change "en" above to the correct language code, especially if
+    your language allows a comma as a decimal mark (instead of a period).
+
+    If you don't use Fraktur characters, you can remove the link on line 7, as this may speed up
+    download times slightly.
+
+    You may need to change each "../mathscribe" path above, depending on the directory structure
+    that you choose.
+
+    You can use a different version of jquery (1.0+) if you prefer.  We've just provided this one
+    for your convenience.
+
+    If you need to use the \html macro, then uncomment the M.MathPlayer and M.trustHtml line above.
+    But if you are going to parse untrusted user input using jqMath, even in a blog comment, you
+    must ensure that M.trustHtml is set back to false first.
+
+    The files jscurry-0.4.0.js, jscurry-0.4.0.min.js, and jqmath-0.4.3.js are provided just for your
+    information.  They are all included, and compressed, in jqmath-etc-0.4.3.min.js.
+    -->
+
+	<title>Complex Variables</title>
+</head>
+<body>
+<center><h2>Complex variables</h2>
+	<h3><font color="GoldenRod"><b>$●$ Complex numbers</b></font></h3>
+<table border="SandyBrown" style="border:1px solid SandyBrown;" bgcolor="OldLace">
+	<tr><td>Cartesian form:</td>
+		<td>$z=x+iy$</td></tr>
+	<tr><td>Polar form:
+	</td>
+		<td>$z=re^{iθ}=r\(\cos θ+i\sin θ\)$</td></tr>
+	<tr><td>Modulus$^1$:</td><td>$|z|=r=√{x^2+y^2}$<br>$|z_1⋅z_2|=|z_1|⋅|z_2|$</td></tr>
+	<tr><td>Argument:</td>
+		<td>$θ=\arg z=\arctan ({y}/{x})$<br>$\arg (z_1z_2)=\arg(z_1)+\arg (z_2)$</td></tr>
+	<tr><td>Complex conjugate:</td>
+		<td>$z^*=x-iy=re^{-iθ}$ <br>$\arg (z^*)=-\arg (z)\text" ; "$ $z⋅z^*=|z|^2$</td></tr>
+	<tr><td>Logarithm$^2$:</td>
+		<td>$\ln z=\ln r +i\(θ+2πn\)$</td></tr>
+</table></center>
+
+<p>
+	<a href="javascript:toggleDiv('super_script_complex_numbers');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_script_complex_numbers" style="background-color: white; padding: 5px 10px; display:none"><p>$^1$ Or "magnitude"</p>
+	<p>$^2$ The principal value of $\ln z$ is given by $n=0$ and $-π< θ ≤π$ </p>
+	</div>
+<p>
+	<a href="javascript:toggleDiv('where_complex_numbers');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_complex_numbers" style="background-color: white; padding: 5px 10px; display:none">
+<table>
+	<tr><td>$z$</td><td>complex variable</td><td>$|z|$</td><td>modulus of $z$</td></tr>
+	<tr><td>$i$</td><td>$i^2=-1$</td><td>$\arg z$</td><td>argument of $z$</td></tr>
+	<tr><td>$x,y$</td><td>real variables</td><td>$z^*$</td><td>complex conjugate of $z==re^{iθ}$</td></tr>
+	<tr><td>$r$</td><td>amplitude (real)</td><td>$n$</td><td>integer</td></tr>
+	<tr><td>$θ$</td><td>phase (real)</td></tr>
+</table>
+</div>
+<center><h3><font color="GoldenRod"><b>$●$ Complex analysis$^a$</b></font></h3>
+	<img src="mathematics_complex_variables.jpg" alt="residue theory" style="width:100%;height:auto;">
+<table border="SandyBrown" style="border:1px solid SandyBrown;" bgcolor="OldLace">
+	<tr><td>Cauchy- Riemann equations$^b$</td><td>if $f(z)=u(x,y)+iv(x,y)$
+		<br>then ${∂ u}/{∂ x}={∂ v}/{∂ y}$
+		 and ${∂ u}/{∂ y}=-{∂ v}/{∂ x}$</td></tr>
+	<tr><td>Cauchy- Goursat theorem$^c$</td><td>$∮↙{c} f(z)dz=0$</td></tr>
+	<tr><td>Chauchy integral formula$^d$</td>
+		<td>$f(z_0)={1}/{2πi}∮↙{c} {f(z)}/{z-z_0}dz$
+			$f^{(n)}(z_0)={n!}/{2πi}∮↙{c} {f(z)}/{\(z-z_0\)^{n+1}}dz$</td></tr>
+	<tr><td>Laurent expansion$^e$</td><td>$f(z)=∑↙{n=-∞}↖∞ a_n \(z-z_0\)^n$
+		<br>where $a_n={1}/{2πi} ∮↙{c} {f(z')}/{\(z'-z_0\)^{n+1}}dz'$</td></tr>
+	<tr><td>
+		Residue theorem</td><td>$∮↙{c} f(z)dz=2πi∑ \text"enclosed residues"$</td></tr>
+</table></center>
+
+	<p>
+		<a href="javascript:toggleDiv('super_script_complex_analysis');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+	</p>
+	<div id="super_script_complex_analysis" style="background-color: white; padding: 5px 10px; display:none"><p>$^a$ Closed contour integrals are taken  in the counterclockwise sense, once.
+	<br>$^b$ Necessary condition for $f(z)$ to be analytic at a given point.
+	<br>$^c$ If f(z) is analytic within and on a simple closed curve $c$. Sometimes called
+	"Cauchy's theorem".
+	<br>$^d$ If f(z) is analytic within and on a simple closed curve $c$, encircling $z_0$.
+	<br>$^e$ Of f(z), (analytic) in the annular region between concentric circles $c_1$ and $c_2$,
+	centred on $z_0$. $c$ is any closed curve in this region encircling $z_0$.</p>
+</div>
+	<p>
+		<a href="javascript:toggleDiv('where_complex_analysis');" style="background-color: white; padding: 5px 10px;">where</a>
+	</p>
+	<div id="where_complex_analysis" style="background-color: white; padding: 5px 10px; display:none">
+<table>
+	<tr><td>$z$</td><td>complex variable</td><td>$^{(n)}$</td><td>nth derivative</td></tr>
+	<tr><td>$i$</td><td>$i^2=-1$</td><td>$a_{n}$</td><td>Laurent coefficients</td></tr>
+	<tr><td>$x,y$</td><td>real variables</td><td>$a_{-1}$</td><td>Residue of $f(z) \text"at" z_0
+		$</td></tr>
+	<tr><td>$z'$</td><td>dummy variable</td></tr>
+</table>
+		</div>
+
+<center><p>...</p></center>
+</body>
+</html>

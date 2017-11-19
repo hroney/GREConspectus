@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+	<title>Quantum definitions</title>
+</head>
+<body>
+<center><h2>Quantum definitions</h2></center>
+<center><h3><font color="MediumSeaGreen"><b>$●$ Quantum uncertainty relations</b></font></h3>
+	<table border style="border:1px solid Teal;" bgcolor="MintCream">
+		<tr><td>De Broglie relation</td><td>$p={h}/{λ}$<br>${\bo p}=ħ{\bo k}$</td></tr>
+		<tr><td>Planck-Einstein relation</td><td>$E=hν=ħω$</td></tr>
+		<tr><td>Dispersion$^{a,b}$</td><td>$\table(∆a)^2,=,‹(a-‹a›)^2›;,=,‹a^2›-‹a›^2$</td></tr>
+		<tr><td>General uncertainty relation</td><td>$(∆a)^2(∆b)^2≥1/4‹{\bo \i}[a↖{∧},b↖{∧}]›^2$</td></tr>
+		<tr><td>Momentum-position uncertainty relation$^c$</td><td>$∆p∆x≥ħ/2$</td></tr>
+		<tr><td>Energy-time uncertainty relation</td><td>$∆E∆t≥ħ/2$</td></tr>
+		<tr><td>Number-phase uncertainty relation</td><td>$∆n∆φ≥1/2$</td></tr>
+	</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_super_uncertainty_relations');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_super_uncertainty_relations" style="background-color: white; padding: 5px 10px; display:none">
+<p>$^a$ Dispersion in quantum physics corresponds to variance in statistics.</p>
+<p>$^b$ An observable $(a,b)$ is a directly measurable parameter of a system.</p>
+<p>$^c$ Also known as the "Heisenberg uncertainty relation."</p>
+</div>
+
+<p>
+	<a href="javascript:toggleDiv('where_uncertainty_relations');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_uncertainty_relations" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$p,{\bo p}$</td><td>particle momentum</td><td>$h$</td><td>Planck constant</td></tr>
+	<tr><td>$ħ$</td><td>$h\text"/"(2π)$</td><td>$λ$</td><td>de Broglie wavelength</td></tr>
+	<tr><td>${\bo k}$</td><td>de Broglie wavevector</td><td>$E$</td><td>energy</td></tr>
+	<tr><td>$ν$</td><td>frequency</td><td>$ω$</td><td>angular frequency $(=2πν)$</td></tr>
+	<tr><td>$a,b$</td><td>observables$^b$</td><td>$‹•›$</td><td>expectation value</td></tr>
+	<tr><td>$(∆a)^2$</td><td>dispersion of $a$</td><td>$a↖{∧}$</td><td>operator for observable $a$</td></tr>
+	<tr><td>$[•,•]$</td><td>commutator</td><td>$x$</td><td>particle position</td></tr>
+	<tr><td>$t$</td><td>time</td><td>$n$</td><td>number of photons</td></tr>
+	<tr><td>$φ$</td><td>wave phase</td></tr>
+</table>
+</div>
+
+<div align="justify">
+	<center><p>
+		<br><a href="javascript:toggleDiv('theory');" style="background-color: SkyBlue; padding: 10px 15px;">Theory</a></p></center>
+	<div id="theory" style="background-color: white; padding: 5px 10px; display:none">
+		<center><p><a href="javascript:toggleDiv('quantum_effects');" style="background-color: PowderBlue; padding: 10px 15px;">As for beginning</a></p></center>
+		<div id="quantum_effects" style="background-color: white; padding: 5px 10px; display:none">
+			<center><p style="color:FireBrick"><b><u>Some Principles and Effects (quantization of energy)</u></b></p></center>
+			<center><p><a href="javascript:toggleDiv('photoelectric_effect');" style="background-color: LightCyan; padding: 10px 15px;">The Photoelectric Effect
+			</a></p></center>
+			<div id="photoelectric_effect" style="background-color: white; padding: 5px 10px; display:none">
+				<center><p style="color:Black"><b><u>THE PHOTOELECTRIC EFFECT</u></b></p></center>
+				<p style="border:3px; border-style:solid; border-color:Black;"> The ejection of electrons from a metal surface by light is called the
+				<i>photoelectric effect</i>.</p>
+				<p>An experiment by <b>Philipp Lenard</b> showed that the energy of the detached electron is given by the frequency of the
+				irradiating light.</p>
+				<center><p><img src="quantum_mechanics_ejection_of_electrons.jpg" alt="The photoelectric effect" style="width:48%;height:auto;">
+					<img src="quantum_mechanics_ejection_of_electrons2.jpg" alt="The photoelectric effect" style="width:48%;height:auto;"></p></center>
+				<p>Monochromatic light yields electrons of a definite energy. An increase in light intensity leads to the emission of more
+				electrons, but does not change their energy. This is in clear contradiction to classical wave theory, where the energy of a wave is given by its intensity.
+				If we carry out the experiment with monochromatic light of different frequencies, a linear dependence between energy and frequency is obtained as
+				<br> $E∝(a+bω)$</p>
+				<center><p><img src="quantum_mechanics_ejection_of_electrons_slope.jpg" alt="The photoelectric effect" style="width:70%;height:auto;">
+				</p></center>
+				<p>The proportionality factor, i.e. the slope of the straight line, is found to be Planck's constant $h$ divided by $2π$, so that</p>
+				<center><p>$E=ħ(ω-ω_a)=h(ν-ν_a)$</p></center>
+				<center><p>with $h=2πħ=6.6×10^{-34}\text"Ws"^2$.</p></center>
+				<p><i><b>Einstein</b></i> interpreted this effect by postulating discrete quanta of light (photons) with energy $ħω$.
+				Increasing the intensity of the light beam also increases the number of photons, which can break off correspondingly
+				more electrons from the metal.</p>
+				<p>In these experiments, a frequency limit $ω_a$ appears, which depends on the kind of metal. Below this frequency limit, no electrons can leave
+				the metal. This means that a definite <i>escape energy</i> $ħω_a$ is needed to raise electrons from the
+				surface of the metal.</p>
+				<p>The light quantum that has to be postulated to understand the photoelectric effect moves with the velocity
+				of light. Hence it follows from Einstein's <i>Theory of Relativity</i> that the rest mass density of the photon is equal to zero.</p>
+				<p>If we set the rest mass equal to zero in the general relation for the total energy</p>
+				<center><p>$E^2=(m_0c^2)^2+p^2c^2=ħ^2ω^2$</p>
+				<p style="border:3px; border-style:solid; border-color:FireBrick;">$E=ħω=hν$</p></center>
+				<p>and express the frequency by the wave number $k=ω\text"/"c$, the momentum of the photon follows as</p>
+				<center><p>$p=ħk=ħω\text"/"c$</p></center>
+				<p>or written as a vector identity, assuming that the direction of the momentum of the photon should
+				correspond to the propagation direction of the light wave,</p>
+				<center><p style="border:3px; border-style:solid; border-color:FireBrick;">${\bo p}=ħ{\bo k}$.</p></center>
+			</div>
+			<center><p>$-$</p></center>
+			<center><p><a href="javascript:toggleDiv('compton_effect');" style="background-color: LightCyan; padding: 10px 15px;">The Compton Effect
+				</a></p></center>
+				<div id="compton_effect" style="background-color: white; padding: 5px 10px; display:none">
+			<center><p style="color:Black"><b><u>THE COMPTON EFFECT</u></b></p></center>
+					<p style="border:3px; border-style:solid; border-color:Black;"> When X-rays are scattered by electrons, a shift in frequency can be observed,
+						the amount of this shift depending on the scattering angle.</p>
+					<p>The effect was discovered by <i><b>Compton</b></i> in 1923 and explained on the basis of the photon picture
+						simultaneously by Compton himself and <i><b>Debye</b></i>.</p>
+					<center><p><img src="quantum_mechanics_compton_effect.jpg" alt="The Compton effect" style="width:100%;height:auto;"></p></center>
+					<p>We assume the electron is unbound and at rest before the collision. Then the <u>conservation of energy</u> and <u>momentum</u> reads:</p>
+					<center><p>$ħω=ħω'+{m_0c^2}/{√{1-β^2}}m_0c^2$,</p>
+					<p>$h{\bo k}=h{\bo k}'+{m_0{\bo v}}/{√{1-β^2}}$</p></center>
+					<p>To obtain a relation between the scattering angle $ϑ$ and the frequency shift, we divide momentum into
+					components parallel and vertical to the direction of incidence. This yields, with $k=ω\text"/"c$,</p>
+					<center><p>${ħω}/{c}={ħω'}/{c}\cos{ϑ}+{m_0{\bo v}}/{√{1-β^2}}\cos{φ}$</p>
+					<p>and <br>
+					${ħω'}/{c}\sin{ϑ}={m_0{\bo v}}/{√{1-β^2}}\sin{φ}$</p></center>
+					<p>From these two component equations, we can first eliminate $φ$ and then the electron velocity
+					$v(β=v\text"/"c)$. Hence for the frequency difference we have</p>
+					<center><p>$ω-ω'={2ħ}/{m_0c^2}ωω'\sin^2{ϑ/2}$</p></center>
+					<p>If we put $ω=2πc\text"/"λ$, we obtain the <i><u>Compton scattering formula</u></i>
+					in the usual form with the difference in wavelength as a function of the scattering angle $ϑ$</p>
+					<center><p style="border:3px; border-style:solid; border-color:Black;">$λ-λ'=4π{ħ}/{m_0c^2}\sin^2{ϑ/2}$</p></center>
+					<p>The scattering formula shows that the change in wavelength depends only on the scattering angle $ϑ$.
+					During the collision the photon loses a part of its energy and the wavelength increases $(λ'>λ)$.</p>
+					<p>The factor $2πħ\text"/"m_0c$ is called the <i>Compton wavelength</i> $λ_c$ of
+					a particle with rest mass $m_0$ (here, an electron). The Compton wavelength can be used as a measure of
+					the size of a particle. The kinetic energy of the scattered electron is then</p>
+					<center><p>$T=ħω-ħω'=ħc2π\({1}/{λ}-{1}/{λ'}\)$</p>
+					<p>or <br>
+					$T=ħω{2λ_c\sin^2{ϑ/2}}/{λ+2λ_c\sin^2{ϑ/2}}$</p></center>
+					<p>Thus the energy of the scattered electron is directly proportional to the energy of
+					the photon. Therefore the Compton effect can only be observed in the domain of short wavelengths
+						(X-rays and $γ$-rays). To appreciate this observation fully, we have to remember that in classical electrodynamics,
+					no alteration in frequency is permitted in the scattering of electromagnetic waves;
+					only light quanta with momentum $ħ{\bo k}$ and energy $ħω$ make this possible. Thus the
+					idea of light quanta has been experimentally confirmed by the Compton effect. A relatively board
+					Compton line appears in the experiment, due to certain momentum distributions of the
+					electrons and because the electrons are bound in atoms.</p>
+					<p>The Compton effect is a further proof for the concept of photons and for the validity of
+					momentum and energy conservation in interaction processes between light and matter.</p>
+				</div>
+			<center><p>$-$</p></center>
+			<center><p><a href="javascript:toggleDiv('ritz_combination_principle');" style="background-color: LightCyan; padding: 10px 15px;">
+			The Ritz Combination Principle</a></p></center>
+		<div id="ritz_combination_principle" style="background-color: white; padding: 5px 10px; display:none">
+			<center><p style="color:Black"><b><u>THE RITZ COMBINATION PRINCIPLE</u></b></p></center>
+			<p>In the course of investigations of the radiation emitted by atoms, it appeared that characteristic
+			spectral lines belong to each atom and that these lines can be formally arranged into certain spectral series
+			(for example, the <i>Balmer series</i> in the hydrogen atom). The <i><b>Ritz</b></i> combination principle (1908)
+			states that new spectral lines can be found by additive and subtractive combination of two known spectral lines. The existence of spectral lines
+			means that transformations (of the electrons) between discrete energy levels take place within the atom.</p>
+			<p>The frequency condition $E=ħω$ yields an explanation for the Ritz combination principle.
+			Considering the transition of an atom from a state with energy $E_l$ to a state with energy $E_n$, we have</p>
+			<center><p>$ħω_{ln}=E_l-E_n=E_l-E_m+E_m-E_n$</p>
+			<p>or the frequencies,
+			<br> $ω_{ln}=ω_{lm}+ω_{mn}$</p></center>
+			<center><p><img src="quantum_mechanics_ritz_principle.jpg" alt="The Ritz combination principle" style="width:80%;height:auto;"></p></center>
+			<p>Here the energy levels and the corresponding transitions are represented schematically. The
+			spectral series result from transitions from different higher energy levels into a common "ground state"
+			$E_n$. Thus, the spectral analysis of atoms suggests quite clearly that only discrete energy levels exist in an atom
+			and that energy can be transferred only by light quanta with a definite energy.</p>
+		</div>
+			<center><p>$-$</p></center>
+			<center><p><a href="javascript:toggleDiv('franck_hertz_experiment');" style="background-color: LightCyan; padding: 10px 15px;">
+				The Frank-Hertz Experiment</a></p></center>
+			<div id="franck_hertz_experiment" style="background-color: white; padding: 5px 10px; display:none">
+				<center><p style="color:Black"><b><u>THE FRANK-HERTZ EXPERIMENT</u></b></p></center>
+				<p>Another experiment demonstrating the quantization of energy was performed by <i><b>Franck</b></i> and
+				<i><b>Hertz</b></i> in 1913, using the cathode $K$ in a cylindrical grid $A$ closely surrounded by
+				a third electrode $Z$ The electrons are accelerated between $K$ and $A$ to reach $Z$ through the
+				anode grid. A small countervoltage prevents very slow electrons from reaching $Z$. The experiment yields a current-voltage
+				characteristic between $K$ and $Z$ as shown</p>
+				<center><p><img src="quantum_mechanics_frank_hertz_experiment.jpg" alt="The Frank-Hertz Experiment" style="width:80%;height:auto;"></p>
+					</center>
+				<p>As long as the energy of the electron in the field does not exceed $4.9\text"eV"$, the
+				electrons can cross the tube without a loss of energy. The exchange of energy due to
+					elastic collisions between electrons and mercury atoms can be neglected. The current increases steadily, but
+				as soon as the energy of the electrons has reached $4.9 \text"eV"$, the current drops
+				drastically. A mercury atom obviously can take up exactly this much energy from the electrons
+				in a collision. Thereafter an electron has insufficient kinetic energy to reach</p>
+			</div>
+
+		<center><p>$-$</p></center>
+		<center><p><a href="javascript:toggleDiv('stern_gerlach_experiment');" style="background-color: LightCyan; padding: 10px 15px;">
+				The Stern-Gerlach Experiment</a></p></center>
+			<div id="stern_gerlach_experiment" style="background-color: white; padding: 5px 10px; display:none">
+				<center><p style="color:Black"><b><u>THE STERN-GERLACH EXPERIMENT</u></b></p></center>
+				<p>In their experiment performed in 1921, <i><b>Stern</b></i> and <i><b>Gerlach</b></i>
+				observed the splitting of an atomic beam in an inhomogeneous magnetic field. If an atom possesses a magnetic moment ${\bo m}$,
+				it will be affected not only by a torque, but also by a force ${\bo F}$ when in an inhomogeneous magnetic field ${\bo H}$.
+				The potential energy in the magnetic field is given by $V=-{\bo m}⋅{\bo H}$; the force is given by the gradient, i.e.
+				${\bo F}=-\text"grad" V=\text"grad" {\bo m}⋅{\bo H}$.</p>
+				<p>In the experiment, a beam of neutral silver atoms was sent through an inhomogeneous magnetic field and the distribution of the atoms after
+				passing the field was measured. Classically one would expect a broadening of the beam, due to the varying strength of the magnetic field.
+				In practice, however, the beam is split into two distinct partial beams. The intensity distribution on the screen is shown in figure.</p>
+				<center><p><img src="quantum_mechanics_stern_gerlach_experiment.jpg" alt="The Stern-Gerlach Experiment" style="width:80%;height:auto;">
+				</p></center>
+				<p>This doubly peaked distribution obviously means that the magnetic moment of the silver atoms cannot
+				orient itself arbitrarily with respect to the magnetic field; rather, only two opposing orientations of the magnetic moment in the
+				field are possible. This cannot be understood classically. Obviously the phenomena of quantization appearing in the atomic domain are not restricted to
+				energy and momentum only, but are also found in other physical quantities. This particular
+				quantization is called <b>directional quantization</b> (or quantization of the angular momentum).</p>
+			</div>
+	</div>
+
+	<center><p>$*$</p></center>
+	<center><p><a href="javascript:toggleDiv('De_Broglie_relations');" style="background-color: PowderBlue; padding: 10px 15px;">
+		De Broglie relation</a></p></center>
+		<div id="De_Broglie_relations" style="background-color: white; padding: 5px 10px; display:none">
+			<center><p style="color:FireBrick"><b><u>DE BROGLIE RELATION</u></b></p></center>
+			<center><p><a href="javascript:toggleDiv('wave_of_matter');" style="background-color: LightCyan; padding: 10px 15px;">
+				Wave of Matter</a></p></center>
+			<div id="wave_of_matter" style="background-color: white; padding: 5px 10px; display:none">
+				<center><p style="color:Black"><b><u>WAVE OF MATTER</u></b></p></center>
+			<p>Investigations on the nature of light showed that, depending on the kind of experiment performed, light must be described by electromagnetic <i>waves</i> or by <i>particles</i>
+			(photons). Thus the wave aspect appears in the context of diffraction and interference phenomena, whereas the particulate aspect shows up most distinctly in the
+			photoelectric effect. So for light, the relations describing wave-particle duality are ready known. But what about material particles?
+			Their particulate nature is rather obvious; do they also possess a wave aspect?</p>
+			<p>In addition to their corpuscular properties, <i><b>de Broglie</b></i> assigned wave properties to particles, thus
+			transferring the relations known from light to mater. What is true for photons should be valid for any type of particles. Hence, according to the
+			particulate picture, we assign to a <i>particle</i>, for example an electron with mass $m$, <i>propagating uniformly with velocity ${\bo v}$
+				through field-free space,</i> an energy $E$ and a momentum ${\bo p}$. In the wave picture, the particle is described by a frequency $ν$ and a wave vector ${\bo k}$.
+			Following de Broglie, we now speculate: since these descriptions should only designate two different aspects of the same object, the following relations between the characteristic
+			quantities should be valid:</p>
+				<center><p style="border:3px; border-style:solid; border-color:Black;">$E=hν=ħω$</p>
+			<p>and </p>
+			<p style="border:3px; border-style:solid; border-color:Black;">${\bo p}=ħ{\bo k}={h}/{λ}{{\bo k}}/{|{\bo k}|}$</p></center>
+			<p>These equations are true for the photon (electromagnetic field); now they are postulated to be valid for <i>all</i>
+			particles. Then to every free particle, understood in the above sense, a plane wave determined up to an amplitude factor $A$ is
+			assigned:</p>
+				<center><p style="border:3px; border-style:solid; border-color:Black;">$ψ\({\bo r},t\)=A\exp{\[\i\({\bo k}⋅{\bo r}-ωt\)\]}$</p></center>
+			<p>or, using the above relations, </p>
+				<center><p style="border:3px; border-style:solid; border-color:Black;">$ψ\({\bo r},t\)=A\exp{\[\i\({\bo p}⋅{\bo r}-Et\)\text"/"ħ\]}$
+				</p></center>
+			<p>Following de Broglie, the plane wave connected to the particle has a wavelength</p>
+				<center><p>$λ={2π}/{k}={h}/{p}={h}/{mv}$</p></center>
+			<p>where the second relation is valid only for particles with nonvanishing rest mass. Because of the small value of the quantum of action, the particle mass must be sufficiently small to
+			generate a measurable wavelength. For this reason, the wave character of matter first appears in atomic region. The phase</p>
+				<center><p>$α={\bo k}⋅{\bo r}-ωt$</p></center>
+			<p>of the wave $ψ\({\bo r},t\)$ propagates with velocity ${\bo u}={\bo r}↖{.}$ according the relation</p>
+				<center><p>${dα}/{dt}={\bo k}⋅{\bo r}↖{.}-ω$ $={\bo k}⋅{\bo u}-ω=0$.</p></center>
+			<p>Hence, we get for the magnitude of the phase velocity ${\bo u}$ (${\bo k}$ and ${\bo u}$ have the same direction)</p>
+				<center><p>$|{\bo u}|={ω}/{k}$.</p></center>
+			<p>In the following, we will show that <b>matter waves</b> - in contrast with electromagnetic waves - even show dispersion in a vacuum.
+			We must therefore calculate $ω(k)$. The relativistic energy theorem for free particles</p>
+				<center><p>$E^2=m_0^2c^4+p^2c^2$</p></center>
+			<p>can, for $v≪c$, be put into form</p>
+				<center><p>$E=mc^2=√{m_0^2c^4+p^2c^2}$ $=m_0c^2+{p^2}/{2m_0}+...$ .</p></center>
+			<p>Now we can give the frequency as a function of the wave number:</p>
+				<center><p>$ω(k)={m_0c^2}/{ħ}+{ħk^2}/{2m_0}+...$ .</p></center>
+			<p>Therefore, the phase velocity $u={ω}/{k}$ is a function of $k$ in a vacuum, i.e.</p>
+				<center><p>$u={m_0c^2}/{ħk}+{ħk}/{2m_0}+...$ ,</p></center>
+			<p>so that the matter waves show dispersion even there, i.e. waves with different wave number (wavelength)
+			have different phase velocities. On the other hand, for a <i>phase velocity $u$</i>, the following relation holds:</p>
+				<center><p>$u={ω}/{k}={ħω}/{ħk}={E}/{p}={mc^2}/{mv}={c^2}/{v}$</p></center>
+			<p>Because $c>v$, the phase velocity of matter waves is always larger than the velocity of light in a vacuum. Hence,
+			it cannot be identified with the velocity of the assigned particles. Because these are massive, they can only propagate more slowly
+			than light does.</p>
+			</div>
+			<center><p>$-$</p></center>
+			<center><p><a href="javascript:toggleDiv('the_group_velocity');" style="background-color: LightCyan; padding: 10px 15px;">
+				The group velocity</a></p></center>
+			<div id="the_group_velocity" style="background-color: white; padding: 5px 10px; display:none">
+				<center><p style="color:Black"><b><u>THE GROUP VELOCITY</u></b></p></center>
+				<p>The group velocity is calculated using</p>
+				<center><p>$v_g={dω}/{dk}={d(ħω)}/{d(ħk)}={dE}/{dp}$ ;</p></center>
+				<p>(it will be proven below). The variation of energy $d{\bo E}$ of the particle moving under the influence of a force ${\bo F}$
+				along a path $d{\bo s}$ is $dE={\bo F}⋅d{\bo s}$ and because ${\bo F}=d{\bo p}\text"/"dt$
+				we therefore have</p>
+				<center><p>$dE={d{\bo p}}/{dt}⋅d{\bo s}=d{\bo p}⋅{\bo v}$ .</p></center>
+				<p>Since ${\bo v}$ and ${\bo p}=m{\bo v}$ are parallel, the following equations hold:</p>
+				<center><p>$dE=|{\bo v}||d{\bo p}|=vdp$</p>
+				<p>or <br>${dE}/{dp}=v$</p></center>
+				<p>Hence, the group velocity of a matter wave is identical with the particle velocity, i.e.</p>
+				<center><p>$v_g=v$</p></center>
+				<p>We can also deduce this result in a different way. If we want to describe a particle as
+				a spatially limited, we cannot describe it by a plane wave. Instead,
+				we try to describe the particle by a finite wave packet, which with the help
+				of a Fourier integral, is written as a superposition of harmonic waves, differing in
+				wavelength and phase velocity. For simplicity we investigate a group of waves propagating in the $x$
+				direction</p>
+				<center><p>$ψ(x,t)=∫↙{k_0-∆k}↖{k_0+∆k} c(k)\exp{(\i\[kx-ω(k)t\])}dk$.</p></center>
+				<p>Here, $k_0=2π\text"/"λ_0$ is the mean wave number of the group and $∆k$ is the measure of the extension
+				(frequency spread) of the wave packet, assumed to be small $(∆k≪k_0)$. Therefore, we can expand the frequency
+					$ω$, which is a function of $k$, in a Taylor series in the interval $∆k$ about $k_0$,
+				and neglect terms of the order $(∆k)^n=(k-k_0)^n$, $n≥2$, i.e.</p>
+				<center><p>$ω(k)=ω(k_0)+\({dω}/{dk}\)_{k=k_0}(k-k_0)$
+					$+1/2\({d^2ω}/{dk^2}\)_{k=k_0}(k-k_0)^2+...$ .</p></center>
+				<p>We take $ξ=k-k_0$ as new integration variable $ξ$ and assume the amplitude $c(k)$ to be
+				a slowly varying function of $k$ in the integration interval $2∆k$. The term $(dω\text"/"dk)_{k-k_0}=v_g$
+				is a group velocity. Thus, we have</p>
+				<center><p>$ψ(x,t)=\exp{(\i\[k_0x-ω_0t\])}$ $∫↙{-∆k}↖{∆k} \exp{\[(\i(x-v_gt))ξ\]}dξ$</p></center>
+				<p>Integration, transformation and the approximation $c(k_0+ξ)≈c(k_0)$ lead to the result</p>
+				<center><p>$ψ(x,t)=C(x,t)\exp{(\i\[k_0x-ω(k_0)t\])}$</p>
+				<p>with <br>
+				$C(x,t)=2c(k_0){\sin\[∆k(x-v_gt)\]}/{x-v_gt}$</p></center>
+				<p>Since the argument of the sine contains the small quantity $∆k,C(x,t)$ varies only slowly
+				depending on time $t$ and coordinate $x$. Therefore, we can regard $C(x,t)$ as the amplitude of an
+				approximately monochromatic wave and $k_0x-ω(k_0)t$ and abbreviating the term</p>
+				<center><p>$∆k(x-v_gt)=z$,</p></center>
+				<p>we see that variation in amplitude is determined by the factor</p>
+				<center><p>${\sin z}/{z}$.</p></center>
+				<p>This has the properties</p>
+				<center><p>$\lim↙{z→0}{\sin z}/{z}=1\text" "$ for $z=0$,</p>
+				<p>${\sin z}/{z}=0\text" "$ for $z=±π\text" , "±2π$.</p></center>
+				<p>If we further increase the absolute value of $z$, the function $\sin z\text"/"z$ runs
+				alternately through maxima and minima, the function values of which are small compared with the principal maximum
+				at $z=0$, and quickly converges to zero. Therefore, we can conclude that superposition generates a wave packet whose
+				amplitude is nonzero only in a finite region, and is described by $(\sin z)\text"/"z$. The form of such packet at a certain time is illustrated</p>
+				<center><p><img src="quantum_mechanics_wave_packet.jpg" alt="The wave packet" style="width:80%;height:auto;"></p></center>
+				<p>The modulating factor $(\sin z)\text"/"z$ of the amplitude assumes for $z→0$ the maximal value $1$. Therefore, for $z=0$</p>
+				<center><p>$v_gt-x=0$ .</p></center>
+				<p>which means that the maximum of the amplitude is a plane, propagating with velocity</p>
+				<center><p>${dx}/{dt}=v_g$ .</p></center>
+				<p>The propagation velocity of the plane of maximal amplitude has to be identified with the group velocity $v_g$, which, as we
+				determined earlier, is the velocity of energy transport. </p>
+				<p style="border:3px; border-style:solid; border-color:Black;"><i><b>The group velocity</b> is the velocity of the whole wave packet ("matter-wave" group)</i>.</p>
+				<p>We can understand this in another, shorter way: if we demand $|ψ(x,t)|^2=\text"const."$ , we conclude that
+				$v_gt-x=\text"const",$ , and, hence, by differentiation, $x↖{.}=v_g$. Thus, the fixed constant value $|ψ(x,t)|^2$ moves with group velocity $v_g$.
+				Differentiating the dispersion relation of $ω(k)$, we get for $v_g$:</p>
+				<center><p>$v_g=\({dω}/{dk}\)_{k=k_0}=\({ħk}/{m_0}\)_{k=k_0}$ $={ħk_0}/{m_0}={p}/{m_0}$.</p></center>
+				<p>From this, we must not in general conclude that the group velocity of a matter-wave group coincides with the classical
+				particle velocity. All results derived up to now were gained under the simplification that all terms in the expansion of
+					$ω(k)$ higher than first order can be neglected. This allowed so long as the medium is free of dispersion.
+				Since de Broglie waves show dispersion even in a vacuum, the derivative $d^2ω\text"/"dk^2≠0$, i.e. it is nonzero.
+				<b>This implies that the wave packet does not retain its form, but gradually spreads (each of the many monochromatic waves
+					forming the packet has a slightly different frequency and therefore a different propagation velocity). If the dispersion is small, i.e.</b></p>
+				<center><p>${d^2ω}/{dk^2}≈0$ ,</p></center>
+				<p>for a certain time, we can assign a particular form to the wave packet. Then we can consider the matter-wave group
+				as moving as a whole with the group velocity $v_g$</p>
+				<p>Following de Broglie, we assign to each uniformly moving particle a plane wave with wavelength
+				$λ$. To determine this wavelength, we start with de Broglie's basic equations. For the wavelength, the following holds:</p>
+				<center><p>$λ={2π}/{k}={2πħ}/{p}={h}/{p}$.</p></center>
+				<p>If we assume the velocity of the particle to be small $v≪c$, and use the equation</p>
+				<center><p>$E={p^2}/{2m_0}$,</p></center>
+				<p>we get the wavelength</p>
+					<center><p style="border:3px; border-style:solid; border-color:Black;">$λ={h}/{√{2m_0E}}$,</p></center>
+				<p>meaning that we must know the rest mass of the particle in motion to determine its wavelength.
+					If we consider, for example, an electron with kinetic energy $E=10\text"keV"$ and rest mass
+				$m_0=9.1×10^{-28}\text"g"$, then its matter wavelength is $λ=0.122\A↖{o}$ $=0.122×10^{-8}cm$.</p>
+				<p>As we know, the resolution of a small object under a microscope depends upon the wavelength of the light used to illuminate the object.
+				The shorter the wavelength, the shorter the distance is between two points that can be seen distinctly through the microscope. The wavelength of
+				visible light can typically be chosen as $λ_L≈5000 \A↖{o}$, permitting a magnification of about $2000$ times.
+				If electrons are used instead of visible light to "scan" an object, magnification of up to $500\text" "000$ times and a resolution about
+				$5-10 \A↖{o}$ can be achieved. Finally, protons and mesons in the GeV region $(10^9\text"eV")$ have wavelengths so small that it is possible to use them to investigate the inner structure
+				of elementary particles.</p>
+				</div>
+			<center><p>$-$</p></center>
+			<center><p><a href="javascript:toggleDiv('the_diffraction_of_matter_waves');" style="background-color: LightCyan; padding: 10px 15px;">
+				The Diffraction of Matter Waves</a></p></center>
+				<div id="the_diffraction_of_matter_waves" style="background-color: white; padding: 5px 10px; display:none">
+					<center><p style="color:Black"><b><u>THE DIFFRACTION OF MATTER WAVES</u></b></p></center>
+					<p>Interference and diffraction phenomena are unique proofs of the occurrence of waves.
+					In particular, destructive interference cannot be explained using the corpuscular picture.
+					While the photoelectric effect and the Compton effects show the corpuscular nature of light, the
+					diffraction of electron rays proves the existence of matter waves.</p>
+					<p>Since the wavelength of electrons is too small for diffraction by an artificial grid, crystal lattices are used for scattering.
+					These experiments are in general a repetition of the corresponding structural investigations performed with
+					X-rays.</p>
+					<p><i><b>Davisson</b></i> and <i><b>Germer</b></i> applied <i><b>Laue's</b></i> method for X-ray diffraction.
+					Here, the surface of a monocrystal is used as a plane diffraction grid. The electrons are scattered at the surface
+					of the crystal, but do not penetrate it. So, the experimental setup and the path of the electron rays is shown</p>
+					<center><p><img src="quantum_mechanics_diffraction_of_matter.jpg" alt="The diffraction of matter waves" style="width:45%;height:auto;">
+						<img src="quantum_mechanics_diffraction_of_matter2.jpg" alt="The diffraction of matter waves" style="width:45%;height:auto;">
+					</p></center>
+					<p>As can be seen in the figure, <b>diffraction maxima</b> appear if the condition</p>
+					<p style="border:3px; border-style:solid; border-color:Black;">$nλ=d\sin θ$</p>
+					<p>is filled. If the electron passes through an accelerating voltage $U$, its energy is given by $eU$,
+					and it follows that</p>
+					<center><p>${nh}/{d√{2m_0e}}=√{U}\sin θ$ ,</p></center>
+					<p>which, indeed, is confirmed by experiment.</p>
+					<p>Tartakowski and Thomson correspondingly used the <i>Debye-Scherrer method</i> of
+					X-ray scattering. Here, monochromatic X-radiation is diffracted by a body consisting of compressed crystal powder. The
+					crystal powder represents a spatial diffraction grid. Because of the disordered arrangement, there are
+					always crystals that comply with the bending condition. We can see the path of the rays.</p>
+					<center><p><img src="quantum_mechanics_scattering_of_matter.jpg" alt="The scattering of matter waves" style="width:45%;height:auto;">
+						<img src="quantum_mechanics_scattering_of_matter2.jpg" alt="The scattering of matter waves" style="width:45%;height:auto;">
+					</p></center>
+					<p>The diffraction maxima appear under the condition (the <b><i>Wulf-Bragg relation</i></b>)</p>
+					<center><p style="border:3px; border-style:solid; border-color:Black;">$2d\sin θ=nλ$ .</p></center>
+					<p>Owing to the statistical distribution of the minicrystals in the crystal powder, the apparatus - and correspondingly
+					the diffraction figures - are symmetrical with respect to the ${\ov SO}$ axis. Because of the radial symmetry of the interference patterns, circles appear around $O$
+					on the screen. Obviously, the relation $\tan (2θ)=D\text"/"2L$ is valid, where $L$ is the distance between scatterer and screen.
+					The experimental setup is chosen in such a way that all angles are small, thus permitting the approximation $\tan θ≈2θ$. From the
+					Wulf-Bragg equation we get</p>
+					<center><p>$Dd=2nLλ$ .</p></center>
+					<p>If electron rays are used, we insert the de Broglie wavelength into above relation and find that</p>
+					<center><p>$D√{U}={2nLh}/{d√{2m_0e}}$ ,</p></center>
+					<p>i.e. the square root of the accelerating voltage times the radius of the diffraction circles has to be constant for any order of diffraction.</p>
+					<p>The experimental results were in perfect agreement with this formula. Nowadays, electron
+					rays and, in particular, neutron rays are an important tool used in solid state physics to determine crystal structures.</p>
+				</div>
+		</div>
+	<center><p>$*$</p></center>
+	<center><p><a href="javascript:toggleDiv('Heisenberg_uncertainty_principle');" style="background-color: PowderBlue; padding: 10px 15px;">
+		The Uncertainty Principle</a></p></center>
+		<div id="Heisenberg_uncertainty_principle" style="background-color: white; padding: 5px 10px; display:none">
+			<center><p style="color:FireBrick"><b><u>THE HEISENBERG UNCERTAINTY PRINCIPLE</u></b></p></center>
+			<center><p><a href="javascript:toggleDiv('Heisenberg_uncertainty_principle_prelude');" style="background-color: PowderBlue; padding: 10px 15px;">
+				Prelude</a></p></center>
+			<div id="Heisenberg_uncertainty_principle_prelude" style="background-color: white; padding: 5px 10px; display:none">
+				<center><p style="color:FireBrick"><b><u>PRELUDE</u></b></p></center>
+			<p>Among other things, the wave character of matter [i.e. that in quantum mechanics particles are guided by the field $ψ(x,t)$]
+			manifests itself in the fact that there is a direct connection between position and moment determination in microscopic physics,
+			namely, we are not able to measure the exact position and momentum of a particle simultaneously. The amount of the uncertainty is given
+			by the <i><b>Heisenberg</b> uncertainty principle</i>.</p>
+			<p>Let us first demonstrate the existence of the uncertainty principle. To do this connection we consider the one-dimension wave packet, illustrated in figure,</p>
+				<center><p><img src="quantum_mechanics_uncertainty_principle.jpg" alt="The probability density of the wave packet" style="width:80%;height:auto;"></p>
+			<p>$ψ(x,t)=2c(k_0){\sin{\[∆k(v_gt-x)\]}}/{v_gt-x}e^{\i(ω_0t-k_0x)}$</p></center>
+			<p>at time $t=0$. The extension of the wave group can be characterized by the quantity $∆x$, i.e. the distance of the first minimum from the maximum.
+			The condition for minima is</p>
+				<center><p>$|ψ(x,t)|^2=4c^2{\sin^2{\[∆kx)\]}}/{x^2}=0$</p></center>
+			<p>Thus we get for the first minimum</p>
+				<center><p>$∆k∆x=π$.</p></center>
+			<p>Inserting the momentum according to de Broglie, we get as an estimate for the Heisenberg uncertainty principle between position and momentum,</p>
+				<center><p>$∆p∆x≈πħ$.</p></center>
+			<p>This equation means that simultaneous determination of position and momentum in microscopic physics is not arbitrary exactly possible;
+			both quantities are always related by the above relation.</p>
+			<p>Heisenberg's uncertainty principle is a consequence of the wave character of the particles
+				(more exactly: of the guiding field of the particles). Using the superposition principle,
+			the probability field is a wave packet superposed of waves with definite momentum (<i>plane waves</i>).
+			The particle guided by this wave packet can be found with high probability within $∆x$. It is said to be
+			<i><u>localized</u></i> in $∆x$. For such a localization $∆x$, a great number of plane waves with momenta near $ħ{\bo k}_0$,
+			i.e. a momentum packet of width $ħ∆k$, is required. In classical physics, uncertainty relations of a similar
+			form appear in processes involving waves. The transmission of a spatially limited electromagnetic signal by a sender occurs in the
+			form of a wave packet containing waves of all frequencies (momenta). To get a wave with a single frequency, the sender must transmit for us
+			long as possible (indefinitely), because the process of switching on and off contributes other frequencies.
+				Therefore the wave spreads throughout space and no determination of its position is possible.</p>
+			<p>After this rather illustrative consideration, we will now derive the Heisenberg uncertainty principle in an exact way. </p>
+			</div>
+			<center><p>$-$</p></center>
+			<center><p><a href="javascript:toggleDiv('Heisenberg_uncertainty_principle_continue');" style="background-color: PowderBlue; padding: 10px 15px;">
+				The Uncertainty Principle</a></p></center>
+			<div id="Heisenberg_uncertainty_principle_continue" style="background-color: white; padding: 5px 10px; display:none">
+				<center><p style="color:FireBrick"><b><u>THE HEISENBERG UNCERTAINTY PRINCIPLE</u></b></p></center>
+				<p>Our starting point is an arbitrary particle state which is described by the wave function $ψ(x)$. Furthermore, we assume that $ψ$
+				is normalized to unity, and we restrict the calculation at first to one dimension only.</p>
+				<p>In deriving the uncertainty principle, we first have to determine a measure for the uncertainty, i.e. we have to define a measure for the deviation of $p_x$,
+				or $x$, from their respective mean values</p>
+				<center><p>${\ov p_x}=∫ψ^{*}(x)\(-\iħ{∂}/{∂x}\)ψ(x)dx$ and ${\ov x}=∫ψ^{*}(x)xψ(x)dx$ .</p></center>
+				<p>Here, we use the mean-square deviations (dispersions) ${\ov ∆p_x^2}$ and ${\ov ∆x^2}$, which are defined by</p>
+				<center><p>${\ov ∆p_x^2}={\ov (p_x-{\ov p_x})^2}$, and ${\ov ∆x^2}={\ov (x-{\ov x})^2}$ .</p></center>
+				<p>For the following calculation we choose a suitable coordinate system: we assume the origin to be fixed in the point ${\ov x}$ and
+				let it move with the centre of the distribution ${\ov x}$ so that at any time ${\ov x}=0$ is valid. Then we have</p>
+				<center><p>${\ov x}=0$, and ${\ov p_x}=0$ .</p></center>
+				<p>From the relation for the distributions (mean-square deviations) we get</p>
+				<center><p>${\ov ∆x^2}={\ov x^2}$, and ${\ov ∆p_x^2}={\ov p_x^2}$ .</p></center>
+				<p>The mean values are easily calculated, i.e.</p>
+				<center><p>${\ov x^2}=∫ψ^{*}x^2ψdx$,</p></center>
+				<center><p>${\ov p_x^2}=∫ψ^{*}(x)\(-ħ^2{∂^2}/{∂x^2}\)ψ(x)dx$ $=-ħ^2∫ψ^{*}(x){∂^2 ψ(x)}/{∂x^2}dx$ .</p></center>
+				<p>To establish a connection between the quantities $x^2$ and $p_x^2$, we consider the integral</p>
+				<center><p>$I(α)=∫↙{-∞}↖{∞}|αxψ(x)+{dψ(x)}/{dx}|^2dx\text" ,"$ $α∈\R$.</p></center>
+				<p>The integral is an absolute square. Therefore $I(α)$ is always greater than, or equal to zero. We multiply out and get</p>
+				<center><p>$I(α)=α^2∫↙{-∞}↖{∞} x^2∣ψ∣^2dx $ $+ α∫↙{-∞}↖{∞}x\({dψ^{*}}/{dx}ψ+ψ^{*}{dψ}/{dx}\)dx$
+				$+∫↙{-∞}↖{∞}{dψ^{*}}/{dx}{dψ}/{dx}dx$ .</p></center>
+				<p>It is helpful to introduce the following abbreviations:</p>
+				<center><p>$A=∫↙{-∞}↖{∞}x^2 ∣ψ∣^2 dx={\ov ∆x^2}$;</p></center>
+				<center><p>$B=-∫↙{-∞}↖{∞}x\({dψ^{*}}/{dx}ψ+ψ^{*}{dψ}/{dx}\)dx$ $=-∫↙{-∞}↖{∞}x{d}/{dx}(ψ^{*}ψ)dx$
+				$=-xψ^{*}ψ∣_{-∞}^{∞}+∫↙{-∞}↖{∞}ψ^{*}ψdx=1$ ,</p></center>
+				<p>because $ψ$ vanishes at the boundaries of the integration:</p>
+				<center><p>$C=∫↙{-∞}↖{∞}{dψ^{*}}/{dx}{dψ}/{dx}dx$ 	$=ψ^{*}{dψ}/{dx}∣_{-∞}^{∞}-∫↙{-∞}↖{∞}ψ^{*}{d^2ψ}/{dx^2}dx$
+					$={1}/{ħ^2}∫↙{-∞}↖{∞}ψ^{*}\(-ħ^2{d^2}/{dx^2}\)ψdx$ $={1}/{ħ^2}{\ov ∆p_x^2}$.</p></center>
+				<p>With the help of the abbreviations, the integral can be written</p>
+				<center><p>$I(α)=Aα^2-Bα+C≥0$ .</p></center>
+				<p>As this polynomial of second order in $α$ is positive definite according to $α∈\R$, the discriminant must necessarily be negative or vanish.
+					$I(α)$ must be positive for all $α$. Therefore the roots of the quadratic equation $I(α)=0$ must be complex. </p>
+				<p>Thus the relation</p>
+				<center><p>$B^2-4CA≤0$</p></center>
+				<p>is necessarily fulfilled. Interesting in this inequality the values for $A$, $B$ and $C$
+				denoted before, we obtain the uncertainty relation for momentum and position in the form</p>
+				<center><p style="border:3px; border-style:solid; border-color:Black;">${\ov ∆p_x^2}{\ov ∆x^2}≥{ħ^2}/{4}$</p></center>
+				<p>The experimentally proved wave nature of particles (meaning the existence of a guiding field) alone obviously <b>implies that the momentum and
+				coordinates of a particle cannot be simultaneously determined</b>; these observables can never be measured simultaneously with arbitrary
+				precision. This principle also valid for other pairs of physical quantities, provided that the product of their dimensions has the dimension of
+				action.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<center><p>...</p></center>
+
+</body>
+</html>

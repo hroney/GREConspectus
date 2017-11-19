@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+  <link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+  <script src="../mathscribe/jquery-1.4.3.min.js"></script>
+  <script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+
+  <!-- <script>M.MathPlayer = false; M.trustHtml = true;</script> -->
+
+  <!--
+  To use jqMath in an html file, use a text editor to copy the above lines to the beginning of
+  your file, remove any corresponding old tags, and save the file in UTF-8 format.
+
+  If you aren't writing in English, change "en" above to the correct language code, especially if
+  your language allows a comma as a decimal mark (instead of a period).
+
+  If you don't use Fraktur characters, you can remove the link on line 7, as this may speed up
+  download times slightly.
+
+  You may need to change each "../mathscribe" path above, depending on the directory structure
+  that you choose.
+
+  You can use a different version of jquery (1.0+) if you prefer.  We've just provided this one
+  for your convenience.
+
+  If you need to use the \html macro, then uncomment the M.MathPlayer and M.trustHtml line above.
+  But if you are going to parse untrusted user input using jqMath, even in a blog comment, you
+  must ensure that M.trustHtml is set back to false first.
+
+  The files jscurry-0.4.0.js, jscurry-0.4.0.min.js, and jqmath-0.4.3.js are provided just for your
+  information.  They are all included, and compressed, in jqmath-etc-0.4.3.min.js.
+
+  α β γ δ ε ζ η θ ι κ λ μ
+ν ξ π ρ ς σ τ υ φ χ ψ ω
+ϐ ϑ ϒ ϕ ϖ Ϛ Ϟ Ϡ ϰ ϱ ϲ
+
+ℎ ℏ
+  -->
+
+  <title>Lagrangian Mechanics</title>
+</head>
+<body>
+<h2>Generalised dynamics</h2>
+<center><h3>$●$ Lagrangian dynamics</h3></center>
+<center>
+  <table border="1" style="border:1px solid Gold;" bgcolor="OldLace">
+  <tr><td>Action</td><td>$S=∫↙{t_1}↖{t_2} L\(\bo q, \bo q↖{.},t\)dt$</td></tr>
+  <tr><td>Euler-Lagrange equation</td><td>${d}/{dt}\({∂L}/{∂q↖{.}_i}\)-{∂L}/{∂q_i}=0$</td></tr>
+  <tr><td>Lagrangian of particle in external field</td><td>$L={1}/{2}mv^2-V(\bo r,t)$
+    <br>$=T-U$</td></tr>
+  <tr><td>Relativistic Lagrangian of a charged particle</td><td>$L=-{m_0c^2}/{γ}-e(ϕ-\bo A⋅\bo v)$</td></tr>
+  <tr><td>Generalised momenta</td><td>$p_i={∂L}/{∂q_i}$</td></tr>
+</table></center>
+<p>
+<a href="javascript:toggleDiv('myContent');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="myContent" style="background-color: white; padding: 5px 10px; display:none">
+  <table border-collapse="collapse;" border="1px solid black;">
+    <tr><td>$$S$$</td><td>action ($δS=0$ for the motion)</td><td>$$L$$</td><td>Lagrangian</td></tr>
+    <tr><td>$$q$$</td><td>generalised coordinates</td><td>$$t$$</td><td>time</td></tr>
+    <tr><td>$$q↖{.}$$</td><td>generalised velocities</td><td>$$m$$</td><td>mass</td></tr>
+    <tr><td>$$\bo v$$</td><td>velocity</td><td>$$U$$</td><td>potential energy</td></tr>
+    <tr><td>$$\bo r$$</td><td>position vector</td><td>$$T$$</td><td>kinetic energy</td></tr>
+    <tr><td>$$m_0$$</td><td>(rest) mass</td><td>$$+e$$</td><td>positive charge</td></tr>
+    <tr><td>$$γ$$</td><td>Lorentz factor</td><td>$$ϕ$$</td><td>electronic potential</td></tr>
+    <tr><td>$$\bo A$$</td><td>magnetic vector potential</td><td>$$p_i$$</td><td>generalised momenta</td></tr>
+  </table>
+</div>
+<center>
+<p><a href="javascript:toggleDiv('myContent2');" style="background-color: SkyBlue; padding: 10px 15px;">Theory</a></p>
+<div id="myContent2" style="background-color: white; padding: 5px 10px; display:none">
+  <p><a href="javascript:toggleDiv('myContent_intro');" style="background-color: PowderBlue; padding: 10px 15px;">Intro</a></p>
+  <div id="myContent_intro" style="background-color: white; padding: 5px 10px; display:none">
+    <p style="color:FireBrick"><b><u>INTRODUCTION</u></b></p>
+    <p>By using <i>Newton's second law</i> and given <i>initial conditions</i>, we are able to obtain
+    the equations of motion of a given system and describe the motion of the system. Newton's laws
+    can be used only if all the forces acting on the system are known; that is, the <i>dynamical conditions</i>
+  are known.<br> In most situations, the problem are not that simple to solve by means of dynamical
+    and initial conditions, for example, a mass that is constrained to move on a spherical surface or
+    a bead that slides on a wire. In these situations, not only the unknown form of the forces of constraints
+  makes the problem difficult to solve, but using the rectangular or other common used coordinates may make
+    it impossible to tackle the problem (even if the forces of constraints were known).<br>
+  Two different methods, <i><u>Lagrange's equations</u></i> and <i><u>Hamilton's equations</u></i>,
+  have been developed to handle such problems.<br>
+  First, these techniques use <i><u>generalized coordinates</u></i>. That is, instead of being limited
+  to use of rectangular or polar coordinates. Furthermore, these techniques use an energy approach,
+    having the primary advantage of dealing with <i><u>scalars</u></i>, rather than vectors.</p>
+<p><br><b>The difference</b> between Lagrange's and Hamilton's methods. <i>In Lagrange's formalism</i> the
+  generalised coordinates used are position and velocity, resulting in second-order linear differential equations.
+  <i>In Hamilton's formalism the generalized coordinates used are position and momentum, resulting
+    in first-order differential equations.</i></p></div>
+  <p>$∗$</p>
+  <a href="javascript:toggleDiv('myContent_general');" style="background-color: PowderBlue; padding: 10px 15px;">Generalized coordinates</a>
+  <div id="myContent_general" style="background-color: white; padding: 5px 10px; display:none">
+    <p style="color:FireBrick"><b><u>GENERALIZED COORDINATES AND CONSTRAINTS</u></b></p>
+  <p>To locate the position of a particle, we need three coordinates. These coordinates could be
+    Cartesian coordinates $x,y,z$; cylindrical coordinates $r,θ,z$; spherical coordinates $r,θ,φ$;
+    or any other suitable coordinates. If there are some restrictions or constraints on the motion
+    of the particle, we need less than three coordinates. For instance, if a particle is constrained
+    to move on a plane surface, only two coordinates are sufficient.</p>
+  <p>The minimum number of coordinates needed to describe a system of $N$ particles, is
+  $n=3N-m$<br> $m$ - is number of constraints, $n$ - is the number of <i>degrees of freedom</i> of the system.</p>
+  <p>The name <b><i><u>generalized coordinates</u></i></b> is given to <i><u>any set of quantities that
+    completely describes the state or configuration of a system</u></i>. These $n$ generalized coordinates are
+  customarily written as
+  <br>$q_1,q_2,q_3,...,q_n$
+  <br>$\text"or  " q_k \text" ,where  "k=1,2,3,...,n$
+    <br>...</p>
+  <p>If each coordinate can vary independently of the other, the system is said to be <i>holonomic</i>.
+  In a <i>nonholonomic</i> system, the coordinates <i>cannot</i> vary independently.</p>
+  <p>In analogy with Cartesian coordinates, we may define the derivatives of $q_k$, that is
+  $q↖{.}_1,q↖{.}_2,...,$ or $q↖{.}_k$ as <i>generalized coordinates</i>.</p>
+  <p>Then, considering a single particle, whose rectangular coordinates $x,y,z$ are a function of
+    the generalized coordinates $q_1,q_2,q_3$:
+    <br> $\table  x=x(q_1,q_2,q_3)=x({\bo q}_k) ; y=y(q_1,q_2,q_3)=y({\bo q}_k) ; z=z(q_1,q_2,q_3)=z({\bo q}_k)$
+<br> we suppose the system changes from an initial configuration given by $(q_1,q_2,q_3)$ to a neighborhood
+  configuration given by $(q_1+δq_1,q_2+δq_2,q_3+δq_3)$. We can express the corresponding changes in the
+  Cartesian coordinates by following relations:<br>
+  $δx={∂x}/{∂q_1}δq_1+{∂x}/{∂q_2}δq_2+{∂x}/{∂q_3}δq_3=∑↙{k=1}↖n{∂x}/{∂q_k}δq_k$
+  <br> with similar expression for $δy$ and $δz$, where $n$ is equal to three and the partial derivatives
+  ${∂x}\text"/"{∂q_k},...,$ are functions of $q$'s. The value of $n$ depends on the degrees of freedom.</p>
+    <p>Considering a more general case in which a mechanical system consists of a large number of particles having $n$
+    degrees of freedom, we similarly get:<br>
+    $δx_i={∂x_i}/{∂q_1}δq_1+{∂x_i}/{∂q_2}δq_2+{∂x_i}/{∂q_3}δq_3=∑↙{k=1}↖n{∂x_i}/{∂q_k}δq_k$</p>
+    <p>It is essential at this point to distinguish between two types of displacement: an <u><i>actual displacement</i></u>
+    $d{\bo r}_i$ and a <u><i>virtual</i></u> (not in actual fact or name) <u><i>displacement</i></u> $δ{\bo r}_i$.
+    Suppose a mass $m_i$ is acted on by an external force ${\bo F}_i$ and causes the mass $m_i$ to move from ${\bo r}_i$
+     to ${\bo r}_i+δ{\bo r}_i$ in a time interval $dt$. This displacement must be consistent with both
+      <b>the equations of motion</b> and <b>the equations of constraints</b> that describe this mass system;
+    hence such displacements are <u><i>actual displacements</i></u>. On the other hand, <u><i>virtual displacements</i></u>
+     are consistent with the equation of constraints but do not satisfy the equations of motion or time.
+     For example, the bob of a pendulum of length $l$ may be moved from $(l,θ)$ to $(l,θ+δθ)$ in any
+      arbitrary time interval as long as the bob remains on the arc of a circle of radius $l$. Thus,
+      $δ{\bo r}_i$ and $δq_i$ are the virtual displacements. We shall make use of the principle of
+      virtual work in the following. We shall cause a virtual displacement $δ{\bo r}_i$, resulting in
+    virtual work $δW$. Basically, in such displacements, the relative orientations and distances
+      between the particles remain unchanged.</p>
+    </div>
+  <p>$∗$</p>
+  <a href="javascript:toggleDiv('myContent_gen_force');" style="background-color: PowderBlue; padding: 10px 15px;">Generalized forces</a>
+  <div id="myContent_gen_force" style="background-color: white; padding: 5px 10px; display:none">
+    <p style="color:FireBrick"><b><u>GENERALIZED FORCES</u></b></p>
+  <p>Consider a force ${\bo F}$ that is acting on a single particle of mass $m$ and produces a virtual
+   displacement $δ{\bo r}_i$ of the particle. The work done $δW$ by this force is given by
+  <br>$δW={\bo F}·δ{\bo r}_i=F_xδx+F_yδy+F_zδz$<br>
+  where $F_x,F_y,F_z$ are the rectangular components of ${\bo F}$. Expressing the displacements $δx,δy,δz$
+    in terms of generalized coordinates $q_k$, we may write
+    <br>$δW=∑↙{k=1}↖n\(F_x{∂x}/{∂q_k}+F_y{∂y}/{∂q_k}+F_z{∂z}/{∂q_k}\)δq_k$<br>
+    $=∑↙{k=1}↖nQ_kδq_k$
+    <br> where $Q_k=F_x{∂x}/{∂q_k}+F_y{∂y}/{∂q_k}+F_z{∂z}/{∂q_k}$, $Q_k$ is called the <u><i>generalized force</i></u>
+    associated with the generalized coordinate $q_k$. The dimensions of $Q_kδq_k$ are that of work.
+    If the increment $δq_k$ has the dimensions of distance, $Q_k$ will have dimensions of force; if $δq_k$
+    has the dimensions of angle $θ$, $Q_k$ will have dimensions of torque $τ_θ$. It may be pointed out that the quantity
+    $δq_k$ and the quantities $δx,δy,δz$ are called <u><i>virtual displacements</i></u> of the system
+    because it is not necessary that such displacements represent any actual displacements.
+  <br>...</p>
+    <p>The other interesting case relates to the CONSERVATIVE GENERAL FORCES. Suppose, a
+      conservative force field is represented by a potential function $V=V(x,y,z)$. The rectangular
+      components of a force acting on a particle are given by<br>
+    $F_x=-{∂V}/{∂x},\text"  " F_y=-{∂V}/{∂y},\text"  " F_z=-{∂V}/{∂z}$
+    <br> thus, $Q_k=F_x{∂x}/{∂q_k}+F_y{∂y}/{∂q_k}+F_z{∂z}/{∂q_k}$
+    <br>$=-\({∂V}/{∂x}{∂x}/{∂q_k}+{∂V}/{∂y}{∂y}/{∂q_k}+{∂V}/{∂z}{∂z}/{∂q_k}\)$
+    </p>
+    <p>Finally, $Q_k=-{∂V}/{∂q_k}$
+    <br> This expresses the relation between a generalized force and the potential representing a
+      conservative system.</p>
+  </div>
+  <p>$∗$</p>
+  <a href="javascript:toggleDiv('myContent_lagrange');" style="background-color: PowderBlue; padding: 10px 15px;">Lagrange's equations</a>
+  <div id="myContent_lagrange" style="background-color: white; padding: 5px 10px; display:none">
+    <p style="color:FireBrick"><b><u>LAGRANGE'S EQUATIONS OF MOTION</u></b></p>
+    <p><a href="javascript:toggleDiv('myContent_single_particle');" style="background-color: LightCyan; padding: 10px 15px;">-Single particle</a></p>
+    <div id="myContent_single_particle" style="background-color: white; padding: 5px 10px; display:none">
+      <p><b><u>LAGRANGE'S EQUATIONS OF MOTION FOR A SINGLE PARTICLE</u></b></p>
+    <p>We are interested in describing the motion of a single particle by means of equations written
+      in terms of generalized coordinates. This leads us to Lagrange's equations. We could start with
+      Newton's second law, ${\bo F}=m{\bo a}$. But it is convenient to start with an expression for
+      kinetic energy $T$ in terms of Cartesian coordinates and then write $T$ in terms of generalized coordinates.
+      </p>
+      <p style="border:3px; border-style:solid; border-color:Black;">$T=1/2m\(x↖{.}^2+y↖{.}^2+z↖{.}^2\)$</p>
+      <p> since $x=x(q_1,q_2,...,q_n)=x(q)$
+      <br> similarly $y=y(q)$, $z=z(q)$</p>
+    <p>We can evaluate $x↖{·}$ in terms of $q_k$ by the following procedure:
+    <br> $x↖{.}={∂x}/{∂q_1}{∂q_1}/{∂t}+{∂x}/{∂q_2}{∂q_2}/{∂t}+...+{∂x}/{∂q_n}{∂q_n}/{∂t}$
+    <br> $=∑↙{k=1}↖n{∂x}/{∂q_k}{∂q_k}/{∂t}=∑↙{k=1}↖n{∂x}/{∂q_k}q↖{.}_k=x↖{.}\(q,q↖{.}\)$
+      <br>...</p>
+    <p>Now we are able to describe the different components of velocity in terms of generalized coordinates $q_k$
+    and generalized velocities $q↖{.}_k$, that is:
+    <br> $x↖{.}=x↖{.}\(q,q↖{.}\)\text" , "y↖{.}=y↖{.}\(q,q↖{.}\)\text" , "z↖{.}=z↖{.}\(q,q↖{.}\)$</p>
+    <p>Rewriting the kinetic as:</p>
+      <p style="border:3px; border-style:solid; border-color:Black;">$T=1/2m\[x↖{.}^2\(q,q↖{.}\)+y↖{.}^2\(q,q↖{.}\)+z↖{.}^2\(q,q↖{.}\)\]$</p>
+    <p>taking the derivative with respect to the generalized velocity $q↖{.}$,
+    <br>${∂T}/{∂q↖{.}_k}=m\(x↖{.}{∂x↖{.}}/{∂q↖{.}_k}+y↖{.}{∂y↖{.}}/{∂q↖{.}_k}+z↖{.}{∂z↖{.}}/{∂q↖{.}_k}\)$
+    <br> we may write ${∂x↖{.}}/{∂q↖{.}_k}={∂x}/{∂q_k}$
+    <br>$⇒\text"  "{∂T}/{∂q↖{.}_k}=m\(x↖{.}{∂x}/{∂q_k}+y↖{.}{∂y}/{∂q_k}+z↖{.}{∂z}/{∂q_k}\)$</p>
+      <p>Differentiating both sides of this equation with respect to $t$:
+      <br>${d}/{dt}\({∂T}/{∂q↖{.}_k}\)=m\[x↖{..}{∂x}/{∂q_k}+y↖{..}{∂y}/{∂q_k}+z↖{..}{∂z}/{∂q_k}\]$<br>
+        $+m\[x↖{.}{d}/{dt}\({∂x}/{∂q_k}\)+y↖{.}{d}/{dt}\({∂y}/{∂q_k}\)+z↖{.}{d}/{dt}\({∂z}/{∂q_k}\)\]$
+        <br>and using the fact that $d\text"/"dt$ and $∂\text"/"∂q_k$ are interchangeable.
+        <br>${d}/{dt}\({∂x}/{∂q↖{.}_k}\)={∂}/{∂q_k}\({dx}/{dt}\)={∂x↖{.}}/{∂q}$
+      <br> or, $\text"  "mx↖{.}{∂x↖{.}}/{∂q_k}={∂}/{∂q_k}\(1/2mx↖{·}^2\)$
+      <br>also $F_x=mx↖{..}\text" , "F_y=my↖{..}\text" , "F_z=mz↖{..}$</p>
+      <p>We obtain:
+      <br>${d}/{dt}\({∂T}/{∂q↖{.}_k}\)= F_x{∂x}/{∂q_k}+F_y{∂y}/{∂q_k}+F_z{∂z}/{∂q_k}$<br>
+        $+{∂}/{∂q_k}\[1/2m\(x↖{.}^2+y↖{.}^2+z↖{.}^2\)\]$
+      <br>using the definition of generalized force and kinetic energy,
+      <br>$Q_k=F_x{∂x}/{∂q_k}+F_y{∂y}/{∂q_k}+F_z{∂z}/{∂q_k}$
+      <br>$T=1/2m\[x↖{.}^2(q,q↖{.})+y↖{.}^2(q,q↖{.})+z↖{.}^2(q,q↖{.})\)]$
+      <br>gives:</p>
+      <p style="border:3px; border-style:solid; border-color:Black;"> ${d}/{dt}\({∂T}/{∂q↖{.}_k}\)=Q_k+{∂T}/{∂q_k}$</p>
+      <p>These differential equations in generalized coordinates describe the motion of a particle
+        and are known as <u><i>Lagrange's equations</i></u> of motion.
+        <br>...</p>
+      <p>Lagrange's equations take a much simpler form if the motion is in a conservative force
+      field so that
+      <br> $Q_k=-{∂V}/{∂q_k}$
+      <br> which on substituting yields
+      <br> ${d}/{dt}\({∂T}/{∂q↖{.}_k}\)={∂T}/{∂q_k}-{∂V}/{∂q_k}$</p>
+      <p>Let us define a <i>Lagrangian function</i> $L$ as the difference between kinetic energy and potential energy; that is:
+      <br>$L=T-V\text"  or  "L(q,q↖{.})=T(q,q↖{.})-V(q_k)$
+        <br>...</p>
+      <p>It is important to know that, if $V$ is a function of the generalized coordinates and not of the generalized velocities, then
+      <br>$V=V(q)\text"  and  "{∂V}/{∂q↖{.}_k}=0$
+      <br> [If $V$ is not independent of velocity $q↖{.}$, then $V=V(q,q↖{.})$ will lead to a tensor force.
+      Thus, we may write
+      <br>$\table {∂L}/{∂q↖{.}_k}={∂}/{∂q↖{.}_k}(T-V)={∂T}/{∂q↖{.}_k};
+        {∂L}/{∂q_k}={∂}/{∂q_k}(T-V)={∂T}/{∂q_k}-{∂V}/{∂q_k}$</p>
+      <p>Substituting these results in Lagrangian equation, we get its final form:</p>
+      <p style="border:3px; border-style:solid; border-color:FireBrick;"> ${d}/{dt}\({∂L}/{∂q↖{.}_k}\)-{∂L}/{∂q_k}=0$</p>
+      <p>which are <b><i>Lagrange's equations describing the motion of a particle in a conservative force field</i></b></p>
+      <p> To solve the equations, we must know the Lagrangian function $L$ in the appropriate generalized coordinates.
+        Since energy is a scalar quantity, the Lagrangian $L$ is a scalar function. Thus, the Lagrangian $L$
+      will be invariant with respect to coordinate transformations. This means that <u><i>the Lagrangian gives
+        the same description of the system under given conditions no matter wich generalized coordinates are used</i></u>.
+      Thus, this equation describes the motion of a particle moving in a conservative force field in
+        terms of any generalized coordinates.</p>
+    </div>
+    <p>-</p>
+    <p><a href="javascript:toggleDiv('myContent_system_particle');" style="background-color: LightCyan; padding: 10px 15px;">-System of particles</a></p>
+    <div id="myContent_system_particle" style="background-color: white; padding: 5px 10px; display:none">
+      <p><b><u>LAGRANGE'S EQUATIONS OF MOTION FOR A SYSTEM OF PARTICLES</u></b></p>
+    <p>Extension the procedure to a more general case of $N$ particles, allows us to write the kinetic energy as:
+    <br> $T=∑↙{i=1}↖N\[1/2m_i\(x↖{.}^2_i+y↖{.}^2_i+z↖{.}^2_i\)\]$
+    <br> Since each particle has three degrees of freedom, the total number of $x_i$ coordinates needed to represent $N$
+    particles will be $3N$. Hence, we may write the kinetic energy of the system as:
+    <br>$T=∑↙{i=1}↖{3N}1/2m_ix↖{.}^2_i$</p>
+      <p>Making almost exact procedure as for single particle, we may write:
+      <br>${d}/{dt}\({∂T}/{∂q↖{.}_k}\)=∑↙{i=1}m_ix↖{..}_i{∂x_i}/{∂q_k}+∑↙{i=1}m_ix↖{.}_i{d}/{dt}\({∂x_i}/{∂q_k}\)$
+      <br>${d}/{dt}\({∂T}/{∂q↖{.}_k}\)=Q_k+{∂T}/{∂q_k}\text"  ,  "k=1,2,...,n$</p>
+      <p style="border:3px; border-style:solid; border-color:FireBrick;">${d}/{dt}\({∂L}/{∂q↖{.}_k}\)-{∂L}/{∂q_k}=0$</p>
+      <p>We are now in a position to illustrate the use of Lagrange's method for obtaining and solving
+      equations for simple systems. It is convenient to do this if we use the following procedure as a <b>guide</b>.</p>
+      <p style="border:3px; border-style:solid; border-color:FireBrick;"> 1. Select a proper set  of generalized coordinates to represent the configuration of the system.
+      <br> 2. Express the kinetic energy $T$ of the system in terms of generalized coordinates and their time derivatives (velocities).
+      <br> 3. If the system is conservative, express the potential energy $V$ as a function of the
+        generalized coordinates; otherwise, find an expression for the generalized forces $Q_k$
+        <br> 4. Finally, using the preceding information, write Lagrange's equations of motion.</p>
+    </div>
+    </div>
+</div>
+</center>
+<center><p><br>...</p></center>
+</body>
+</html>

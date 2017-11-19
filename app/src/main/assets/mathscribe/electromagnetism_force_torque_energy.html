@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+	<!-- <script>M.MathPlayer = false; M.trustHtml = true;</script> -->
+
+	<!--
+    To use jqMath in an html file, use a text editor to copy the above lines to the beginning of
+    your file, remove any corresponding old tags, and save the file in UTF-8 format.
+
+    If you aren't writing in English, change "en" above to the correct language code, especially if
+    your language allows a comma as a decimal mark (instead of a period).
+
+    If you don't use Fraktur characters, you can remove the link on line 7, as this may speed up
+    download times slightly.
+
+    You may need to change each "../mathscribe" path above, depending on the directory structure
+    that you choose.
+
+    You can use a different version of jquery (1.0+) if you prefer.  We've just provided this one
+    for your convenience.
+
+    If you need to use the \html macro, then uncomment the M.MathPlayer and M.trustHtml line above.
+    But if you are going to parse untrusted user input using jqMath, even in a blog comment, you
+    must ensure that M.trustHtml is set back to false first.
+
+    The files jscurry-0.4.0.js, jscurry-0.4.0.min.js, and jqmath-0.4.3.js are provided just for your
+    information.  They are all included, and compressed, in jqmath-etc-0.4.3.min.js.
+    -->
+
+	<title>Force, Torque and Energy</title>
+</head>
+<body>
+<center><h2>Force, torque and energy</h2></center>
+<center><h3><font color="DarkSlateBlue"><b>$●$ Electromagnetic force and torque</b></font></h3>
+	<table border="Brown" style="border:1px solid DarkSlateBlue;" bgcolor="Lavender">
+		<tr><td>Force between two static charges: Coulomb's law </td>
+			<td>$\bo F_2={q_1q_2}/{4πε_0r^2_{12}}\bo r_{12}$</td></tr>
+		<tr><td>Force between two current-carrying elements</td>
+			<td>$d\bo F_2={μ_0I_1I_2}/{4πr^2_{12}}[d\bo l_2,[d\bo l_1,\bo r_{12}]]$</td></tr>
+		<tr><td>Force on a current-carrying element in a magnetic field</td>
+			<td>$d\bo F=Id\bo l ×\bo B$</td></tr>
+		<tr><td>Force on a charge (Lorentz force)</td><td>$\bo F=q(\bo E+[\bo v ,\bo B])$</td></tr>
+		<tr><td>Force on an electric dipole$^a$</td><td>$\bo F=(\bo p ,\bo ∇)\bo E$</td></tr>
+		<tr><td>Force on an magnetic dipole$^b$</td><td>$\bo F=(\bo m ,\bo ∇)\bo B$</td></tr>
+		<tr><td>Torque on an electric dipole</td><td>$\bo G=[\bo p ,\bo E]$</td></tr>
+		<tr><td>Torque on an magnetic dipole</td><td>$\bo G=[\bo m ,\bo B]$</td></tr>
+		<tr><td>Torque on an current loop</td><td>$\bo G=I_L ∮↙{\text"loop"}[\bo r ,[d\bo l_L ,\bo B]]$</td></tr>
+	</table></center>
+<p>$^a$ $\bo F$ simplifies to $\bo ∇(\bo p ,\bo E)$ if $p$ is intrinsic,
+	$\bo ∇(pE\text"/"2)$ if $\bo p$ is induced by $\bo E$ and the medium is isotropic.</p>
+<p>$^b$ $\bo F$ simplifies to $\bo ∇(\bo m ,\bo B)$ if $m$ is intrinsic,
+	$\bo ∇(mB\text"/"2)$ if $\bo m$ is induced by $\bo B$ and the medium is isotropic.</p>
+<center><img src="electromagnetism_force_CoulombForce.jpg" alt="Coulomb force" style="width:/2;height:158px;">
+	<img src="electromagnetism_force_r1-r2.jpg" alt="Coulomb force" style="width:/2;height:158px;">
+</center>
+<p>where</p>
+<table border="1">
+	<tr><td>$\bo F_2$</td><td>force on $q_2$ or $d\bo l_2$</td><td>$q_{1,2}$</td><td>charges</td></tr>
+	<tr><td>$\bo r_{1,2}$</td><td>vector from 1 to 2</td>
+		<td>$ε_0$</td><td>permittivity of free space</td></tr>
+	<tr><td>$dl_{1,2}$</td><td>line element</td><td>$I_{1,2}$</td><td>currents flowing along
+		$d\bo l_1$ and $d\bo l_2$</td></tr>
+	<tr><td>$μ_0$</td><td>permeability of free space</td><td>$F$</td><td>force</td></tr>
+	<tr><td>$I$</td><td>current flowing along $d\bo l$</td>
+		<td>$\bo B$</td><td>magnetic flux density</td></tr>
+	<tr><td>$\bo E$</td><td>electric field</td><td>$\bo v$</td><td>charge velocity</td></tr>
+	<tr><td>$\bo p$</td><td>electric dipole moment</td><td>$\bo m$</td><td>magnetic dipole moment</td></tr>
+	<tr><td>$\bo G$</td><td>torque</td><td>$dl_L$</td><td>line element (of loop)</td></tr>
+	<tr><td>$\bo r$</td><td>position vector $dl_L$</td><td>$I_L$</td><td>current around loop</td></tr>
+</table>
+
+<center><h3><font color="DarkSlateBlue"><b>$●$ Electromagnetic energy</b></font></h3>
+	<table border="Brown" style="border:1px solid DarkSlateBlue;" bgcolor="Lavender">
+		<tr><td>Electromagnetic field energy density (in free space)</td>
+			<td>$u={1}/{2}ε_0E^2+{1}/{2}{B^2}/{μ_0}$</td></tr>
+		<tr><td>Energy density in media</td><td>$u={1}/{2}\((\bo D,\bo E)+(\bo B,\bo H)\)$</td></tr>
+		<tr><td>Energy flow (Poynting) vector</td><td>$\bo N=[\bo E ,\bo H]$</td></tr>
+		<tr><td>Mean flux density at a distance $r$ from a short oscillating dipole</td>
+			<td>$\ov \bo N={ω^4p_0^2\sin θ}/{32π^2ε_0c^3r^3}\bo r$</td></tr>
+		<tr><td>Total mean power from oscillating dipole$^a$</td><td>$W={ω^4p_0^2\text"/"2}/{6πε_0c^3}$</td></tr>
+		<tr><td>Self-energy of a charge distribution</td>
+			<td>$U_{tot}={1}/{2}∮↙{\text"volume"}φ(\bo r)ρ(\bo r)dτ$</td></tr>
+		<tr><td>Energy of an assembly of capacitors$^b$</td><td>$U_{\text"tot"}={1}/{2}∑↙{i}∑↙{j}C_{ij}V_iV_j$</td></tr>
+		<tr><td>Energy of an assembly of inductors$^c$</td><td>$U_{\text"tot"}={1}/{2}∑↙{i}∑↙{j}L_{ij}I_iI_j$</td></tr>
+		<tr><td>Intrinsic dipole in an electric field</td><td>$U_{\text"dip"}=-(\bo p,\bo E)$</td></tr>
+		<tr><td>Intrinsic dipole in an magnetic field</td><td>$U_{\text"dip"}=-(\bo m,\bo B)$</td></tr>
+		<tr><td>Hamiltonian of a charged particle in an EM field$^d$</td>
+			<td>$H={|\bo p_m-q\bo A|^2}/{2m}+qφ$</td></tr>
+	</table></center>
+<p>$^a$ Sometimes called "Larmor's formula".</p>
+<p>$^b$ $C_{ii}$ is the self-capacitance of the $i$th body. Note that $C_{ij}=C_{ji}$.</p>
+<p>$^c$ $L_{ii}$ is the self-inductance of the $i$th body. Note that $L_{ij}=L_{ji}$.</p>
+<p>$^d$ Newtonian limit, i.e. velocity $≪c$.</p>
+<p>where</p>
+<table border="1">
+	<tr><td>$u$</td><td>energy density</td><td>$\bo B$</td><td>magnetic flux density</td></tr>
+	<tr><td>$\bo E$</td><td>electric field</td><td>$ε_0$</td><td>permittivity of free space</td></tr>
+	<tr><td>$μ_0$</td><td>permeability of free space</td><td>$\bo D$</td><td>electric displacement</td></tr>
+	<tr><td>$\bo H$</td><td>magnetic field strength</td><td>$c$</td><td>speed of light</td></tr>
+	<tr><td>$N$</td><td>energy flow rate per unit area $⊥$ to the flow direction</td><td>$p_0$</td>
+		<td>amplitude of dipole moment</td></tr>
+	<tr><td>$\bo r$</td><td>vector from dipole ($≫$wavelength)</td>
+		<td>$θ$</td><td>angle between $\bo p$ and $\bo r$</td></tr>
+	<tr><td>$ω$</td><td>oscillation frequency</td><td>$W$</td><td>total mean radiated power</td></tr>
+	<tr><td>$U_{\text"tot"}$</td><td>total energy</td><td>$dτ$</td><td>volume element</td></tr>
+	<tr><td>$\bo r$</td><td>position vector of $dτ$</td><td>$φ$</td><td>electrical potential</td></tr>
+	<tr><td>$ρ$</td><td>charge density</td><td>$V_i$</td><td>potential of $i$th capacitor</td></tr>
+	<tr><td>$C_{ij}$</td><td>mutual capacitance between capacitors $i$ and $j$</td>
+		<td>$L_{ij}$</td><td>mutual inductance between inductors $i$ and $j$</td></tr>
+	<tr><td>$U_{\text"dip"}$</td><td>energy of dipole</td><td>$\bo p$</td><td>electric dipole moment</td></tr>
+	<tr><td>$\bo m$</td><td>magnetic dipole moment</td><td>$H$</td><td>Hamiltonian</td></tr>
+	<tr><td>$\bo p_m$</td><td>particle momentum</td><td>$q$</td><td>particle charge</td></tr>
+	<tr><td>$m$</td><td>particle mass</td><td>$A$</td><td>magnetic vector potential</td></tr>
+</table>
+<center><p>...</p></center>
+</body>
+</html>

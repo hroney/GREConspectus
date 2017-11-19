@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+    <link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+    <script src="../mathscribe/jquery-1.4.3.min.js"></script>
+    <script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+    <title>Static Fields</title>
+</head>
+<body>
+<center><h2>Introduction</h2></center>
+<center><h3><font color="DarkSlateBlue">$●$ Equation conversion: SI to Gaussian units</font></h3>
+    <table style="border:1px solid DarkSlateBlue;" bgcolor="Lavender">
+        <tr><td>$ε_0↦1/(4π)$</td><td></td><td>$μ_0↦{4π}/{c^2}$</td><td></td><td>$\bo B↦\bo B/c$</td></tr>
+        <tr><td>$χ_E↦4πχ_E$</td><td></td><td>$χ_H↦4πχ_H$</td><td></td><td>$\bo H↦c/(4π)\bo H$</td></tr>
+        <tr><td>$\bo A↦\bo A/c$</td><td></td><td>$\bo M↦c\bo M$</td><td></td><td>$\bo D=\bo D/(4π)$</td></tr>
+    </table></center>
+<p>The quantities $ρ, \bo J,\bo E, φ, σ, \bo P, ε_r$ and $μ_r$ are all unchanged</p>
+
+<center><h2>Static fields</h2></center>
+<center><h3><font color="DarkSlateBlue">$●$ Electrostatics</font></h3>
+<table border="Brown" style="border:1px solid DarkSlateBlue;" bgcolor="Lavender">
+    <tr><td>Electrostatic potential</td><td>$\bo E=-\bo ∇ φ$</td></tr>
+    <tr><td>Potential difference$^a$</td><td>$φ_a-φ_b=∫↙a↖b \bo E⋅d\bo l=-∫↙b↖a \bo E⋅d\bo l$</td></tr>
+    <tr><td>Poisson's Equation (free space)</td><td>$∇^2 φ=-{ρ}/{ε_0}$</td></tr>
+    <tr><td>Point charge at $\bo r'$</td><td>$φ(\bo r)={q}/{4πε_0|\bo r-\bo r'|}$
+        <br>$\bo E(\bo r)={q(\bo r-\bo r')}/{4πε_0|\bo r-\bo r'|^3}$</td></tr>
+    <tr><td>Field from a charge distribution (free space)</td>
+        <td>$\bo E(\bo r)={1}/{4πε_0}∫↙\text"volume"{ρ(\bo r')(\bo r-\bo r')}/{|\bo r-\bo r'|^3}dτ'$</td></tr>
+</table></center>
+<p>$^a$between points $a$ and $b$ along the path $l$.</p>
+<p>where</p>
+<table border="1">
+    <tr><td>$$\bo E$$</td><td>electric field</td><td>$$φ_a$$</td><td>potential at $a$</td></tr>
+    <tr><td>$$φ$$</td><td>electrostatic potential</td><td>$$φ_b$$</td><td>potential at $b$</td></tr>
+    <tr><td>$$d\bo l$$</td><td>line element</td><td>$$ε_0$$</td><td>permittivity of free space</td></tr>
+    <tr><td>$$ρ$$</td><td>charge density</td><td>$$q$$</td><td>point charge</td></tr>
+    <tr><td>$$dτ'$$</td><td>volume element</td><td>$$\bo r'$$</td><td>position vector of $dτ'$</td></tr>
+</table>
+
+<center><h3><font color="DarkSlateBlue">$●$ Magnetostatics$^b$</font></h3>
+<table border="Brown" style="border:1px solid DarkSlateBlue;" bgcolor="Lavender">
+    <tr><td>Magnetic scalar potential</td><td>$\bo B=-μ_0\bo ∇ φ_m$</td></tr>
+    <tr><td>$φ_m$in the terms of the solid angle of a generating current loop</td>
+        <td>$φ_m={IΩ}/{4π}$</td></tr>
+    <tr><td>Biot-Savart law (the field from a line current)</td>
+        <td>$\bo B(\bo r)={μ_0I}/{4π}∫↙\text"line"{d\bo l×(\bo r-\bo r')}/{|\bo r-\bo r'|^3}$</td></tr>
+    <tr><td>Ampere's law (differential form)</td><td>$\bo ∇×\bo B=μ_0\bo J$</td></tr>
+    <tr><td>Ampere's law (integral form)</td><td>$∮\bo B⋅d\bo l=μ_0I_{tot}$</td></tr>
+</table></center>
+<p>$^b$in the free space</p>
+<p>where</p>
+<table border="1">
+    <tr><td>$$\bo B$$</td><td>magnetic flux density</td><td>$$Ω$$</td><td>loop solid angle</td></tr>
+    <tr><td>$$φ_m$$</td><td>magnetic scalar potential</td><td>$$I$$</td><td>current</td></tr>
+    <tr><td>$$d\bo l$$</td><td>line element in the direction of the current</td><td>$$μ_0$$</td>
+        <td>permeability of free space</td></tr>
+    <tr><td>$$\bo J$$</td><td>current density</td><td>$$I_{tot}$$</td><td>total current through loop
+    </td></tr><tr><td>$$\bo r'$$</td><td>position vector of $d\bo l$</td></tr>
+</table>
+<center><p>...</p></center>
+</body>
+</html>

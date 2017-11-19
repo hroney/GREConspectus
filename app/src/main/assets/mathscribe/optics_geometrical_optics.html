@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+	<title>Geometrical Optics</title>
+</head>
+<body>
+<center><h2>Geometrical Optics</h2></center>
+<center><h3><font color="GoldenRod"><b>$●$ Lenses and mirrors$^a$</b></font></h3>
+	<img src="optics_geometrical_optics1.jpg" alt="lens" style="width:100%;height:auto;">
+	<img src="optics_geometrical_optics2.jpg" alt="mirror" style="width:100%;height:auto;">
+</center>
+<center>
+	<table>
+		<tr><th colspan="3" style="border-bottom:1px solid Black;">sign convention</th></tr>
+		<tr><td colspan="2">$$+$$</td><td>$$-$$</td></tr>
+		<tr><td>$r$</td><td>centred to right</td><td>centred to left</td></tr>
+		<tr><td>$u$</td><td>real object</td><td>virtual object</td></tr>
+		<tr><td>$v$</td><td>real image</td><td>virtual image</td></tr>
+		<tr><td>$f$</td><td>converging lens/ concave mirror</td><td>diverging lens/ convex mirror</td></tr>
+		<tr><td>$M_{T}$</td><td>erect image</td><td>inverted image</td></tr>
+	</table>
+</center>
+<center>
+<table border="Brown" style="border:1px solid Gold;" bgcolor="GoldenRod">
+	<tr><td>Fermat's principle$^b$</td><td>$L=∫ηdl$ is stationary</td></tr>
+	<tr><td>Gauss's lens formula</td><td>$1/u+1/v=1/f$</td></tr>
+	<tr><td>Newton's lens formula</td><td>$x_1x_2=f^2$</td></tr>
+	<tr><td>Lensmaker's formula</td><td>$1/u+1/v=(η-1)\(1/r_1-1/r_2\)$</td></tr>
+	<tr><td>Mirror formula$^c$</td><td>$1/u+1/v=-2/R=1/f$</td></tr>
+	<tr><td>Dioptre number</td><td>$D=1/f$ m$^{-1}$</td></tr>
+	<tr><td>Focal ratio$^d$</td><td>$n=f/d$</td></tr>
+	<tr><td>Transverse linear magnification</td><td>$M_T=-v/u$</td></tr>
+	<tr><td>Longitudinal linear magnification</td><td>$M_L=-M_T^2$</td></tr>
+</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_lenses');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_lenses" style="background-color: white; padding: 5px 10px; display:none">
+
+<p>	$^a$ Formulas assume "Gaussian optics," i.e., all lenses are thin and all angles small. Light enters from the left.<br>
+$^b$A stationary optical path length has, to first order, a length identical to that of adjacent paths.<br>
+$^c$ The mirror is concave if $R<0$, convex if $R>0$.<br>
+	$^d$ Or "$f$-number," written $f\text"/"2$ if $n=2$ etc.</p></div>
+
+<p>
+	<a href="javascript:toggleDiv('where_lenses5');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_lenses" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$L$</td><td>optical path length</td><td>$dl$</td><td>ray path element</td></tr>
+	<tr><td>$η$</td><td>refractive index</td><td>$u$</td><td>object distance</td></tr>
+	<tr><td>$v$</td><td>image distance</td><td>$f$</td><td>focal length</td></tr>
+	<tr><td>$x_1$</td><td>$=v-f$</td><td>$x_2$</td><td>$=u-f$</td></tr>
+	<tr><td>$r_i$</td><td>radii of curvature of lens surfaces</td><td>$R$</td><td>mirror radius of curvature</td></tr>
+	<tr><td>$D$</td><td>dioptre number ($f$ in meters)</td><td>$n$</td><td>focal ratio</td></tr>
+	<tr><td>$d$</td><td>lens or mirror diameter</td><td>$M_T$</td><td>transverse magnification</td></tr>
+	<tr><td>$M_L$</td><td>longitudinal magnification</td></tr>
+</table>
+</div>
+
+<center><h3><font color="GoldenRod"><b>$●$ Prism</b></font></h3>
+	<img src="optics_geometrical_optics_prism.jpg" alt="prism" style="width:100%;height:auto;">
+</center>
+<center>
+<table border="Brown" style="border:1px solid Gold;" bgcolor="GoldenRod">
+	<tr><td>Transmission angle</td><td>$\sin θ_t=\(η^2-\sin^2 θ_i\)^{1\text"/"2}\sin α$
+		$-\sin θ_i\cos α$</td></tr>
+	<tr><td>Deviation</td><td>$δ=θ_i+θ_t-α$</td></tr>
+	<tr><td>Minimum deviation condition</td><td>$\sin θ_i=\sin θ_t=η\sin {α}/{2}$</td></tr>
+	<tr><td>Refractive index</td><td>$η={\sin \[(δ_m+α)\text"/"2\]}/{\sin\(α\text"/"2\)}$</td></tr>
+	<tr><td>Angular dispersion$^a$</td><td>$D={dδ}/{dλ}={2\sin\(α\text"/"2\)}/{\cos \[(δ_m+α)\text"/"2\]}{dη}/{dλ}$</td></tr>
+</table></center>
+<p>
+	<a href="javascript:toggleDiv('super_prism');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_prism" style="background-color: white; padding: 5px 10px; display:none">
+	$^a$ At minimum deviation.</div>
+<p>
+	<a href="javascript:toggleDiv('where_prism');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_prism" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$θ_i$</td><td>angle of incidence</td><td>$θ_t$</td><td>angle of transmission</td></tr>
+	<tr><td>$α$</td><td>apex angle</td><td>$η$</td><td>refractive index</td></tr>
+	<tr><td>$δ$</td><td>angle of deviation</td><td>$δ_m$</td><td>minimum deviation</td></tr>
+	<tr><td>$D$</td><td>dispersion</td><td>$λ$</td><td>wavelength</td></tr>
+</table>
+	</div>
+
+<center><h3><font color="GoldenRod"><b>$●$ Optical fibres</b></font></h3>
+	<img src="optics_geometrical_optics_fibres.jpg" alt="prism" style="width:100%;height:158px;">
+</center>
+<center>
+<table border="Brown" style="border:1px solid Gold;" bgcolor="GoldenRod">
+	<tr><td>Acceptance angle</td><td>$\sin θ_m={1}/{η_0}\(η^2_f-η^2_c\)^{1\text"/"2}$</td></tr>
+	<tr><td>Numerical aperture</td><td>$N=η_0\sin θ_m$</td></tr>
+	<tr><td>Multimode dispersion$^a$</td><td>${∆t}/{L}={η_f}/{c}\({η_f}/{η_c}-1\)$</td></tr>
+</table>
+	</center>
+<p>
+	<a href="javascript:toggleDiv('super_optical_fibres');" style="background-color: white; padding: 5px 10px;">$^{a,b,c}$</a>
+</p>
+<div id="super_optical_fibres" style="background-color: white; padding: 5px 10px; display:none">
+	$^a$ Of a pulse with a given wavelength caused by the range of incident angles up to $θ_m$.
+	Sometimes called "intermodal dispersion" or "modal dispersion."</div>
+<p>
+	<a href="javascript:toggleDiv('where_fibres');" style="background-color: white; padding: 5px 10px;">where</a>
+</p>
+<div id="where_fibres" style="background-color: white; padding: 5px 10px; display:none">
+<table border="1">
+	<tr><td>$θ_m$</td><td>maximum angle of incidence</td><td>$η_0$</td><td>exterior refractive index</td></tr>
+	<tr><td>$η_f$</td><td>fibre refractive index</td><td>$η_c$</td><td>cladding refractive index</td></tr>
+	<tr><td>$N$</td><td>numerical aperture</td><td>$∆t$</td><td>temporal dispersion</td></tr>
+	<tr><td>$L$</td><td>fibre length</td><td>$c$</td><td>speed of light</td></tr>
+</table>
+	</div>
+<center>
+	<p>
+		<br><a href="javascript:toggleDiv('theory');" style="background-color: SkyBlue; padding: 10px 15px;">Theory</a></p>
+	<div id="theory" style="background-color: white; padding: 5px 10px; display:none">
+		<p><a href="javascript:toggleDiv('myContent_intro');" style="background-color: PowderBlue; padding: 10px 15px;">Fundamentals</a></p>
+		<div id="myContent_intro" style="background-color: white; padding: 5px 10px; display:none">
+			<p style="color:FireBrick"><b><u>FUNDAMENTALS</u></b></p>
+			<p><b>What Is a Ray?</b></p>
+			<p style="border:3px; border-style:solid; border-color:Black;">A <b>ray</b> is an idealized model of light, obtained by choosing a line that is
+				perpendicular to the wavefronts of the actual light, and that points in the direction
+				of energy flow.</p>
+			</div>
+		<p>$∗$</p>
+		<p><a href="javascript:toggleDiv('optics_basic_concepts');" style="background-color: PowderBlue; padding: 10px 15px;">Basic concepts</a></p>
+		<div id="optics_basic_concepts" style="background-color: white; padding: 5px 10px; display:none">
+			<p style="color:FireBrick"><b><u>BASIC CONCEPTS</u></b></p>
+			<p><b>Refractive Index</b></p>
+			<p>The two transparent optical media that form an interface are
+				distinguished from one another by a constant called the index of refraction, generally labeled
+				with the symbol $n$. The optical characteristics of matter are completely
+				specified by its refractive index. The <i><u>index of refraction</u></i> for any transparent optical medium is defined as the
+				ratio of the speed of light in a vacuum to the speed of light in the medium,</p>
+			<p style="border:3px; border-style:solid; border-color:Black;">$n={\text"speed of light in vacuum"}/{\text"speed of light in medium"}$ $=c/v$</p>
+			<p>The greater the index of refraction of a medium, the lower the speed of light in that medium and
+				the more light is bent in going from air into the medium. There are two general cases,
+				one for light passing from a medium of lower index to higher index, the other from higher index
+				to lower index. Note that in the first case (lower-to-higher) the light ray is <i>bent toward the
+				normal</i>. In the second case (higher-to-lower) the light ray is <i>bent away from the normal</i>. It is
+				helpful to memorize these effects since they often help one trace light through optical media in a
+				generally correct manner.</p>
+			<p><img src="optics_lower-to-higher.jpg" alt="refraction" style="width:50%;height:auto;">
+				<img src="optics_higher-to-lower.jpg" alt="refraction" style="width:50%;height:auto;"></p>
+		</div>
+		<p>$∗$</p>
+		<p><a href="javascript:toggleDiv('optics_snells_law');" style="background-color: PowderBlue; padding: 10px 15px;">Snell's law</a></p>
+		<div id="optics_snells_law" style="background-color: white; padding: 5px 10px; display:none">
+			<p style="color:FireBrick"><b><u>SNELL'S LAW</u></b></p>
+		<p><i>Snell’s law of refraction</i> relates the sines of the angles of incidence and
+			refraction at an interface between two optical media to the indexes of refraction of the two
+			media. The law is named after a Dutch astronomer, Willebrord Snell, who formulated the law in
+			the 17th century. Snell’s law enables us to calculate the direction of the refracted ray if we know
+			the refractive indexes of the two media and the direction of the incident ray. The mathematical
+			expression of <b>Snell’s law</b> and an accompanying drawing are</p>
+			<p style="border:3px; border-style:solid; border-color:Black;">${\sin i}/{\sin r}={n_r}/{n_i}$
+			<br><img src="optics_snells_law.jpg" alt="Snell's law" style="width:100%;height:auto;"></p>
+			<p>where $I$ is the angle of incidence, $r$ is the angle of refraction, $n_i$ is the index in the incident medium
+			and $n_r$ is the index in the refracting medium</p>
+			<p><b>Note carefully</b> that both the angle of incidence $(i)$ and refraction $(r)$ are measured with respect to
+				the <b>surface normal</b>. <i>Note also that the incident ray, normal, and refracted ray all lie in the same
+				geometrical plane.</i></p>
+			<p>In practice Snell's law is often written simply as</p>
+			<p style="border:3px; border-style:solid; border-color:Black;">$n_i\sin i=n_r\sin r$</p>
+		</div>
+		<p>$∗$</p>
+		<p><a href="javascript:toggleDiv('optics_critical_angle');" style="background-color: PowderBlue; padding: 10px 15px;">Critical angle</a></p>
+		<div id="optics_critical_angle" style="background-color: white; padding: 5px 10px; display:none">
+			<p style="color:FireBrick"><b><u>CRITICAL ANGLE AND TOTAL INTERNAL REFLECTION</u></b></p>
+			<p>When light travels from a medium of higher index to one of lower index, we encounter some interesting results. Refer to the figure,
+				where we see four rays of light originating from point $O$ in the higher-index medium, each
+				incident on the interface at a different angle of incidence. <b>Ray $1$</b> is incident on the interface at
+				$90°$ (normal incidence) so there is no bending.</p>
+			<p><img src="optics_critical_angle.jpg" alt="Critical angle" style="width:100%;height:auto;"></p>
+			<p>The light in this direction simply speeds up in the second medium (why?) but continues along
+				the same direction. <b>Ray $2$</b> is incident at angle $i$ and refracts (bends away from the normal) at
+				angle $r$. <b>Ray $3$</b> is incident at the <i>critical angle $i_c$</i>, large enough to cause the refracted ray bending
+				away from the normal $(N)$ to bend by $90°$, thereby traveling along the interface between the two
+				media. (This ray is trapped in the interface.) <b>Ray $4$</b> is incident on the interface at an angle
+				<i>greater than</i> the critical angle, and is <i>totally reflected</i> into the same medium from which it
+				came. <b>Ray $4$</b> obeys the <i>law of reflection</i> so that its angle of reflection is exactly equal to its angle
+				of incidence.
+			<br>...</p>
+			<p>The calculation of the critical angle of incidence for any two optical media—whenever light is
+				incident from the medium of higher index—is accomplished with <i>Snell’s law</i>. Referring to <b>Ray
+				3</b> and using Snell’s law, we have</p>
+			<p>$n_i\sin i_c=n_r\sin 90°$</p>
+			<p>where $n_i$ is the index for the incident medium, $i_c$ is the critical angle of incidence, $n_r$ is the index
+				for the medium of lower index, and $r = 90°$ is the angle of refraction at the critical angle. Then,
+				since $\sin 90° = 1$, we obtain for the critical angle,</p>
+			<p style="border:3px; border-style:solid; border-color:Black;">$i_c=\sin^{-1}{\({n_r}/{n_i}\)}$</p>
+		</div>
+	</div>
+</center>
+<center><p>...</p></center>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="../mathscribe/jqmath-0.4.3.css">
+
+	<script src="../mathscribe/jquery-1.4.3.min.js"></script>
+	<script src="../mathscribe/jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
+	<title>Waves in and out of media</title>
+</head>
+<body>
+<center><h2>Waves in and out of media</h2></center>
+<center><h3><font color="GoldenRod"><b>$●$ Waves in lossless media</b></font></h3>
+
+	<center><table border="Brown" style="border:1px solid Gold;" bgcolor="GoldenRod">
+	<tr><td>Electric field</td><td>$∇^2\bo E=με{∂^2\bo E}/{∂ t^2}$</td></tr>
+	<tr><td>Magnetic field</td><td>$∇^2\bo B=με{∂^2\bo B}/{∂ t^2}$</td></tr>
+	<tr><td>Refractive index</td><td>$η=√{μ_rε_r}$</td></tr>
+	<tr><td>Wave speed</td><td>$v=1/√{εμ}=c/η$</td></tr>
+	<tr><td>Impedance of free space</td><td>$Z_0=√{μ_0/ε_0}≈376.7Ω$</td></tr>
+	<tr><td>Wave impedance</td><td>$Z=E/H=Z_0√{μ_r/ε_r}$</td></tr>
+</table></center>
+</center>
+<p>where</p>
+<table border="1">
+	<tr><td>$E$</td><td>electric field</td><td>$\bo B$</td><td>magnetic flux density</td></tr>
+	<tr><td>$μ$</td><td>permeability $(=μ_0μ_r)$</td><td>$ε$</td><td>permittivity $(=ε_0ε_r)$</td></tr>
+	<tr><td>$t$</td><td>time</td><td>$v$</td><td>speed of wave</td></tr>
+	<tr><td>$η$</td><td>refractive index</td><td>$c$</td><td>speed of light</td></tr>
+	<tr><td>$Z_0$</td><td>impedance of free space</td><td>$Z$</td><td>wave impedance</td></tr>
+	<tr><td>$H$</td><td>magnetic field strength</td></tr>
+</table>
+
+<center><h3><font color="GoldenRod"><b>$●$ Radiation pressure$^a$</b></font></h3>
+	<img src="optics_wave_in_and_out1.jpg" alt="radiation pressure" style="width:40%;height:auto;">
+	<img src="optics_wave_in_and_out2.jpg" alt="radiation pressure (3D)" style="width:40%;height:auto;"></center>
+<center>
+<table border="Brown" style="border:1px solid Gold;" bgcolor="GoldenRod">
+	<tr><td>Radiation momentum density</td><td>$\bo G={\bo N}/{c^2}$</td></tr>
+	<tr><td>Isotropic radiation</td><td>$p_n=1/3u(1+R)$</td></tr>
+	<tr><td>Specular reflection</td><td>$p_n=u(1+R)\cos^2 θ_i$<br>
+		$p_t=u(1-R)\sin θ_i\cos θ_i$</td></tr>
+	<tr><td>From an extended source$^b$</td><td>$p_n={1+R}/{c}∫∫I_ν(θ,φ)\cos^2 θdΩdν$</td></tr>
+	<tr><td>From a point source,$^c$ luminosity $L$</td><td>$p_n={L(1+R)}/{4πr^2c}$</td></tr>
+</table></center>
+<p>$^a$ On an opaque surface.</p>
+<p>$^b$ In spherical polar coordinates.</p>
+<p>$^c$ Normal to the plane.</p>
+<p>where</p>
+<table border="1">
+	<tr><td>$\bo G$</td><td>momentum density</td><td>$\bo N$</td><td>Poynting vector</td></tr>
+	<tr><td>$p_n$</td><td>normal pressure</td><td>$u$</td><td>incident radiation energy density</td></tr>
+	<tr><td>$R$</td><td>(power) reflectance coefficient</td><td>$p_t$</td><td>tangential pressure</td></tr>
+	<tr><td>$θ_i$</td><td>angle of incidence</td><td>$I_ν$</td><td>specific intensity</td></tr>
+	<tr><td>$ν$</td><td>frequency</td><td>$Ω$</td><td>solid angle</td></tr>
+	<tr><td>$θ$</td><td>angle between $dΩ$ and normal to plane</td><td>$L$</td><td>source luminosity (i.e. radiant power)</td></tr>
+	<tr><td>$r$</td><td>distance from source</td></tr>
+</table>
+
+<center><p>...</p></center>
+</body>
+</html>

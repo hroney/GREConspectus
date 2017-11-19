@@ -1,0 +1,76 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.roboquarks.physgreconspectus">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- for formulas activities -->
+        <activity android:name=".main_activity.Formulas">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- For sections -->
+        <activity android:name=".main_activity.Sections"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main_activity.Formulas"/>
+        </activity>
+
+        <!-- Child activities -->
+        <!-- For menu (in formulas) -->
+
+        <!-- For menu about (tab layout) -->
+        <activity android:name=".main_menu.FormulasMenuAbout"
+            android:theme="@style/MenuAboutTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main_activity.Formulas"/>
+        </activity>
+
+        <!-- For menu Additional -->
+        <activity android:name=".main_menu.FormulasMenuAdditional"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main_activity.Formulas"/>
+        </activity>
+
+        <!-- For menu Literature -->
+        <activity android:name=".main_menu.FormulasMenuLiterature"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main_activity.Formulas"/>
+        </activity>
+
+        <!-- For menu Tips -->
+        <activity android:name=".main_menu.FormulasMenuTips"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main_activity.Formulas"/>
+        </activity>
+
+        <!-- For menu StudyPlan -->
+        <activity android:name=".main_menu.FormulasMenuStudyPlan"
+            android:theme="@style/MenuStudyPlanTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main_activity.Formulas"/>
+        </activity>
+        <!-- android:parentActivityName=".Formulas" -->
+        <!--android:label="@string/mathematics_name"-->
+
+    </application>
+
+</manifest>
