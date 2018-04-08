@@ -20,5 +20,6 @@ Rotation is also enabled:
 
 ## Aknowledgements
 
+Although, I designed and wrote the java code of the app, almost all content (i.e. formulas, plots etc.) was added by Krayfer.
 Icons were designed by <a href="https://www.freepik.com/" target="_blank">`Freepik`</a>. Authors are grateful to them.
 
