@@ -5,15 +5,9 @@
 ## Examples
 
 <p align="center">
-  <img src="/example_GIFs/math1.gif?raw=true" width="500px">
-</p>
-
-<p align="center">
-  <img src="/example_GIFs/math2.gif?raw=true" width="500px">
-</p>
-
-<p align="center">
-  <img src="/example_GIFs/mechanics.gif?raw=true" width="500px"/>
+  <img src="/example_GIFs/math1.gif?raw=true" width="250px">
+  <img src="/example_GIFs/math2.gif?raw=true" width="250px">
+  <img src="/example_GIFs/mechanics.gif?raw=true" width="250px"/>
 </p>
 
 ## Aknowledgements
