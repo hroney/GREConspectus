@@ -15,7 +15,7 @@ Below you can see several examples of the working app. Please, pay attention tha
 Rotation is also enabled:
 
 <p align="center">
-  <img src="/example_GIFs/math1.gif?raw=true" width="250px">
+  <img src="/example_GIFs/rotated_em.gif?raw=true" width="500px">
 </p>
 
 ## Aknowledgements
