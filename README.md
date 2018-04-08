@@ -5,15 +5,15 @@
 ## Examples
 
 <p align="center">
-  <img src="/examples/same_galaxies.gif?raw=true" width="1000px">
+  <img src="math1.gif?raw=true" width="1000px">
 </p>
 
 <p align="center">
-  <img src="/examples/different_galaxies.gif?raw=true" width="1000px">
+  <img src="math2.gif?raw=true" width="1000px">
 </p>
 
 <p align="center">
-  <img src="/examples/disappearing_galaxies1.gif?raw=true" width="1000px"/>
+  <img src="mechanics.gif?raw=true" width="1000px"/>
 </p>
 
 ## Aknowledgements
